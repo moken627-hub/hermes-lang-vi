@@ -48,6 +48,15 @@ Every key passed: placeholder parity, whitespace parity, verbatim-token parity, 
 - Hermes Agent with language-pack plugin support (spec Oct 2026)
 - Locale resolution: pack > overlay > bundled > en (safe fallback to English)
 
+## About
+
+**hermes-lang-vi** is built and maintained by [5ac](https://5ac.vn) — an Agentic AI consultancy from Vietnam and the maker of **G-Company OS**, an AI agent platform for SMB sales, marketing, finance and operations.
+
+- 🌐 Website: [5ac.vn](https://5ac.vn)
+- 🧩 More Hermes plugins from us: [hermes-plugin-zalo](https://github.com/moken627-hub/hermes-plugin-zalo) — Zalo messaging platform plugin for Hermes Agent (production-tested)
+
+The translation itself is contributed to the Hermes community under MIT. If your business needs AI agents that work in Vietnamese end-to-end, that's literally what we do.
+
 ## License
 
 MIT — Vietnamese translation © 2026 5ac. Hermes Agent UI strings © Nous Research (MIT).
