@@ -1,4 +1,4 @@
-# Validation — hermes-lang-vi v1.1.0
+# Validation — hermes-lang-vi
 
 Recorded output of `hermes plugins validate` for the pinned release.
 
