@@ -1,0 +1,203 @@
+gateway.agents.active_agents	**Agent đang hoạt động:** {count}
+gateway.agents.active_ago	 · hoạt động cách đây {seconds} giây
+gateway.agents.async_jobs	**Async job của gateway:** {count}
+gateway.agents.background_delegations	**Các tác vụ đang được giao chạy background:** {count}
+gateway.agents.between_turns	giữa các lượt
+gateway.agents.child_row	  - agent con {index}: {calls} lượt gọi api · {doing}
+gateway.agents.header	🤖 **Agent & tác vụ đang hoạt động**
+gateway.agents.more	... và {count} nữa
+gateway.agents.no_progress	 · không có tiến triển trong {seconds} giây
+gateway.agents.none	Không có agent đang hoạt động hay tác vụ đang chạy.
+gateway.agents.quiet_for	 · im lặng {seconds} giây
+gateway.agents.running_processes	**Tiến trình background đang chạy:** {count}
+gateway.agents.state_running	đang chạy
+gateway.agents.state_starting	đang khởi động
+gateway.agents.this_chat	 · chat này
+gateway.approval_expired	⚠️ Phê duyệt đã hết hạn (agent không còn chờ). Hãy yêu cầu agent thử lại.
+gateway.approvals.admin_only	Chỉ admin gateway mới được đổi chế độ phê duyệt cố định.
+gateway.approve.always_plural	✅ Đã phê duyệt các lệnh (mẫu được phê duyệt vĩnh viễn) ({count} lệnh). Agent đang tiếp tục...
+gateway.approve.always_singular	✅ Đã phê duyệt lệnh (mẫu được phê duyệt vĩnh viễn). Agent đang tiếp tục...
+gateway.approve.no_pending	Không có lệnh nào đang chờ để phê duyệt.
+gateway.approve.once_plural	✅ Đã phê duyệt các lệnh ({count} lệnh). Agent đang tiếp tục...
+gateway.approve.once_singular	✅ Đã phê duyệt lệnh. Agent đang tiếp tục...
+gateway.approve.session_plural	✅ Đã phê duyệt các lệnh (mẫu được phê duyệt cho session này) ({count} lệnh). Agent đang tiếp tục...
+gateway.approve.session_singular	✅ Đã phê duyệt lệnh (mẫu được phê duyệt cho session này). Agent đang tiếp tục...
+gateway.background.complete_header	✅ Tác vụ background hoàn tất\nPrompt: "{preview}"\n\n
+gateway.background.exit_code	mã thoát {code}
+gateway.background.failed	❌ Tác vụ background "{preview}" của bạn thất bại trước khi hoàn tất. Gửi lại /bg để thử, hoặc dùng /agents để xem gì vẫn đang chạy.
+gateway.background.final_output	{header}\n\nKết quả cuối:\n```\n{output}\n```
+gateway.background.last_output	. Kết quả gần nhất:\n```\n{tail}\n```
+gateway.background.no_credentials	❌ Tác vụ background không khởi động được vì chưa cấu hình đăng nhập AI model nào. Dùng /login, hoặc chạy `hermes setup` trên máy chủ.
+gateway.background.no_response	(Không có phản hồi nào được tạo)
+gateway.background.recent_output	{header}\n\nKết quả gần đây:\n```\n{output}\n```
+gateway.background.rerun_hint	\nHãy yêu cầu tôi chạy lại hoặc hiển thị toàn bộ log.
+gateway.background.started	🔄 Đã bắt đầu tác vụ background: "{preview}"\nTask ID: {task_id}\nBạn cứ trò chuyện tiếp — kết quả sẽ hiện khi xong.
+gateway.background.still_running	⏳ Tác vụ background vẫn đang chạy
+gateway.background.task_failed	❌ Tác vụ background thất bại
+gateway.background.task_finished	✅ Tác vụ background đã hoàn tất
+gateway.background.usage	Cách dùng: /bg <prompt>\nVí dụ: /bg Tóm tắt các tin nổi bật trên HN hôm nay\n\nChạy prompt trong một session riêng. Bạn cứ trò chuyện tiếp — kết quả sẽ hiện ở đây khi xong.
+gateway.blueprint.failed	Lệnh cron blueprint thất bại: {error}
+gateway.branch.branched_many	⑂ Đã rẽ nhánh sang **{title}** ({count} tin nhắn đã sao chép)\nGốc: `{parent}`\nNhánh: `{new}`\nDùng `/resume` để quay lại bản gốc.
+gateway.branch.branched_one	⑂ Đã rẽ nhánh sang **{title}** ({count} tin nhắn đã sao chép)\nGốc: `{parent}`\nNhánh: `{new}`\nDùng `/resume` để quay lại bản gốc.
+gateway.branch.branched_thread_many	⑂ Đã rẽ nhánh sang **{title}** trong thread mới ({count} tin nhắn đã sao chép)\nThread: {thread}\nGốc: `{parent}` — chat này vẫn ở lại thread đó\nNhánh: `{new}`\nDùng `/branch --here` để rẽ nhánh trong chat này.
+gateway.branch.branched_thread_one	⑂ Đã rẽ nhánh sang **{title}** trong thread mới ({count} tin nhắn đã sao chép)\nThread: {thread}\nGốc: `{parent}` — chat này vẫn ở lại thread đó\nNhánh: `{new}`\nDùng `/branch --here` để rẽ nhánh trong chat này.
+gateway.branch.create_failed	Không tạo được nhánh: {error}
+gateway.branch.db_unavailable	Cơ sở dữ liệu session không khả dụng.
+gateway.branch.no_conversation	Chưa có cuộc trò chuyện để rẽ nhánh — hãy gửi tin nhắn trước.
+gateway.branch.switch_failed	Đã tạo nhánh nhưng không chuyển sang được.
+gateway.branch.thread_fallback	Không tạo được thread nào ở đây, nên nhánh đã thay thế session của chat này.
+gateway.btw.answer	💬 /btw: "{preview}"\n\n{answer}
+gateway.btw.failed	❌ /btw thất bại: "{preview}"\n{error}
+gateway.btw.no_history	Chưa có cuộc trò chuyện nào — hãy gửi câu hỏi của bạn như một tin nhắn bình thường.
+gateway.btw.no_provider	❌ Không thể trả lời câu hỏi bên lề: chưa cấu hình thông tin đăng nhập provider nào.
+gateway.btw.started	💬 Câu hỏi bên lề: "{preview}"\nTrả lời từ một bản chụp của cuộc trò chuyện này — công việc hiện tại vẫn tiếp diễn.
+gateway.btw.usage	Cách dùng: /btw <question>\nVí dụ: /btw lỗi đó nằm trong file nào?\n\nTrả lời nhanh một câu hỏi bên lề về cuộc trò chuyện này mà không làm gián đoạn nó. Để chạy tác vụ background độc lập, dùng /bg <prompt>.
+gateway.bundles.default_desc	Nạp {count} skill
+gateway.bundles.header	**Skill Bundles** ({count} đã cài):
+gateway.bundles.header_plain	Skill Bundles ({count} đã cài):
+gateway.bundles.invoke_hint	Gọi bundle bằng `/<slug>` để nạp tất cả skill của nó.
+gateway.bundles.invoke_hint_plain	Gọi bundle bằng /<slug> để nạp tất cả skill của nó.
+gateway.bundles.item	• `/{slug}` — {desc} _({count} skill)_
+gateway.bundles.item_plain	/{slug} — {desc} ({count} skill)
+gateway.bundles.none	Chưa cài skill bundle nào.\nTạo một bundle trên máy chủ bằng:\n  `hermes bundles create <name> --skill <s1> --skill <s2>`\nThư mục: `{dir}`
+gateway.bundles.none_plain	Chưa cài skill bundle nào.\nTạo bằng: hermes bundles create <name> --skill <s1> --skill <s2>\nThư mục: {dir}
+gateway.bundles.unavailable	Hệ thống con bundle không khả dụng: {error}
+gateway.busy.ack	{head}{detail}{tail}
+gateway.busy.ack_detail_joiner	, 
+gateway.busy.ack_detail_wrap	 ({detail})
+gateway.busy.action_restarting	khởi động lại
+gateway.busy.action_shutting_down	tắt
+gateway.busy.another_turn_running	⏳ Một lượt khác vẫn đang chạy trên session này. Để bảo vệ transcript, tin nhắn này chưa được xử lý. Hãy đợi lượt đang chạy kết thúc rồi gửi lại.
+gateway.busy.behavior_interrupt_long	Khi Hermes đang bận, tin nhắn sẽ ngắt phiên chạy hiện tại.
+gateway.busy.behavior_interrupt_short	ngắt phiên chạy hiện tại
+gateway.busy.behavior_queue_long	Khi Hermes đang bận, tin nhắn sẽ được xếp vào hàng đợi cho lượt tiếp theo.
+gateway.busy.behavior_queue_short	xếp vào hàng đợi cho lượt tiếp theo
+gateway.busy.behavior_steer_long	Khi Hermes đang bận, tin nhắn sẽ được dẫn vào phiên chạy hiện tại (sau lệnh gọi tool kế tiếp).
+gateway.busy.behavior_steer_short	dẫn vào phiên chạy hiện tại (sau lệnh gọi tool kế tiếp)
+gateway.busy.compressing_head	⏳ Đang nén context
+gateway.busy.demoted_tail	 — tin nhắn của bạn được xếp vào hàng đợi chờ đến khi nó xong (dùng /stop để hủy tất cả).
+gateway.busy.drain_queued	⏳ Gateway đang {action} — đã xếp vào hàng đợi cho lượt tiếp theo sau khi nó quay lại.
+gateway.busy.drain_rejected	⏳ Gateway đang {action} và hiện không nhận thêm lượt nào.
+gateway.busy.drain_rejected_new_work	⏳ Gateway đang {action} và hiện không nhận việc mới.
+gateway.busy.draining_maintenance	⏳ Agent này đang dừng nhận việc để bảo trì và hiện không nhận lượt mới. Nó sẽ quay lại ngay — vui lòng gửi lại sau ít phút.
+gateway.busy.elapsed_min	đã trôi qua {minutes} phút
+gateway.busy.interrupting_head	⚡ Đang ngắt tác vụ hiện tại
+gateway.busy.interrupting_tail	. Tôi sẽ trả lời tin nhắn của bạn ngay sau.
+gateway.busy.queued_head	⏳ Đã xếp vào hàng đợi cho lượt tiếp theo
+gateway.busy.queued_tail	. Tôi sẽ trả lời khi tác vụ hiện tại hoàn tất.
+gateway.busy.redirected_head	↪ Đã chuyển hướng phiên chạy hiện tại
+gateway.busy.redirected_tail	. Tôi sẽ điều chỉnh theo góp ý của bạn.
+gateway.busy.reject_codex_runtime	Agent đang chạy — hãy đợi hoặc dùng /stop trước, rồi mới đổi runtime.
+gateway.busy.reject_goal	Agent đang chạy — dùng /goal status / pause / clear / wait giữa chừng, hoặc /stop trước khi đặt mục tiêu mới.
+gateway.busy.reject_loop	Agent đang chạy — dùng /loop status / pause / stop giữa chừng, hoặc /stop trước khi đặt loop mới.
+gateway.busy.reject_moa	Agent đang chạy — hãy đợi hoặc dùng /stop trước, rồi mới chạy /moa.
+gateway.busy.reject_model	Agent đang chạy — hãy đợi hoặc dùng /stop trước, rồi mới đổi model.
+gateway.busy.running_tool	đang chạy: {tool}
+gateway.busy.save_failed	Không lưu được chế độ busy input vào config. Chế độ không đổi.
+gateway.busy.set	Đã đặt chế độ busy input thành **`{mode}`** (đã lưu).\n_{behavior}_
+gateway.busy.slash_rejected	⏳ Agent đang chạy — `/{command}` không chạy được giữa lượt. Hãy đợi phản hồi hiện tại hoặc dùng `/stop` trước.
+gateway.busy.status	**Chế độ busy input: `{mode}`\nTin nhắn khi đang bận: _{behavior}_\nĐổi bằng `/busy queue`, `/busy steer`, hoặc `/busy interrupt`.
+gateway.busy.steered_head	⏩ Đã dẫn vào phiên chạy hiện tại
+gateway.busy.steered_subagents_head	⏩ Đã dẫn vào phiên chạy hiện tại và (các) subagent đang hoạt động của nó
+gateway.busy.steered_subagents_tail	. Tin nhắn của bạn sẽ đến sau lệnh gọi tool kế tiếp của chúng.
+gateway.busy.steered_tail	. Tin nhắn của bạn sẽ đến sau lệnh gọi tool kế tiếp.
+gateway.busy.subagent_working_head	⏳ Subagent đang làm việc
+gateway.busy.unknown_mode	Chế độ `{arg}` không rõ. Dùng `/busy queue`, `/busy steer`, hoặc `/busy interrupt`.
+gateway.clarify.answered	✅ đã trả lời: {response}
+gateway.clarify.cancelled	↩️ Đã hủy phần làm rõ — tin nhắn của bạn sẽ được xử lý như tin nhắn tiếp theo.
+gateway.clarify.expired	⏳ Prompt này đã hết hạn — vui lòng gửi yêu cầu mới.
+gateway.clarify.hint_multi	Có thể chọn nhiều mục — trả lời bằng các số cách nhau bằng dấu phẩy hoặc khoảng trắng (vd "1, 3"), bằng nội dung của lựa chọn, hoặc bằng câu trả lời của riêng bạn.
+gateway.clarify.hint_single	Trả lời bằng số, nội dung của lựa chọn, hoặc bằng câu trả lời của riêng bạn.
+gateway.clarify.native_stream_placeholder	💬 Đang chờ lựa chọn của bạn...
+gateway.clarify.option_line	  {index}. {choice}
+gateway.clarify.question	❓ {question}
+gateway.clarify.skip_hint	Trả lời "skip" để bỏ qua câu hỏi này.
+gateway.codex_runtime.config_load_failed	❌ Không nạp được config: {error}
+gateway.commands.default_desc	Lệnh skill
+gateway.commands.header	📚 **Lệnh** (tổng {total}, trang {page}/{total_pages})
+gateway.commands.nav_next	tiếp → `/commands {page}`
+gateway.commands.nav_prev	`/commands {page}` ← trước
+gateway.commands.none	Không có lệnh nào khả dụng.
+gateway.commands.out_of_range	_(Trang {requested} yêu cầu nằm ngoài phạm vi, đang hiển thị trang {page}.)_
+gateway.commands.skill_header	⚡ **Lệnh skill**:
+gateway.commands.usage	Cách dùng: `/commands [page]`
+gateway.compress.aborted	⚠️ Nén bị hủy ({error}). Không bỏ tin nhắn nào — cuộc trò chuyện không đổi. Chạy /compress để thử lại, /reset để có session sạch, hoặc kiểm tra cấu hình model auxiliary.compression của bạn.
+gateway.compress.aggressive_unsupported	--aggressive không được hỗ trợ; dùng '/compress here [N]' để chỉ giữ lại các lượt trao đổi gần đây, hoặc /undo để bỏ bớt lượt.
+gateway.compress.aux_failed	ℹ️ Model nén đã cấu hình `{model}` thất bại ({error}). Đã khôi phục bằng model chính — context vẫn nguyên vẹn — nhưng bạn nên kiểm tra `auxiliary.compression.model` trong config.yaml.
+gateway.compress.codex_compacted	🗜️ Đã nén thread Codex app-server (thread/compact). Bản mirror transcript không đổi do thiết kế — app-server giờ mang context đã nén.
+gateway.compress.codex_incomplete	⚠️ Nén Codex app-server chưa hoàn tất — thread không đổi. Kiểm tra log app-server, thử lại /compress, hoặc /reset để có session sạch.
+gateway.compress.codex_nothing	🗜️ Không có gì để nén: session này chạy trên runtime Codex app-server, có context nằm trong thread do Codex sở hữu, chỉ tồn tại khi agent đang chạy. Gửi tin nhắn trước rồi /compress — hoặc /reset để bắt đầu mới.
+gateway.compress.failed	Nén thất bại: {error}
+gateway.compress.focus_line	Trọng tâm: "{topic}"
+gateway.compress.hygiene_failed	⚠️ Rút ngắn lịch sử trò chuyện thất bại, nên tôi giữ nguyên mọi thứ. Chạy /compress để thử lại hoặc /new để bắt đầu mới. Nếu vẫn tiếp tục, hãy chạy `hermes doctor` trên máy chủ.
+gateway.compress.hygiene_timeout	⚠️ Rút ngắn lịch sử trò chuyện mất quá lâu, nên tôi bỏ qua và giữ nguyên mọi thứ. Chạy /compress để thử lại hoặc /new để bắt đầu mới.
+gateway.compress.hygiene_timeout_doctor_hint	 Nếu vẫn tiếp tục, hãy chạy `hermes doctor` trên máy chủ.
+gateway.compress.no_provider	Chưa cấu hình provider -- không thể nén.
+gateway.compress.not_enough	Chưa đủ nội dung trò chuyện để nén (cần ít nhất 4 tin nhắn).
+gateway.compress.nothing_to_do	Chưa có gì để nén (transcript vẫn toàn là context được bảo vệ).
+gateway.compress.summary_failed	⚠️ Tạo tóm tắt thất bại ({error}). {count} tin nhắn lịch sử đã bị xóa và thay bằng placeholder; context trước đó không thể khôi phục. Nên kiểm tra cấu hình model auxiliary.compression của bạn.
+gateway.compress.turnhold_deferred	ℹ️ Đã hoãn nén context — tóm tắt vẫn đang stream. Lượt này tiếp tục mà không nén.
+gateway.config_read_failed	⚠️ Không đọc được config.yaml: {error}
+gateway.config_save_failed	⚠️ Không lưu được config: {error}
+gateway.confirm.cancelled	🟡 Đã hủy /{command}. Cuộc trò chuyện không đổi.
+gateway.confirm.destructive_optout	\n\nℹ️ Sau này /clear, /new, /reset và /undo sẽ chạy mà không cần xác nhận. Bật lại qua `approvals.destructive_slash_confirm: true` trong config.yaml.
+gateway.confirm.destructive_optout_save_failed	\n\n⚠️ Không lưu được lựa chọn đó (config.yaml không ghi được), nên /clear, /new, /reset và /undo sẽ hỏi lại lần sau. Để tắt hẳn, đặt `approvals.destructive_slash_confirm: false` trong config.yaml.
+gateway.confirm.destructive_prompt	⚠️ **Xác nhận /{command}**\n\n{detail}\n\nChọn:\n• **Phê duyệt một lần** — chỉ thực hiện lần này\n• **Luôn phê duyệt** — thực hiện và tắt nhắc này vĩnh viễn\n• **Hủy** — giữ cuộc trò chuyện hiện tại\n\n_Fallback dạng chữ: trả lời `{prefix}approve`, `{prefix}always`, hoặc `{prefix}cancel`._
+gateway.confirm.detail_new	Việc này bắt đầu session mới và bỏ lịch sử trò chuyện hiện tại.
+gateway.confirm.detail_undo_many	Việc này xóa {count} lượt người dùng gần nhất khỏi lịch sử.
+gateway.confirm.detail_undo_one	Việc này xóa lượt trao đổi user/assistant gần nhất khỏi lịch sử.
+gateway.context.and_more	  … và {count} nữa
+gateway.context.bar	{bar}
+gateway.context.category.conversation	Cuộc trò chuyện
+gateway.context.category.mcp	MCP
+gateway.context.category.memory	Bộ nhớ
+gateway.context.category.rules	Quy tắc
+gateway.context.category.skills	Skill
+gateway.context.category.subagent_definitions	Định nghĩa subagent
+gateway.context.category.system_prompt	System prompt
+gateway.context.category.tool_definitions	Định nghĩa tool
+gateway.context.category_header	Ước tính mức dùng theo nhóm
+gateway.context.category_row	{glyph} {label} ~{tokens} token ~{pct}%
+gateway.context.compressions	Số lần nén trong session này: {count}
+gateway.context.detail_after_first	_(Thống kê nén và throughput đầy đủ sẽ có sau phản hồi đầu tiên của agent)_
+gateway.context.estimated	Context ước tính: ~{count} token qua {messages} tin nhắn
+gateway.context.free_space	Dung lượng trống
+gateway.context.header	🧠 **Cửa sổ context**
+gateway.context.headroom	Khoảng trống tới giới hạn: {headroom} token
+gateway.context.hint_all	Dùng /context all để xem chi phí theo từng skill và từng toolset.
+gateway.context.in_use	Đang dùng: {used} / {total} ({pct}%)
+gateway.context.last_savings	Lần nén gần nhất giải phóng: {savings}% context
+gateway.context.model	Model: `{model}`
+gateway.context.no_data	Chưa có dữ liệu context. Gửi một tin nhắn để bắt đầu session.
+gateway.context.no_data_yet	  (chưa có dữ liệu — gửi tin nhắn trước)
+gateway.context.not_available	n/a
+gateway.context.over_threshold	⚠️ **Vượt ngưỡng tự nén ({threshold}, {threshold_pct}%)**
+gateway.context.skill_row	  {name} index ~{index_tokens}  SKILL.md {md_tokens} token
+gateway.context.skills_title	Skill theo chi phí (index = luôn bật; SKILL.md = chi phí khi được nạp)
+gateway.context.source.local_estimate	ước tính cục bộ
+gateway.context.source.provider_usage	mức dùng của provider
+gateway.context.source.provider_usage_plus_estimate	mức dùng của provider + ước tính tin nhắn mới
+gateway.context.source_line	Nguồn: {source}; số liệu theo nhóm là ước tính cục bộ.
+gateway.context.threshold	Tự nén tại: {threshold} ({threshold_pct}%) — còn {to_go}
+gateway.context.throughput_note	_Throughput, chứ không phải kích thước context — mỗi lệnh gọi sẽ gửi lại cửa sổ phía trên._
+gateway.context.toolset_row	  {toolset} {count} tool ~{tokens} token
+gateway.context.toolsets_title	Toolset theo chi phí schema (lớn nhất trước)
+gateway.context.total_billed	Tổng đã tính phí: {total}
+gateway.context.totals_header	Tổng cả session (lũy kế trên {calls} lệnh gọi API)
+gateway.context.totals_line	Input {input} · Output {output} · Reasoning {reasoning}
+gateway.context.window	Cửa sổ: {total} token
+gateway.context.window_line	Cửa sổ context: {mark}{used} / {max} token ({mark}{pct}%)
+gateway.credits.not_logged_in	Chưa đăng nhập Nous Portal. Đăng nhập để xem số dư credit và nạp thêm.
+gateway.debug.auto_delete	⏱ Các nội dung dán sẽ tự xóa sau 6 giờ.
+gateway.debug.full_logs_hint	Để tải log đầy đủ lên, dùng `hermes debug share` từ CLI.
+gateway.debug.header	**Đã tải lên báo cáo debug:**
+gateway.debug.report_label	Báo cáo
+gateway.debug.share_hint	Chia sẻ các liên kết này với đội ngũ Hermes để được hỗ trợ.
+gateway.debug.upload_failed	✗ Tải lên báo cáo debug thất bại: {error}
+gateway.deny.denied_plural	❌ Đã từ chối các lệnh ({count} lệnh).
+gateway.deny.denied_reason_plural	❌ Đã từ chối các lệnh ({count} lệnh). Lý do đã chuyển cho agent: "{reason}"
+gateway.deny.denied_reason_singular	❌ Đã từ chối lệnh. Lý do đã chuyển cho agent: "{reason}"
+gateway.deny.denied_singular	❌ Đã từ chối lệnh.
+gateway.deny.no_pending	Không có lệnh nào đang chờ để từ chối.
+gateway.deny.stale	❌ Đã từ chối lệnh (lần phê duyệt đã cũ).
+gateway.diff.err_default	Không tạo được diff

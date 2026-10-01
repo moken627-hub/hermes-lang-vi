@@ -1,0 +1,7 @@
+name: hermes-lang-vi
+version: 1.1.0
+description: Vietnamese (Tieng Viet) language pack for Hermes Agent
+provides_locales:
+  - id: vi
+    endonym: Tiếng Việt
+    rtl: false

@@ -1,0 +1,203 @@
+gateway.diff.failed	{error}
+gateway.diff.more_untracked	\n... và {count} mục nữa
+gateway.diff.no_changes	Không có thay đổi.
+gateway.diff.not_enabled	Chưa bật checkpoints nên không có baseline của session.\nBật trong config.yaml:\n```\ncheckpoints:\n  enabled: true\n```\n/diff thường vẫn hoạt động — nó dùng git trực tiếp.
+gateway.diff.truncated_note	\n... (đã cắt bớt — tổng cộng {lines} dòng; dùng /diff --stat để xem tóm tắt)
+gateway.diff.untracked_label	**Chưa được theo dõi (untracked):**
+gateway.draining	⏳ Đang dừng {count} agent đang hoạt động trước khi khởi động lại...
+gateway.errors.auth_failed	⚠️ Đăng nhập vào dịch vụ AI model thất bại. Dùng /login để đăng nhập lại, hoặc nhờ người vận hành bot chạy `hermes doctor` trên máy chủ.
+gateway.errors.bad_request	⚠️ Dịch vụ AI model đã từ chối yêu cầu này. Hãy thử diễn đạt lại tin nhắn, hoặc dùng /model để đổi model.
+gateway.errors.connection_interrupted	⚠️ Kết nối đến dịch vụ AI model bị gián đoạn giữa chừng — thường là tạm thời. Dùng /retry để thử lại; nếu tình trạng tiếp diễn, hãy chạy `hermes doctor` trên máy chủ.
+gateway.errors.connection_unknown	⚠️ Hermes không thể kết nối đến dịch vụ AI model (SDK không cung cấp chi tiết thêm). Dùng /retry để thử lại; nếu vẫn tiếp diễn, hãy chạy `hermes doctor` trên máy chủ.
+gateway.errors.context_overflow	⚠️ Cuộc trò chuyện đã trở nên quá dài để tôi đọc hết trong một lượt. Dùng /compress để rút gọn lịch sử, hoặc /new để bắt đầu cuộc trò chuyện mới.
+gateway.errors.empty_response_model_label	Model
+gateway.errors.generic_failed	⚠️ Đã xảy ra lỗi và tôi không thể hoàn tất câu trả lời này. Dùng /retry để thử lại, hoặc /new để bắt đầu cuộc trò chuyện mới. Chi tiết kỹ thuật nằm trong gateway log (`hermes logs`).
+gateway.errors.generic_failed_with_hint	⚠️ Đã xảy ra lỗi và tôi không thể hoàn tất câu trả lời này.{hint}\nDùng /retry để thử lại, hoặc /new để bắt đầu cuộc trò chuyện mới. Chi tiết kỹ thuật nằm trong gateway log (`hermes logs`).
+gateway.errors.hint_auth	 Đăng nhập vào dịch vụ AI model của bạn đã hết hạn hoặc API key không đúng. Dùng /login tại đây, hoặc chạy `{relogin}` trên máy chủ.
+gateway.errors.hint_overloaded	 Dịch vụ AI model đang quá tải tạm thời. Chờ một chút rồi dùng /retry.
+gateway.errors.hint_quota	 Số dư hoặc hạn mức dịch vụ AI model của bạn đã hết. Nạp thêm trên trang web của dịch vụ, hoặc dùng /model để đổi model.
+gateway.errors.hint_rate_limited	 Bạn đang bị giới hạn tần suất. Vui lòng chờ một chút rồi thử lại.
+gateway.errors.hint_rejected	 Dịch vụ AI model đã từ chối yêu cầu.
+gateway.errors.hint_usage_limit	 Giới hạn sử dụng của gói của bạn đã đạt mức tối đa. Vui lòng chờ đến khi nó được đặt lại.
+gateway.errors.hint_usage_limit_resets	 Giới hạn sử dụng của gói của bạn đã đạt mức tối đa. Sẽ được đặt lại sau khoảng {hours} giờ.
+gateway.errors.history_unavailable	⚠️ Lịch sử của session này tạm thời không truy cập được, nên tin nhắn này chưa được xử lý. Hãy nhờ người vận hành kiểm tra state.db, rồi gửi lại khi mọi thứ đã ổn định. Chỉ dùng /reset nếu bạn thực sự muốn bắt đầu một cuộc trò chuyện mới.
+gateway.errors.interrupted_before_start	⚠️ Tin nhắn của bạn bị gián đoạn trước khi quá trình xử lý bắt đầu (có thể do một lệnh /stop gần đây). Vui lòng gửi lại.
+gateway.errors.no_credentials	⚠️ Tôi không thể kết nối đến dịch vụ AI model, nên tin nhắn này chưa được xử lý. Dùng /login để đăng nhập lại, hoặc /model để chọn model khác. Nếu vẫn tiếp tục thất bại, hãy chạy `hermes doctor` trên máy chủ.
+gateway.errors.no_response	⚠️ Đã xử lý xong nhưng không tạo ra phản hồi nào. Đây có thể là lỗi tạm thời — hãy thử gửi lại tin nhắn của bạn.
+gateway.errors.previous_turn_cleanup	⚠️ Tin nhắn của bạn chưa được xử lý (lượt trước vẫn đang được dọn dẹp). Vui lòng gửi lại.
+gateway.errors.processing_incomplete	xử lý chưa hoàn tất
+gateway.errors.provider_kept_failing	⚠️ Dịch vụ AI model liên tục gặp lỗi. Dùng /retry để thử lại, hoặc /model để đổi model. Chi tiết nằm trong gateway log (`hermes logs`).
+gateway.errors.rate_limited	⏱️ Dịch vụ AI model đang giới hạn tần suất các yêu cầu. Chờ một chút rồi dùng /retry.
+gateway.errors.session_storage_unavailable	⚠️ Bộ lưu trữ session tạm thời không khả dụng, nên lượt này đã bị dừng để bảo vệ lịch sử trò chuyện của bạn. Tin nhắn của bạn có thể đã được lưu — vui lòng gửi lại sau một chút.
+gateway.errors.session_storage_unavailable_disk	⚠️ Bộ lưu trữ session tạm thời không khả dụng, nên lượt này đã bị dừng để bảo vệ lịch sử trò chuyện của bạn. Vui lòng kiểm tra dung lượng đĩa khả dụng, rồi gửi lại tin nhắn của bạn.
+gateway.errors.stopped_before_finishing	⚠️ Tôi phải dừng trước khi hoàn tất{reason}. Dùng /retry để thử lại, hoặc /compress nếu cuộc trò chuyện này đã trở nên rất dài.
+gateway.errors.unexpected_silence	⚠️ Model chỉ trả về một dấu hiệu im lặng cho một tin nhắn cần có câu trả lời. Thử lại hoặc diễn đạt lại tin nhắn.
+gateway.errors.unreachable	⚠️ Dịch vụ AI model hiện không thể kết nối — endpoint model đã cấu hình không chạy hoặc không tới được. Chờ một chút rồi dùng /retry; nếu vẫn tiếp diễn, hãy chạy `hermes doctor` trên máy chủ.
+gateway.errors.usage_limit_resets	⏱️ Giới hạn sử dụng của dịch vụ AI model đã đạt mức tối đa; sẽ được đặt lại sau {window}. Dùng /retry sau thời điểm đó, hoặc /model để đổi model.
+gateway.exec_approval.action_always	Luôn cho phép
+gateway.exec_approval.action_deny	Từ chối
+gateway.exec_approval.action_once	Cho phép một lần
+gateway.exec_approval.action_session	Cho phép trong session
+gateway.exec_approval.deadline	Nếu bạn không trả lời trong vòng {window} thì lệnh sẽ KHÔNG được chạy.
+gateway.exec_approval.default_reason	lệnh nguy hiểm
+gateway.exec_approval.header	Hermes muốn chạy một lệnh cần bạn đồng ý
+gateway.exec_approval.reason_label	Lý do bị đánh dấu
+gateway.exec_approval.smart_deny_heading	⚠️ **Smart DENY — chủ sở hữu ghi đè cho một thao tác duy nhất:**
+gateway.exec_approval.smart_deny_line	Smart DENY: ghi đè của chủ sở hữu chỉ áp dụng cho riêng thao tác này.
+gateway.exec_approval.text_body	{heading}\n```\n{command}\n```\n{reason_label}: {reason}\n\n
+gateway.exec_approval.text_choice_always	`{prefix}approve always` để cho phép vĩnh viễn
+gateway.exec_approval.text_choice_deny	`{prefix}deny` để hủy
+gateway.exec_approval.text_choice_joiner	, 
+gateway.exec_approval.text_choice_last	, hoặc {choice}.\n
+gateway.exec_approval.text_choice_once	Trả lời `{prefix}approve` để chạy nó một lần
+gateway.exec_approval.text_choice_session	`{prefix}approve session` để cho phép pattern này trong phần còn lại của session
+gateway.exec_approval.timed_out_card_body	{notice}\n```\n{command}\n```
+gateway.exec_approval.timed_out_notice	⌛ Phê duyệt đã hết hạn sau {window} — lệnh KHÔNG được chạy. Hãy bảo tôi thử lại nếu bạn vẫn muốn chạy, hoặc tăng approvals.timeout trong config.yaml.
+gateway.fast.choice_auto	auto — nhanh trong vài giây đầu của mỗi lượt
+gateway.fast.choice_cold	cold — chỉ nhanh ở lượt đầu tiên của session
+gateway.fast.choice_fast	fast — bật Priority Processing
+gateway.fast.choice_normal	normal — xử lý tiêu chuẩn
+gateway.fast.choice_ultrafast	ultrafast — OpenAI Ultrafast (GPT-6 Astra, giá gấp 6 lần)
+gateway.fast.label_fast	FAST
+gateway.fast.label_normal	NORMAL
+gateway.fast.not_supported	⚡ /fast chỉ khả dụng cho các model OpenAI hỗ trợ Priority Processing.
+gateway.fast.picker_title	⚡ **Priority Processing**\n\nChế độ hiện tại: `{mode}`\n\nChọn một mục:
+gateway.fast.saved	⚡ ✓ Priority Processing: **{label}** (đã lưu vào config)\n_(áp dụng từ tin nhắn tiếp theo)_
+gateway.fast.session_only	⚡ ✓ Priority Processing: **{label}** (chỉ session này)
+gateway.fast.status	⚡ Priority Processing\n\nChế độ hiện tại: `{mode}`\n\n_Cách dùng:_ `/fast <normal|fast|auto|cold|ultrafast|status>`
+gateway.fast.status_fast	fast
+gateway.fast.status_normal	normal
+gateway.fast.ultrafast_not_supported	⚡ Ultrafast chỉ khả dụng cho GPT-6 Astra (model hiện tại: `{model}`).
+gateway.fast.unknown_arg	⚠️ Đối số không hợp lệ: `{arg}`\n\n**Các tùy chọn hợp lệ:** normal, fast, auto, cold, ultrafast, status
+gateway.footer.example_line	\nVí dụ: `{preview}`
+gateway.footer.saved	📎 Runtime footer: **{state}**{example}\n_(đã lưu toàn cục — áp dụng từ tin nhắn tiếp theo)_
+gateway.footer.state_off	OFF
+gateway.footer.state_on	ON
+gateway.footer.status	📎 Runtime footer: **{state}**\nCác trường: `{fields}`\nNền tảng: `{platform}`
+gateway.footer.usage	Cách dùng: `/footer [on|off|status]`
+gateway.goal.gate_add_admin_only	⛔ /goal gate add yêu cầu một gateway admin được cấu hình rõ ràng (allow_admin_from cho DM, group_allow_admin_from cho nhóm).
+gateway.goal.invalid	Mục tiêu không hợp lệ: {error}
+gateway.goal.no_goal_set	Chưa đặt mục tiêu.
+gateway.goal.no_resume	Không có mục tiêu để tiếp tục.
+gateway.goal.paused	⏸ Mục tiêu đã tạm dừng: {goal}
+gateway.goal.resumed	▶ Mục tiêu đã tiếp tục: {goal}\nTiếp tục ngay — tôi sẽ thực hiện bước tiếp theo luôn.
+gateway.goal.set	⊙ Đã đặt mục tiêu (ngân sách {budget} lượt): {goal}\nTôi sẽ tiếp tục làm việc cho đến khi mục tiêu hoàn thành, bạn tạm dừng/xóa nó, hoặc ngân sách cạn kiệt.\nĐiều khiển: /goal status · /goal pause · /goal resume · /goal clear
+gateway.goal.unavailable	Mục tiêu không khả dụng trên session này.
+gateway.goal_cleared	✓ Đã xóa mục tiêu.
+gateway.heartbeat.cleared	✓ Đã xóa heartbeat.
+gateway.heartbeat.interval_too_small	Khoảng thời gian quá nhỏ — tối thiểu là {min_seconds}s.
+gateway.heartbeat.invalid_prefix	Heartbeat không hợp lệ
+gateway.heartbeat.no_resume	Không có heartbeat nào để tiếp tục.
+gateway.heartbeat.none_set	Chưa đặt heartbeat nào.
+gateway.heartbeat.paused	⏸ Heartbeat đã tạm dừng: {prompt}
+gateway.heartbeat.prompt_required	Cách dùng: /heartbeat every <interval> <prompt> — bắt buộc phải có prompt.
+gateway.heartbeat.resumed	▶ Heartbeat đã tiếp tục (mỗi {interval}): {prompt}
+gateway.heartbeat.set	♥ Đã đặt heartbeat (mỗi {interval}): {prompt}\nKích hoạt như một lượt bình thường mỗi khi session này rảnh và đã hết khoảng thời gian. Chỉ tồn tại trong lúc gateway đang chạy — dùng `hermes cron` cho các lịch trình lâu dài.
+gateway.heartbeat.unavailable	Heartbeat không khả dụng (không có session).
+gateway.heartbeat.usage	Cách dùng: /heartbeat every <interval> <prompt>  (vd: /heartbeat every 10m Check CI)\nNgoài ra: /heartbeat status | pause | resume | clear
+gateway.help.header	📖 **Các lệnh của Hermes**\n
+gateway.help.more_use_commands	\n... và {count} lệnh nữa. Dùng `/commands` để xem danh sách đầy đủ, có phân trang.
+gateway.help.skill_header	\n⚡ **Lệnh Skill** ({count} đang hoạt động):
+gateway.hooks.command_blocked	Lệnh `/{command}` đã bị một hook chặn.
+gateway.init.ack_generate	Đang tạo AGENTS.md từ bản quét dự án…
+gateway.init.ack_update	Đang cập nhật AGENTS.md từ bản quét dự án…
+gateway.init.start_failed	Không thể bắt đầu /init — vui lòng thử lại.
+gateway.insights.error	Lỗi khi tạo insights: {error}
+gateway.insights.invalid_days	Giá trị --days không hợp lệ: {value}
+gateway.kanban.error_prefix	⚠ lỗi kanban: {error}
+gateway.kanban.no_output	(không có đầu ra)
+gateway.kanban.ping.assignee_tag	@{assignee} 
+gateway.kanban.ping.blocked	⏸ {head} bị chặn{reason}
+gateway.kanban.ping.board_tag	[{board}] 
+gateway.kanban.ping.changes_default_reason	phản hồi của reviewer yêu cầu thay đổi
+gateway.kanban.ping.changes_requested	🛑 {board_tag}Kanban {task_id} review yêu cầu thay đổi/BLOCK: {reason}{provenance}
+gateway.kanban.ping.completed	✔ {head} hoàn thành — {title}{handoff}
+gateway.kanban.ping.crashed	✖ {head} — worker của nó dừng ngoài dự kiến; nó sẽ được tự động thử lại.
+gateway.kanban.ping.failed_n_times	nó thất bại {count} lần liên tiếp
+gateway.kanban.ping.gave_up	⛔ {head} hiện bị chặn: {count}{last}. Hãy khắc phục nguyên nhân, rồi `hermes kanban unblock {task_id}` (hoặc `hermes kanban reassign {task_id}`). Log: `hermes kanban log {task_id}`.
+gateway.kanban.ping.head	{board_tag}{assignee_tag}Kanban {task_id}
+gateway.kanban.ping.implementer_suffix	 → giao cho implementer @{implementer}
+gateway.kanban.ping.kept_failing	nó liên tục thất bại
+gateway.kanban.ping.last_error	 (lần cuối: {value})
+gateway.kanban.ping.limit_generic	giới hạn thời gian của nó
+gateway.kanban.ping.limit_minutes	giới hạn {minutes} phút của nó
+gateway.kanban.ping.reason_suffix	: {value}
+gateway.kanban.ping.review_requested	👀 {head} sẵn sàng để review — {title}{handoff}
+gateway.kanban.ping.reviewer_suffix	 — reviewer @{reviewer}
+gateway.kanban.ping.status	🔄 {head} → {status}
+gateway.kanban.ping.timed_out	⏱ {head} đã vượt quá {span} và bị dừng; nó sẽ được tự động thử lại.
+gateway.kanban.ping.triage	🛑 {head} được chuyển đến TRIAGE — {why}{recurrences}{reason}
+gateway.kanban.ping.triage_attention	cần orchestration chú ý
+gateway.kanban.ping.triage_decision	cần con người quyết định
+gateway.kanban.ping.triage_recurrences	 (bị chặn {value} lần vì cùng nguyên nhân)
+gateway.kanban.subscribed_suffix	(đã đăng ký — bạn sẽ được thông báo khi {task_id} hoàn thành hoặc bị chặn)
+gateway.kanban.truncated_suffix	… (đã cắt bớt; dùng `hermes kanban …` trong terminal để xem đầu ra đầy đủ)
+gateway.kanban.wake.block_loop_detected	được chuyển đến triage sau khi bị chặn nhiều lần; cần orchestration chú ý
+gateway.kanban.wake.blocked	bị chặn; cần chú ý
+gateway.kanban.wake.changes_requested	review yêu cầu thay đổi (BLOCK); phần triển khai chưa được phê duyệt
+gateway.kanban.wake.completed	đã hoàn thành
+gateway.kanban.wake.crashed	lỗi crash (worker đã thoát); dispatcher sẽ thử lại
+gateway.kanban.wake.gave_up	đã từ bỏ (hết số lần retry)
+gateway.kanban.wake.guidance	Đây là thông báo trạng thái tác vụ tự động, không phải yêu cầu phân tách lại tác vụ. Hãy kiểm tra board hiện tại trước khi tạo các tác vụ tiếp theo; không tạo lại các tác vụ hoặc đồ thị đã tồn tại.
+gateway.kanban.wake.handoff	Kết quả: {summary}
+gateway.kanban.wake.message	[kanban] Tác vụ {task_id} {status}.\nTiêu đề: {title}\nNgười được giao: @{assignee}\nBoard: {board}\n\nKiểm tra kết quả hoặc quyết định bước tiếp theo.
+gateway.kanban.wake.review_detail	Phản hồi review: {reason}\nHãy kiểm tra card hiện có và lần review hiện tại của nó; trả công việc về cùng tác vụ triển khai. Đừng coi BLOCK này là phê duyệt và đừng tạo tác vụ trùng lặp.
+gateway.kanban.wake.review_requested	đã chuyển sang review; phần triển khai đã xong
+gateway.kanban.wake.status_default	trạng thái đã thay đổi
+gateway.kanban.wake.status_joiner	, 
+gateway.kanban.wake.timed_out	hết thời gian; dispatcher sẽ thử lại
+gateway.learn.ack_conversation	Đang học một skill từ cuộc trò chuyện này…
+gateway.learn.ack_described	Đang học một skill từ những gì bạn mô tả…
+gateway.login.free_tier_remaining	\nMột số cuộc trò chuyện vẫn đang dùng free tier; hãy dùng /model trong các cuộc trò chuyện đó để đổi model.
+gateway.loop.goal_defers_note	\nLưu ý: một /goal đang hoạt động đang điều khiển session này — các lần thức dậy của loop sẽ bị hoãn cho đến khi mục tiêu hoàn thành, tạm dừng hoặc park.
+gateway.loop.no_session	Loop không khả dụng (không có session đang hoạt động).
+gateway.loop.unavailable	Loop không khả dụng.
+gateway.memory.unknown_subcommand	Subcommand /memory không xác định. Dùng: pending, approve <id>, reject <id>, approval <on|off>.
+gateway.moa.prepare_failed	Không thể chuẩn bị lượt MoA.
+gateway.model.capabilities_label	Khả năng: {capabilities}
+gateway.model.context_label	Context: {tokens} token
+gateway.model.cost_label	Chi phí: {cost}
+gateway.model.current_label	Hiện tại: `{model}` trên {provider}
+gateway.model.current_tag	 (hiện tại)
+gateway.model.err_config_not_updated	config.yaml chưa được cập nhật ({error})
+gateway.model.err_skew	Gateway này đang chạy code từ {boot_rev} nhưng bản checkout trên đĩa hiện là {disk_rev}. Đổi model có nguy cơ crash do module cũ — hãy khởi động lại gateway để nạp code mới: hermes gateway restart
+gateway.model.err_stale_override	đã lưu vào config.yaml, nhưng override cũ trong session chưa được xóa ({error})
+gateway.model.err_switch_failed	Đổi model sang {model} thất bại ({error}); vẫn giữ {current}.
+gateway.model.error_prefix	Lỗi: {error}
+gateway.model.guard_confirm	⚠️ **{title}**\n\n{message}\n\n_Cách dự phòng bằng văn bản: trả lời `{prefix}approve` để đổi hoặc `{prefix}cancel` để giữ model hiện tại._
+gateway.model.max_output_label	Đầu ra tối đa: {tokens} token
+gateway.model.more_models_suffix	 (+{count} model nữa)
+gateway.model.next_turn_only	    (chỉ lượt tiếp theo — khôi phục sau một câu trả lời)
+gateway.model.prompt_caching_enabled	Prompt caching: đang bật
+gateway.model.provider_label	Provider: {provider}
+gateway.model.saved_global	Đã lưu vào config.yaml (`--global`)
+gateway.model.session_only_hint	_(chỉ dành cho session này — thêm `--global` để lưu vĩnh viễn)_
+gateway.model.switch_cancelled	🟡 Đã hủy đổi model. Model hiện tại không đổi ({model}).
+gateway.model.switched	Đã đổi model sang `{model}`
+gateway.model.usage_persist	`/model <name> --global` — lưu vĩnh viễn
+gateway.model.usage_switch_model	`/model <name>` — đổi model
+gateway.model.usage_switch_provider	`/model <name> --provider <slug>` — đổi provider
+gateway.model.warning_prefix	Cảnh báo: {warning}
+gateway.no_active_goal	Không có mục tiêu nào đang hoạt động.
+gateway.notify.context_injection_refused	Context injection đã bị từ chối.
+gateway.notify.delivery_failed_retry	⚠️ Gửi tin nhắn thất bại sau nhiều lần thử. Vui lòng thử lại — yêu cầu của bạn đã được xử lý nhưng không thể gửi phản hồi.
+gateway.notify.media_delivery_failed	⚠️ Không thể gửi tệp đính kèm {kind}.
+gateway.notify.media_delivery_failed_with_name	⚠️ Không thể gửi tệp đính kèm {kind} ({file_name}).
+gateway.notify.media_kind.audio	âm thanh
+gateway.notify.media_kind.file	tệp
+gateway.notify.media_kind.image	ảnh
+gateway.notify.media_kind.video	video
+gateway.notify.no_home_channel	📬 Chưa đặt home channel cho {platform}. Home channel là nơi Hermes gửi kết quả cron job và tin nhắn đa nền tảng.\n\nGõ {sethome_cmd} để đặt cuộc trò chuyện này làm home channel của bạn, hoặc bỏ qua nếu không muốn.
+gateway.notify.plain_fallback_prefix	(Định dạng phản hồi gặp lỗi, dùng văn bản thuần:)\n\n{content}
+gateway.notify.turn_error	Xin lỗi, tôi gặp một lỗi.
+gateway.notify.turn_error_detailed	Xin lỗi, tôi gặp một lỗi ({error_type}).\n{error_detail}\nThử lại hoặc dùng /reset để bắt đầu session mới.
+gateway.notify.turn_error_no_details	không có chi tiết
+gateway.pairing.code_reply	Chào bạn! Tôi chưa nhận ra bạn, nên tôi không thể trả lời cho đến khi người vận hành bot này phê duyệt bạn.\n\nMã pairing của bạn: `{code}` (có hiệu lực trong {validity})\n\nNếu bạn là người chạy bot này, hãy mở terminal và chạy: `{approve_cmd}`. Nếu không, hãy gửi lệnh đó cho chủ bot. Sau khi được phê duyệt, hãy gửi lại tin nhắn của bạn.
+gateway.pairing.rate_limited	Hiện có quá nhiều yêu cầu pairing. Hãy chờ vài phút rồi gửi lại tin nhắn của bạn.
+gateway.pairing.validity_hour	{hours} giờ
+gateway.pairing.validity_hours	{hours} giờ
+gateway.pause.already_paused	⏸️ Hermes đã tạm dừng rồi{suffix}. Dùng `/pause off` để tiếp tục.
+gateway.pause.not_paused	Hermes không ở trạng thái tạm dừng.
+gateway.pause.paused	⏸️ Đã tạm dừng{suffix}. Cron/kanban/gateway mới sẽ bị tạm hoãn; công việc đang chạy vẫn hoàn thành bình thường. Dùng `/pause off` để tiếp tục.
+gateway.pause.reason_suffix	 (lý do: {reason})
+gateway.pause.resumed	▶️ Đã tiếp tục — công việc mới được chấp nhận trở lại.

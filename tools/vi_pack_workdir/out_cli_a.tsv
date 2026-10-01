@@ -1,0 +1,746 @@
+cli.approval.bell_context	duyệt
+cli.approval.label	Duyệt
+cli.approval.outcome_always	đã thêm vào danh sách cho phép
+cli.approval.outcome_deny	đã từ chối
+cli.approval.outcome_once	cho phép một lần
+cli.approval.outcome_session	cho phép trong session này
+cli.approval.timed_out_no_response	hết thời gian chờ (không có phản hồi)
+cli.approval.timeout_denying	⏱ Hết thời gian chờ — từ chối lệnh
+cli.banner.context_minimum	Hermes cần ít nhất {tokens} token. Tool schemas + system prompt dùng một prefix cố định khá lớn.
+cli.banner.context_too_low	⚠️  Độ dài context chỉ có {tokens} token — nhiều khả năng quá thấp để dùng agent với tool.
+cli.banner.fix_config	Cách sửa: đặt model.context_length trong config.yaml, hoặc tăng thiết lập context của server bạn
+cli.banner.fix_lm_studio	Sửa trên LM Studio: đặt context length trong model settings → reload model
+cli.banner.fix_local_server	Cách sửa: khởi động server với context ít nhất {tokens_k}K (llama.cpp: -c {tokens}), hoặc đặt model.ollama_num_ctx trong config.yaml bằng đúng cửa sổ context mà server thực sự phục vụ
+cli.banner.fix_ollama	Sửa trên Ollama: OLLAMA_CONTEXT_LENGTH={tokens} ollama serve
+cli.banner.hermes_models_lack_tools	Chúng thiếu khả năng tool-calling cần thiết cho agent workflow. Hãy cân nhắc dùng model agentic (Claude, GPT, Gemini, DeepSeek, v.v.).
+cli.banner.hermes_models_not_agentic	⚠  Các model Nous Research Hermes 3 & 4 KHÔNG agentic và không được thiết kế để dùng với Hermes Agent.
+cli.banner.hermes_models_switch_hint	Chuyển bằng: /model sonnet  hoặc  /model gpt5
+cli.banner.project_skills_loaded	◆ Đã tải {count} project skill từ repo này
+cli.banner.project_skills_untrusted	◆ Tìm thấy {count} project skill trong {root} nhưng chưa tải — chạy `hermes skills trust` để bật chúng.
+cli.billing.actions_require_admin	Thao tác billing cần quyền admin/owner của org.
+cli.billing.add_card_first	Thêm thẻ trước
+cli.billing.add_card_once_hint	Thêm thẻ một lần trên trang billing của portal — sau đó bạn có thể nạp tiền ngay từ terminal.
+cli.billing.add_card_then_recheck	Thêm thẻ trên trang billing, rồi chọn “kiểm tra lại” ở đây.
+cli.billing.add_card_title	Thêm thẻ
+cli.billing.add_funds	Nạp tiền
+cli.billing.add_funds_now_hint	Nạp tiền ngay — một lần trừ tiền, cộng vào số dư của bạn hôm nay.
+cli.billing.added_to_balance	✓ Đã cộng {amount} vào số dư của bạn.
+cli.billing.allow_remote_spending_detail	Mở trình duyệt của bạn để ủy quyền cho terminal này.
+cli.billing.allow_remote_spending_title	Cho phép Remote Spending
+cli.billing.allowed_but_org_off	Remote Spending đã được phép cho terminal này, nhưng org vẫn đang tắt. Admin billing có thể bật từ trang Hermes Agent trên portal, rồi chạy lại /topup.
+cli.billing.allowed_no_card	Remote Spending đã được phép — nhưng chưa có thẻ nào được lưu.
+cli.billing.allowed_run_topup	Remote Spending đã được phép. Chạy /topup để tiếp tục.
+cli.billing.amount_prompt	Số tiền (USD):
+cli.billing.amount_prompt_labeled	{label} (USD)
+cli.billing.auto_reload	Tự động nạp lại
+cli.billing.auto_reload_consent	Bằng việc xác nhận, bạn ủy quyền cho Nous Research trừ tiền trên {card} mỗi khi số dư của bạn chạm {threshold}. Có thể tắt bất cứ lúc nào ở đây hoặc trên portal.
+cli.billing.auto_reload_disabled	✅ Đã tắt tự động nạp lại.
+cli.billing.auto_reload_enabled	✅ Tự động nạp lại đang bật: dưới {threshold} → nạp lên {reload_to}.
+cli.billing.auto_reload_hint	Tự động nạp tiền khi số dư của bạn thấp.
+cli.billing.auto_reload_off_line	Tự động nạp lại: tắt
+cli.billing.auto_reload_on_detail	Bật — {rule}
+cli.billing.auto_reload_on_line	Tự động nạp lại: bật — dưới {threshold} → nạp lên {reload_to}
+cli.billing.auto_reload_rule	dưới {threshold} → nạp lên {reload_to}
+cli.billing.auto_reload_rule_cap	Dưới {threshold} → nạp lên {reload_to}
+cli.billing.bar_pct_used	 · đã dùng {pct}%
+cli.billing.bar_plan	{label}[{bar}]  còn ${remaining} trên tổng ${total}{pct}
+cli.billing.bar_plan_label	gói
+cli.billing.bar_topup	{label}[{bar}]  ${remaining} · không bao giờ hết hạn
+cli.billing.bar_topup_label	nạp tiền
+cli.billing.cancelled	Đã hủy.
+cli.billing.cancelled_no_funds	Đã hủy. Chưa nạp tiền.
+cli.billing.cancelled_yellow	🟡 Đã hủy.
+cli.billing.card_found_continuing	Đã tìm thấy thẻ: {card} — tiếp tục.
+cli.billing.card_line	Thẻ: {card}
+cli.billing.card_on_file	Thẻ đã lưu: {card}
+cli.billing.charge_error_idempotency_conflict	🔴 Charge key đó đã được dùng cho một số tiền khác. Hãy bắt đầu lượt nạp mới.
+cli.billing.charge_error_no_payment_method	💳 Chưa có thẻ nào được lưu — nạp tiền và quản lý billing trên portal.
+cli.billing.charge_error_remote_spending_disabled	Remote spending đang tắt với tài khoản này — admin billing có thể bật từ trang Hermes Agent trên portal.
+cli.billing.charge_error_role_required	Nạp tiền cần quyền admin/owner của org. Hãy nhờ admin, hoặc quản lý trên portal.
+cli.billing.charge_failed_authentication_required	🔴 Ngân hàng của bạn yêu cầu xác minh (3DS). Hoàn tất trên portal để kết thúc giao dịch này.
+cli.billing.charge_failed_card_declined	🔴 Thẻ của bạn bị từ chối. Hãy thử thẻ khác trên portal.
+cli.billing.charge_failed_generic	🔴 Giao dịch không thành công ({reason}).
+cli.billing.charge_failed_payment_method_expired	🔴 Thẻ của bạn đã hết hạn. Cập nhật trên portal.
+cli.billing.charge_stepup_declined	Chưa có giao dịch nào. Chạy /topup khi bạn muốn cho phép Remote Spending.
+cli.billing.charge_stepup_explain	Để trừ tiền từ terminal này, hãy cho phép Remote Spending một lần. Nó sẽ mở trình duyệt để bạn ủy quyền, sau đó {amount} tiếp tục ngay tại đây.
+cli.billing.charge_stepup_noninteractive	Chạy `hermes portal` và cho phép Remote Spending, rồi thử lại.
+cli.billing.charge_stepup_not_granted	Không thể cho phép Remote Spending — cần admin hoặc owner của org phê duyệt. Thẻ của bạn chưa bị trừ tiền.
+cli.billing.charge_submitted	Đã gửi giao dịch — đang xác nhận thanh toán…
+cli.billing.choice_add_card_on_portal	Thêm thẻ trên portal
+cli.billing.choice_add_funds	Nạp tiền
+cli.billing.choice_agree_turn_on	Đồng ý và bật
+cli.billing.choice_allow_remote_spending	Cho phép Remote Spending
+cli.billing.choice_auto_reload	Tự động nạp lại
+cli.billing.choice_back	Quay lại
+cli.billing.choice_cancel	Hủy
+cli.billing.choice_close	Đóng
+cli.billing.choice_custom_amount	Số tiền tùy chọn…
+cli.billing.choice_edit_thresholds	Sửa ngưỡng
+cli.billing.choice_go_back	Quay lại
+cli.billing.choice_manage_on_portal	Quản lý trên portal
+cli.billing.choice_monthly_limit	Giới hạn hàng tháng
+cli.billing.choice_not_now	Để sau
+cli.billing.choice_pay_now	Thanh toán {amount} ngay
+cli.billing.choice_recheck_card	Tôi đã thêm rồi — kiểm tra lại
+cli.billing.choice_resume_topup	Tiếp tục nạp {amount}
+cli.billing.choice_turn_off	Tắt
+cli.billing.complete_in_browser	Hoàn tất các thay đổi billing trong trình duyệt.
+cli.billing.confirm_purchase	Xác nhận mua
+cli.billing.consent_charge	Bằng việc xác nhận, bạn cho phép Nous Research trừ tiền vào thẻ của bạn.
+cli.billing.could_not_check_charge	🔴 Không thể kiểm tra giao dịch: {error}
+cli.billing.couldnt_allow_remote_spending	Không thể cho phép Remote Spending: {error}
+cli.billing.currently	Hiện tại: {rule}
+cli.billing.default_ceiling_suffix	 (trần mặc định)
+cli.billing.desc_add_card_on_portal	mở trang billing trong trình duyệt của bạn
+cli.billing.desc_add_funds	một lần trừ tiền, cộng vào số dư của bạn hôm nay
+cli.billing.desc_agree_turn_on	bật tự động nạp lại
+cli.billing.desc_allow_remote_spending	mở trình duyệt của bạn để ủy quyền
+cli.billing.desc_auto_reload	tự nạp lại khi số dư của bạn sắp cạn
+cli.billing.desc_custom_amount	nhập số tiền của riêng bạn
+cli.billing.desc_do_not_charge	không trừ tiền
+cli.billing.desc_do_nothing	không làm gì
+cli.billing.desc_edit_thresholds	thay đổi khi nào / nạp bao nhiêu
+cli.billing.desc_manage_card_billing	quản lý thẻ / billing của bạn trong trình duyệt
+cli.billing.desc_monthly_limit	hiện trần chi tiêu hàng tháng (chỉ đọc)
+cli.billing.desc_not_now	hủy
+cli.billing.desc_one_time_purchase	mua credit một lần
+cli.billing.desc_open_billing_page	mở trang billing trong trình duyệt của bạn
+cli.billing.desc_recheck_card	kiểm tra lại thẻ và tiếp tục
+cli.billing.desc_resume_topup	hoàn tất giao dịch đang tạm dừng
+cli.billing.desc_submit_charge	gửi giao dịch
+cli.billing.desc_turn_off	tắt tự động nạp lại
+cli.billing.free_models_only_hint	> Free · chỉ dùng model free. Chạy /subscription để dùng model trả phí.
+cli.billing.invalid_selection	🔴 Lựa chọn không hợp lệ.
+cli.billing.killswitch_reason_buy	Admin billing có thể bật từ trang Hermes Agent trên portal trước khi bạn nạp tiền.
+cli.billing.killswitch_reason_overview	Admin billing có thể bật từ trang Hermes Agent trên portal để nạp tiền tại đây.
+cli.billing.load_failed	{label}: {error}
+cli.billing.load_failed_label	Không thể tải billing
+cli.billing.low_balance_usage	! Số dư thấp · còn {amount}. Chạy /topup hoặc /subscription.
+cli.billing.manage_on_portal_url	Quản lý trên portal: {url}
+cli.billing.monthly_cap_reached	🔴 Đã chạm trần chi tiêu hàng tháng.
+cli.billing.monthly_cap_reached_headroom	🔴 Đã chạm trần chi tiêu hàng tháng — còn dư ${remaining}.
+cli.billing.monthly_limit_read_only	Giới hạn hàng tháng được đặt trên portal — terminal chỉ hiển thị ở chế độ chỉ đọc.
+cli.billing.monthly_spend_limit	Giới hạn chi tiêu hàng tháng
+cli.billing.no_charge_id	Không nhận được charge id; hãy kiểm tra trên portal.
+cli.billing.no_manage_url	Không có URL quản lý — portal của bạn đã cấu hình chưa?
+cli.billing.no_monthly_cap	Không thấy trần hàng tháng (được quản lý trên portal).
+cli.billing.no_portal_url	Không có URL portal.
+cli.billing.no_saved_card	Chưa lưu thẻ nào.
+cli.billing.no_saved_card_add_funds_hint	Chưa lưu thẻ nào — “Nạp tiền” sẽ hướng dẫn bạn thêm thẻ.
+cli.billing.no_saved_card_lower	chưa có thẻ đã lưu
+cli.billing.no_saved_card_manage_portal	Chưa có thẻ đã lưu — quản lý billing trên portal.
+cli.billing.no_saved_card_short	Chưa lưu thẻ nào
+cli.billing.not_logged_in	Chưa đăng nhập vào Nous Portal.
+cli.billing.one_time_setup	! Thiết lập một lần
+cli.billing.open_this_url	Mở URL này: {url}
+cli.billing.opening_browser_remote_spending	Đang mở trình duyệt của bạn để cho phép Remote Spending…
+cli.billing.org_line	Org: {org}
+cli.billing.org_line_role	Org: {org} · {role}
+cli.billing.pay_question	Thanh toán {amount}?
+cli.billing.payment_line	Thanh toán: {card}
+cli.billing.plan_free	Free
+cli.billing.plan_line	Gói: {plan}{renews}
+cli.billing.portal_card_will_be_charged	Thẻ bạn đã lưu trên portal sẽ được dùng để trừ tiền.
+cli.billing.portal_line	Portal: {url}
+cli.billing.presets	Mức gợi ý: {presets}
+cli.billing.refill_when_low_amounts	Tự nạp khi thấp — tự động nạp {reload_to} khi số dư của bạn xuống dưới {threshold}.
+cli.billing.refill_when_low_generic	Tự nạp khi thấp — tự động trừ tiền thẻ của bạn khi số dư xuống dưới mức bạn đặt.
+cli.billing.reload_must_exceed_threshold	🔴 Số tiền nạp lên phải lớn hơn ngưỡng.
+cli.billing.reload_to_label	Nạp số dư lên
+cli.billing.remote_spending_allowed	Remote Spending đã được phép.
+cli.billing.remote_spending_needs_approval	🔴 Remote Spending cần được phê duyệt — chạy /topup để cho phép, rồi thử lại.
+cli.billing.remote_spending_off_for_org	Remote spending đang tắt với org này.
+cli.billing.renews_suffix	 · gia hạn {date}
+cli.billing.resume_topup_detail	{amount} sẵn sàng hoàn tất — nhấn Enter để tiếp tục.
+cli.billing.resume_topup_title	Tiếp tục lượt nạp của bạn
+cli.billing.resuming_topup	Đang tiếp tục lượt nạp của bạn — xác nhận thanh toán…
+cli.billing.revoked_by_admin	Một admin đã dừng việc chi tiêu của terminal này.
+cli.billing.revoked_by_you	Bạn đã dừng việc chi tiêu của terminal này.
+cli.billing.revoked_reconnect	🔴 {who} Kết nối lại để khôi phục — chạy `hermes portal` để ủy quyền lại.
+cli.billing.run_interactive_to_configure	Chạy trong CLI tương tác để cấu hình tự động nạp lại.
+cli.billing.run_interactive_to_confirm	Chạy trong CLI tương tác để xác nhận một giao dịch mua.
+cli.billing.run_interactive_to_purchase	Chạy lệnh này trong CLI tương tác để hoàn tất một giao dịch mua.
+cli.billing.run_portal_then	Chạy `hermes portal` để đăng nhập, rồi {cmd}.
+cli.billing.session_logged_out	🔴 Session của bạn đã bị đăng xuất. Chạy `hermes portal` để đăng nhập lại.
+cli.billing.something_went_wrong	Đã xảy ra lỗi.
+cli.billing.stepup_stale	Remote Spending vẫn chưa được bật cho terminal này — việc ủy quyền chưa có hiệu lực. Thử lại, hoặc thực hiện thay đổi này trên portal.
+cli.billing.still_no_card	Vẫn chưa có thẻ nào — hoàn tất thêm thẻ trên portal, rồi kiểm tra lại.
+cli.billing.still_processing	🟡 Vẫn đang xử lý sau 5 phút — đây là timeout chứ không phải lỗi. Chờ ít phút rồi kiểm tra /billing hoặc portal.
+cli.billing.threshold_label	Khi số dư xuống dưới
+cli.billing.too_many_charges	🟡 Đang có quá nhiều giao dịch lúc này{mins}. Đây không phải lỗi thanh toán.
+cli.billing.topup_header	Nạp tiền · số dư {balance}
+cli.billing.topup_on_portal_to_continue	Nạp tiền và quản lý billing trên portal để tiếp tục.
+cli.billing.topup_title	Nạp tiền vào số dư của bạn
+cli.billing.total_line	Tổng: {amount}
+cli.billing.total_spendable	Tổng có thể chi tiêu: ${amount}
+cli.billing.try_again_in_min	 (thử lại sau ~{minutes} phút)
+cli.billing.turn_on_auto_reload_question	Bật tự động nạp lại?
+cli.billing.under_five	dưới $5
+cli.billing.usage_cta	Chạy /subscription để đổi gói · /topup để nạp thêm vào số dư
+cli.billing.used_this_month	đã dùng {spent} trên {limit} trong tháng này{ceiling}
+cli.billing.your_topup	lượt nạp của bạn
+cli.chat.attaching_images_natively	📎 đang đính kèm {count} ảnh trực tiếp (model hỗ trợ vision): {names}
+cli.chat.billing_cta_nous	Chạy [bold]/topup[/] để thêm credit, hoặc [bold]/subscription[/] để đổi gói.
+cli.chat.billing_cta_provider	Thêm credit qua {provider}
+cli.chat.billing_cta_switch	Hoặc đổi provider bằng [bold]/model <model> --provider <provider>[/].
+cli.chat.context_injection_refused	Đã từ chối context injection.
+cli.chat.context_refs	[@ context: {count} tham chiếu, {tokens} token]
+cli.chat.continuous_voice_stopped	Chế độ voice liên tục đã dừng do lỗi.
+cli.chat.delivering_leftover_steer	⏩ Gửi phần /steer còn lại thành lượt kế tiếp: '{preview}'
+cli.chat.initializing_agent	Đang khởi tạo agent...
+cli.chat.interrupted_marker	── [Đã ngắt — đang xử lý tin nhắn mới] ──
+cli.chat.iteration_budget_reached	⚠ Đã chạm hạn mức iteration ({used}/{max}) — phản hồi có thể chưa đầy đủ
+cli.chat.new_message_interrupting	⚡ Phát hiện tin nhắn mới, đang ngắt...
+cli.chat.out_of_credits_title	⚡ Hết credit
+cli.chat.reasoning_label	Suy luận
+cli.chat.reasoning_more_lines	... ({count} dòng nữa — dùng /reasoning full để hiển thị)
+cli.chat.sending_after_interrupt	⚡ Gửi sau khi ngắt: '{preview}'
+cli.chat.sending_after_interrupt_multi	⚡ Gửi {count} tin nhắn sau khi ngắt: '{preview}'
+cli.chat.skipped_unreadable_images	⚠ đã bỏ qua {count} đường dẫn ảnh không đọc được
+cli.chat.unknown_error	Lỗi không xác định
+cli.chat.your_provider	provider của bạn
+cli.clarify.bell_context	làm rõ
+cli.clarify.label	Làm rõ
+cli.clarify.timed_out_locked_answers	(làm rõ hết thời gian chờ sau {timeout}s — trả về các câu trả lời đã khóa)
+cli.command.ambiguous	Lệnh không rõ ràng: {command}
+cli.command.did_you_mean_many	Ý bạn là: {candidates}?
+cli.command.did_you_mean_one	Ý bạn là {suggestion}?
+cli.command.type_help	Gõ /help để xem danh sách đầy đủ.
+cli.command.unknown_nothing_sent	Lệnh không rõ {command} — không có gì được gửi.{hint}
+cli.commands.agents.agent_idle	Agent: nhàn rỗi
+cli.commands.agents.agent_running	Agent: đang chạy
+cli.commands.agents.background_delegations	Delegation chạy nền: {count} đang chạy
+cli.commands.agents.between_turns	giữa các lượt
+cli.commands.agents.child_line	└ child {index}: {api_calls} lệnh gọi api · {doing}
+cli.commands.agents.in_tool	trong {tool}
+cli.commands.agents.last_activity	 · hoạt động cuối {seconds}s trước
+cli.commands.agents.no_progress	 · không có tiến triển {seconds}s — đang ngắt
+cli.commands.agents.quiet	 · im lặng {seconds}s
+cli.commands.agents.recently_finished	Vừa hoàn thành: {count}
+cli.commands.agents.running_processes	Process đang chạy: {count}
+cli.commands.background.complete	✅ Task nền #{number} hoàn tất
+cli.commands.background.keep_chatting	Bạn có thể tiếp tục trò chuyện — kết quả sẽ hiển thị khi xong.
+cli.commands.background.label	Task nền #{number}
+cli.commands.background.no_credentials	(>_<) Không thể khởi động task nền: không có credentials hợp lệ.
+cli.commands.background.no_response	(Không có phản hồi được tạo)
+cli.commands.background.prompt	Prompt: "{preview}"
+cli.commands.background.started	🔄 Task nền #{number} đã bắt đầu: "{preview}"
+cli.commands.background.task_id	Task ID: {task_id}
+cli.commands.background.title_suffix	(nền #{number})
+cli.commands.background.usage	Cách dùng: /bg <prompt>\nVí dụ: /bg Tóm tắt các tin nóng trên HN hôm nay\n(Để hỏi nhanh về cuộc trò chuyện này, dùng /btw <question>.)\nTask chạy trong một session riêng và kết quả sẽ hiển thị tại đây khi xong.
+cli.commands.blueprint.failed	Lệnh cron blueprint thất bại: {error}
+cli.commands.branch.branch_session	Session nhánh:   {session_id}
+cli.commands.branch.branched_one	⑂ Đã tách session "{title}" ({count} tin nhắn người dùng)
+cli.commands.branch.branched_other	⑂ Đã tách session "{title}" ({count} tin nhắn người dùng)
+cli.commands.branch.original_session	Session gốc: {session_id}
+cli.commands.browser.already_default	Browser chưa kết nối tới browser họ Chromium đang chạy (đang dùng chế độ mặc định)
+cli.commands.browser.already_listening	✓ Browser họ Chromium đang lắng nghe tại {url} rồi
+cli.commands.browser.binary	Binary: {path}
+cli.commands.browser.binary_not_found	⚠ Không tìm thấy binary lightpanda — {hint}
+cli.commands.browser.connected	🌐 Browser đã kết nối tới browser họ Chromium đang chạy qua CDP
+cli.commands.browser.disconnected	🌐 Browser đã ngắt kết nối khỏi browser họ Chromium đang chạy
+cli.commands.browser.endpoint	Endpoint: {url}
+cli.commands.browser.engine_lightpanda	Engine: Lightpanda — {reason} (không hỗ trợ chụp màn hình)
+cli.commands.browser.engine_not_in_use	⚠ browser.engine là 'lightpanda' nhưng KHÔNG đang được dùng: {reason}
+cli.commands.browser.invalid_port	⚠ Port không hợp lệ trong browser url: {url}
+cli.commands.browser.launch_failed	⚠ Không thể tự khởi động browser họ Chromium
+cli.commands.browser.launch_manually	Hãy tự khởi động browser họ Chromium:
+cli.commands.browser.launched	✓ Đã khởi động browser họ Chromium và đang lắng nghe trên port {port}
+cli.commands.browser.launching	Browser họ Chromium chưa chạy với remote debugging — đang thử khởi động...
+cli.commands.browser.missing_host	⚠ Thiếu host trong browser url: {url}
+cli.commands.browser.no_executable	Không tìm thấy executable browser họ Chromium được hỗ trợ trong môi trường này
+cli.commands.browser.not_connected	Browser chưa kết nối — hãy khởi động browser họ Chromium với remote debugging rồi thử lại /browser connect
+cli.commands.browser.not_responding	⚠ Browser đã khởi động nhưng port {port} vẫn chưa phản hồi
+cli.commands.browser.port_occupied	⚠ Port {port} đang bị một ứng dụng khác không phải browser CDP chiếm
+cli.commands.browser.port_occupied_detail	(có thể một IDE debugger hoặc dev server đang dùng) — chuyển sang khởi động trên port {launch_port}...
+cli.commands.browser.port_unreachable	⚠ Không thể truy cập port {port} tại {url}
+cli.commands.browser.reverted	Browser tool đã trở về chế độ mặc định (local headless hoặc provider cloud)
+cli.commands.browser.scheme_missing	(thiếu)
+cli.commands.browser.session_reset	Đã reset session. Cấu hình tool mới đã có hiệu lực.
+cli.commands.browser.status_auto	🌐 Browser: Chromium headless cục bộ (agent-browser)
+cli.commands.browser.status_browser_use	🌐 Browser: chế độ Browser Use (browser_exec qua Browser Use CLI 3.0)
+cli.commands.browser.status_browser_use_note	Chrome cục bộ qua CDP, hoặc browser cloud của Browser Use
+cli.commands.browser.status_chrome	🌐 Browser: Chromium headless cục bộ (agent-browser --engine chrome)
+cli.commands.browser.status_cloud	🌐 Browser: {provider} (cloud)
+cli.commands.browser.status_connect_hint	/browser connect      — kết nối tới browser họ Chromium đang chạy của bạn
+cli.commands.browser.status_connected	🌐 Browser: đã kết nối tới browser họ Chromium đang chạy qua CDP
+cli.commands.browser.status_disconnect_hint	/browser disconnect   — trở về mặc định
+cli.commands.browser.status_lightpanda	🌐 Browser: Lightpanda cục bộ (agent-browser --engine lightpanda)
+cli.commands.browser.status_lightpanda_fallback	Tự động fallback sang Chromium cho chụp màn hình và các lệnh thất bại
+cli.commands.browser.status_lightpanda_note	⚡ Lightpanda: điều hướng nhanh hơn, không hỗ trợ chụp màn hình
+cli.commands.browser.status_reachable	Trạng thái: ✓ kết nối được
+cli.commands.browser.status_unreachable	Trạng thái: ⚠ không kết nối được (browser có thể chưa chạy)
+cli.commands.browser.status_use_off_hint	/browser use off      — trở về browser tool tích hợp sẵn
+cli.commands.browser.try_again	Thử lại sau vài giây — instance debug có thể vẫn đang khởi động
+cli.commands.browser.unsupported_scheme	⚠ Browser url scheme không được hỗ trợ: {scheme} (chấp nhận một trong: http, https, ws, wss)
+cli.commands.browser.usage	Cách dùng: /browser connect|disconnect|status|use
+cli.commands.browser.usage_connect	connect      Kết nối browser tool tới session browser họ Chromium đang chạy của bạn
+cli.commands.browser.usage_disconnect	disconnect   Trở về browser backend mặc định
+cli.commands.browser.usage_status	status       Hiển thị chế độ browser hiện tại
+cli.commands.browser.usage_use	use [off]    Chuyển sang chế độ Browser Use (CLI 3.0) / quay về tool tích hợp sẵn
+cli.commands.browser.use_disabled	🌐 Đã tắt chế độ Browser Use — khôi phục browser tool tích hợp sẵn
+cli.commands.browser.use_enabled	🌐 Đã bật chế độ Browser Use — browser_exec qua Browser Use CLI 3.0
+cli.commands.browser.use_off_hint	/browser use off   — trở về browser tool tích hợp sẵn
+cli.commands.browser.use_on_hint	/browser use       — chuyển sang chế độ Browser Use (browser_exec qua CLI 3.0)
+cli.commands.browser.use_usage	Cách dùng: /browser use [off]
+cli.commands.btw.header	💬 /btw: "{preview}"
+cli.commands.btw.no_answer	(Không có câu trả lời được tạo)
+cli.commands.btw.no_credentials	(>_<) Không thể trả lời câu hỏi ngoài lề: không có credentials hợp lệ.
+cli.commands.btw.title_suffix	(btw)
+cli.commands.btw.usage	Cách dùng: /btw <question>\nVí dụ: /btw lỗi đó nằm ở file nào?\nTrả lời nhanh một câu hỏi về cuộc trò chuyện này mà không làm gián đoạn nó.\n(Để chạy task nền độc lập, dùng /bg <prompt>.)
+cli.commands.bundles.create_hint	Tạo bằng: hermes bundles create <name> --skill <s1> --skill <s2>
+cli.commands.bundles.default_desc	Tải {count} skill
+cli.commands.bundles.directory	Thư mục: {dir}
+cli.commands.bundles.installed_count	({count} đã cài):
+cli.commands.bundles.invoke_hint	Gọi bundle bằng /<slug>. Quản lý bằng `hermes bundles`.
+cli.commands.bundles.none_installed	Chưa cài bundle skill nào.
+cli.commands.bundles.skills_count	({count} skill)
+cli.commands.bundles.title	Skill Bundles
+cli.commands.bundles.unavailable	Hệ thống con bundle không khả dụng: {error}
+cli.commands.busy.enter_while_busy	Enter khi đang bận: {behavior}
+cli.commands.busy.label	Chế độ nhập khi bận
+cli.commands.busy.long_interrupt	Enter sẽ chuyển hướng lượt chạy hiện tại khi Hermes đang bận; /stop vẫn hủy nó.
+cli.commands.busy.long_queue	Enter sẽ xếp hàng đầu vào tiếp theo khi Hermes đang bận.
+cli.commands.busy.long_steer	Enter sẽ đưa tin nhắn của bạn vào lượt chạy hiện tại (sau lệnh gọi tool kế tiếp).
+cli.commands.busy.short_interrupt	chuyển hướng lượt chạy hiện tại ngay lập tức
+cli.commands.busy.short_queue	xếp hàng cho lượt kế tiếp
+cli.commands.busy.short_steer	đưa vào lượt chạy hiện tại (sau lệnh gọi tool kế tiếp)
+cli.commands.busy.status	Chế độ nhập khi bận: {mode}
+cli.commands.busy.usage	Cách dùng: /busy [queue|steer|interrupt|status]
+cli.commands.copy.copied	Đã copy phản hồi của assistant #{index} vào clipboard
+cli.commands.copy.copied_osc52	Đã copy phản hồi của assistant #{index} qua OSC 52 (cần terminal hỗ trợ)
+cli.commands.copy.failed	Copy vào clipboard thất bại: {error}
+cli.commands.copy.invalid_number	Số phản hồi không hợp lệ. Dùng 1-{max}.
+cli.commands.copy.nothing_in_response	Không có gì để copy trong phản hồi assistant đó.
+cli.commands.copy.nothing_in_responses	Chưa có gì để copy trong các phản hồi assistant.
+cli.commands.copy.nothing_yet	Chưa có gì để copy.
+cli.commands.copy.usage	Cách dùng: /copy [number]
+cli.commands.cron.available	Khả dụng: list, add, edit, pause, resume, run, remove
+cli.commands.cron.create_failed	(x_x) Tạo job thất bại: {error}
+cli.commands.cron.created	(^_^)b Đã tạo job: {job_id}
+cli.commands.cron.current_jobs	Job hiện tại:
+cli.commands.cron.did_not_run	(x_x) Không chạy job: {name} ({job_id})\n  {reason}
+cli.commands.cron.id	ID: {job_id}
+cli.commands.cron.job_not_found	(._.) Không tìm thấy job: {job_id}
+cli.commands.cron.last_run	Lần chạy cuối: {when} ({status})
+cli.commands.cron.list_header	Job đã lên lịch:
+cli.commands.cron.name	Tên: {name}
+cli.commands.cron.need_prompt_or_skill	(._.) Hãy cung cấp prompt hoặc ít nhất một skill
+cli.commands.cron.next_run	Lần chạy kế: {value}
+cli.commands.cron.next_run_na	Lần chạy kế: N/A
+cli.commands.cron.next_short	Kế tiếp
+cli.commands.cron.no_jobs	(._.) Không có job nào đã lên lịch.
+cli.commands.cron.no_jobs_hint	Không có job nào đã lên lịch. Dùng '/cron add' để tạo.
+cli.commands.cron.overview_commands	Lệnh:
+cli.commands.cron.overview_title	(^_^) Task đã lên lịch
+cli.commands.cron.overview_usage	/cron list\n/cron add "every 2h" "Kiểm tra trạng thái server" [--skill blogwatcher]\n/cron edit <job_id> --schedule "every 4h" --prompt "Task mới"\n/cron edit <job_id> --skill blogwatcher --skill maps\n/cron edit <job_id> --remove-skill blogwatcher\n/cron edit <job_id> --clear-skills\n/cron pause <job_id>\n/cron resume <job_id>\n/cron run <job_id>\n/cron remove <job_id>
+cli.commands.cron.pause_failed	(x_x) Tạm dừng job thất bại: {error}
+cli.commands.cron.paused	(^_^)b Đã tạm dừng job: {name} ({job_id})
+cli.commands.cron.prompt	Prompt: {prompt}
+cli.commands.cron.remove_failed	(x_x) Xóa job thất bại: {error}
+cli.commands.cron.removed	(^_^)b Đã xóa job: {name} ({job_id})
+cli.commands.cron.repeat_must_be_integer	(._.) --repeat phải là số nguyên
+cli.commands.cron.resume_failed	(x_x) Tiếp tục job thất bại: {error}
+cli.commands.cron.resumed	(^_^)b Đã tiếp tục job: {name} ({job_id})
+cli.commands.cron.run_failed	(x_x) Chạy job thất bại: {error}
+cli.commands.cron.schedule	Lịch: {schedule}
+cli.commands.cron.schedule_repeat	Lịch: {schedule} ({repeat})
+cli.commands.cron.skills	Skill: {skills}
+cli.commands.cron.skills_none	Skill: không có
+cli.commands.cron.state	Trạng thái: {state}
+cli.commands.cron.status_delivery_failed	delivery_failed: {error}
+cli.commands.cron.status_error	lỗi: {error}
+cli.commands.cron.triggered	(^_^)b Đã kích hoạt job: {name} ({job_id})
+cli.commands.cron.unknown_command	(._.) Lệnh cron không rõ: {subcommand}
+cli.commands.cron.update_failed	(x_x) Cập nhật job thất bại: {error}
+cli.commands.cron.updated	(^_^)b Đã cập nhật job: {job_id}
+cli.commands.cron.usage_action	(._.) Cách dùng: /cron {subcommand} <job_id>
+cli.commands.cron.usage_add	(._.) Cách dùng: /cron add <schedule> <prompt>
+cli.commands.cron.usage_edit	(._.) Cách dùng: /cron edit <job_id> [--schedule ...] [--prompt ...] [--skill ...]
+cli.commands.curator.failed	(._.) curator: {error}
+cli.commands.diff.and_more	... và {count} nữa
+cli.commands.diff.label_all	Tất cả (so với HEAD)
+cli.commands.diff.label_staged	Staged
+cli.commands.diff.label_working	Unstaged
+cli.commands.diff.more_lines	... ({count} dòng nữa — {hint})
+cli.commands.diff.no_session_changes	Không có thay đổi — Hermes chưa sửa file nào ở đây.
+cli.commands.diff.not_enabled	Checkpoints chưa được bật nên chưa có baseline session.\nBật bằng: hermes --checkpoints\nHoặc trong config.yaml: checkpoints: { enabled: true }\n(/diff thường vẫn chạy — nó dùng git trực tiếp.)
+cli.commands.diff.stat_hint	chạy /diff --stat để xem tóm tắt
+cli.commands.diff.stat_hint_session	chạy /diff session --stat để xem tóm tắt
+cli.commands.diff.untracked	Chưa theo dõi:
+cli.commands.export.exported	✓ Đã export '{name}' tới {path}
+cli.commands.export.share_hint	Chia sẻ: người kia chạy /import hoặc `hermes profile import <archive>`.
+cli.commands.export.usage	Cách dùng: /export [profile] [-o output.tar.gz]
+cli.commands.fast.feature_anthropic	Anthropic Fast Mode
+cli.commands.fast.feature_generic	Chế độ nhanh
+cli.commands.fast.feature_openai	Priority Processing
+cli.commands.fast.feature_ultrafast	OpenAI Ultrafast
+cli.commands.fast.not_supported	(._.) /fast chỉ khả dụng với model hỗ trợ fast mode (OpenAI Priority Processing hoặc Anthropic Fast Mode).
+cli.commands.fast.set_to	✓ Đã đặt {feature} thành {value} {scope}
+cli.commands.fast.status	{feature}: {status}
+cli.commands.fast.ultrafast_not_supported	(._.) Ultrafast chỉ khả dụng cho GPT-6 Astra (model hiện tại: {model}).
+cli.commands.fast.usage	Cách dùng: /fast [normal|fast|auto|cold|ultrafast|status] [--global]
+cli.commands.focus.usage	Cách dùng: /focus [on|off|status]
+cli.commands.footer.fields	Các trường: {fields}
+cli.commands.footer.label	Footer runtime
+cli.commands.footer.usage	/footer [on|off|status]
+cli.commands.goal.continuing	Tiếp tục ngay — đang thực hiện bước kế tiếp.
+cli.commands.goal.label	Mục tiêu
+cli.commands.goal.send_to_kick	Gửi bất kỳ tin nhắn nào để bắt đầu bước kế tiếp.
+cli.commands.handoff.already_in_flight	Session đang trong quá trình handoff. Hãy đợi nó ổn định rồi thử lại.
+cli.commands.handoff.check_platform	Kiểm tra {platform} — session có thể vẫn sẽ tới đó.
+cli.commands.handoff.complete	↻ Handoff hoàn tất. Session hiện đang hoạt động trên {platform}.
+cli.commands.handoff.config_load_failed	Không thể tải cấu hình gateway: {error}
+cli.commands.handoff.failed	Handoff thất bại: {error}
+cli.commands.handoff.no_home_channel	Chưa cấu hình home channel cho {platform}.
+cli.commands.handoff.no_longer_waiting	CLI này không còn chờ nữa. Đừng tiếp tục session này tại đây;
+cli.commands.handoff.picked_up	Gateway đã nhận; đang chuyển giao...
+cli.commands.handoff.platform_not_enabled	Platform '{platform}' chưa được cấu hình/bật trong gateway.
+cli.commands.handoff.queued	Đã xếp hàng handoff '{title}' → {platform} (home: {home}).
+cli.commands.handoff.resume_hint	Resume lại trên CLI này sau bằng: /resume {title}
+cli.commands.handoff.retry_when_settled	nếu không có gì tới, hãy thử lại /handoff khi trạng thái ổn định.
+cli.commands.handoff.session_intact	Session CLI của bạn vẫn nguyên vẹn.
+cli.commands.handoff.session_intact_retry	Session CLI của bạn vẫn nguyên vẹn. Thử lại /handoff, hoặc /resume thủ công trên platform.
+cli.commands.handoff.session_row_failed	Không thể đảm bảo dòng session trong state.db: {error}
+cli.commands.handoff.set_home_hint	Hãy đặt trước bằng /sethome trên chat đích.
+cli.commands.handoff.still_transferring	Vẫn đang chuyển giao (agent đang phát lại session của bạn trên đích)...
+cli.commands.handoff.taking_long	Gateway đang mất lâu bất thường để hoàn tất việc chuyển giao.
+cli.commands.handoff.timed_out	Hết thời gian chờ gateway. `hermes gateway` có đang chạy không?
+cli.commands.handoff.unknown_error	lỗi không xác định
+cli.commands.handoff.unknown_platform	Platform không rõ: '{platform}'.
+cli.commands.handoff.usage	Cách dùng: /handoff <platform>
+cli.commands.handoff.usage_detail_1	Chuyển session hiện tại sang home channel của platform đó.
+cli.commands.handoff.usage_detail_2	Session CLI kết thúc tại đây; resume lại sau bằng /resume.
+cli.commands.handoff.waiting	Đang chờ gateway nhận...
+cli.commands.hatch.base_failed	(x_x) Không thể tạo ngoại hình cơ sở: {error}
+cli.commands.hatch.default_name	Thú cưng
+cli.commands.hatch.describe_prompt	(o_o) Mô tả thú cưng của bạn: 
+cli.commands.hatch.designing	(o_o) Đang thiết kế '{concept}'… (một phút gọi image-model)
+cli.commands.hatch.failed	(x_x) Hatch thất bại: {error}
+cli.commands.hatch.hatched	(^_^)b {name} đã nở và được nhận nuôi — nó sẽ xuất hiện ngay sau đây!
+cli.commands.hatch.no_base_draft	(x_x) Không nhận được bản nháp cơ sở — thử lại.
+cli.commands.hatch.progress_compose	┊ đang ghép spritesheet…
+cli.commands.hatch.progress_drawing	┊ đang vẽ {state}…
+cli.commands.hatch.progress_save	┊ đang lưu…
+cli.commands.hatch.usage	(o_o) Cách dùng: /hatch <description>  (vd: /hatch một chú cáo cyber tí hon)
+cli.commands.heartbeat.cleared	✓ Đã xóa heartbeat.
+cli.commands.heartbeat.interval_too_small	Khoảng thời gian quá nhỏ — tối thiểu là {min_seconds}s.
+cli.commands.heartbeat.invalid_label	Heartbeat không hợp lệ
+cli.commands.heartbeat.label	Heartbeats
+cli.commands.heartbeat.none_set	Chưa đặt heartbeat nào.
+cli.commands.heartbeat.none_to_resume	Không có heartbeat để tiếp tục.
+cli.commands.heartbeat.paused	⏸ Đã tạm dừng heartbeat: {prompt}
+cli.commands.heartbeat.prompt_required	Cách dùng: /heartbeat every <interval> <prompt> — bắt buộc phải có prompt.
+cli.commands.heartbeat.resumed	▶ Đã tiếp tục heartbeat (mỗi {interval}): {prompt}
+cli.commands.heartbeat.set	♥ Đã đặt heartbeat (mỗi {interval}): {prompt}
+cli.commands.heartbeat.set_note	Kích hoạt như một lượt bình thường khi session rảnh và đã hết khoảng thời gian. Dùng /heartbeat pause | resume | clear để quản lý; chỉ tồn tại khi process Hermes này đang chạy — dùng `hermes cron` cho lịch bền vững.
+cli.commands.heartbeat.usage	Cách dùng: /heartbeat every <interval> <prompt>   (vd: /heartbeat every 10m Kiểm tra CI)
+cli.commands.heartbeat.usage_also	Ngoài ra: /heartbeat status | pause | resume | clear
+cli.commands.image.attached	📎 Đã đính kèm ảnh: {name}
+cli.commands.image.not_found	(>_<) Không tìm thấy file: {path}
+cli.commands.image.now_type_prompt	Giờ hãy gõ prompt của bạn (hoặc dùng --image ở chế độ single-query): {text}
+cli.commands.image.unsupported	(._.) Không phải file ảnh được hỗ trợ: {name}
+cli.commands.image.usage	Cách dùng: /image <path>  vd: /image {example}
+cli.commands.import.imported	✓ Đã import profile '{name}' tại {path}
+cli.commands.import.usage	Cách dùng: /import <archive.tar.gz> [--name <name>]
+cli.commands.import.use_it	Dùng nó: hermes -p {name}
+cli.commands.import.wrapper_created	Đã tạo wrapper: {path}
+cli.commands.indicator.label	Kiểu chỉ báo bận
+cli.commands.indicator.note	TUI sẽ nhận kiểu mới ở lần render kế tiếp.
+cli.commands.indicator.status	Kiểu chỉ báo bận: {style}
+cli.commands.indicator.unknown_style	(._.) Kiểu chỉ báo không rõ: {arg}
+cli.commands.indicator.usage	Cách dùng: /indicator [{styles}]
+cli.commands.init.generating	⚡ Đang tạo AGENTS.md từ lần quét project...
+cli.commands.init.updating	⚡ Đang cập nhật AGENTS.md từ lần quét project...
+cli.commands.journey.failed	/journey thất bại: {error}
+cli.commands.kanban.failed	(._.) lỗi kanban: {error}
+cli.commands.learn.from_conversation	⚡ Đang học một skill từ cuộc trò chuyện này...
+cli.commands.learn.from_description	⚡ Đang học một skill từ mô tả của bạn...
+cli.commands.login.label	Đăng nhập
+cli.commands.login.no_result	(Không có kết quả)
+cli.commands.login.title_suffix	(đăng nhập)
+cli.commands.loop.goal_defers_note	Lưu ý: một /goal đang hoạt động đang điều khiển session này — các lần loop thức dậy sẽ bị hoãn cho đến khi goal kết thúc, tạm dừng hoặc park.
+cli.commands.loop.label	Loops
+cli.commands.memory.unknown_subcommand	Subcommand /memory không rõ. Dùng: pending, approve <id>, reject <id>, approval <on|off>.
+cli.commands.paste.attached	📎 Đã đính kèm ảnh #{index} từ clipboard
+cli.commands.paste.extract_failed	(>_<) Clipboard có ảnh nhưng trích xuất thất bại
+cli.commands.paste.no_image	(._.) Không tìm thấy ảnh trong clipboard
+cli.commands.personality.available	Khả dụng: none, {available}
+cli.commands.personality.cleared	{face} Đã xóa personality {scope}
+cli.commands.personality.cleared_note	Không có overlay personality — dùng hành vi agent gốc.
+cli.commands.personality.none_option	(không có overlay personality)
+cli.commands.personality.scope_saved	(đã lưu vào config)
+cli.commands.personality.scope_session	(chỉ session này)
+cli.commands.personality.set_to	{face} Đã đặt personality thành '{name}' {scope}
+cli.commands.personality.title	(^o^)/ Personalities
+cli.commands.personality.unknown	(._.) Personality không rõ: {name}
+cli.commands.personality.usage	Cách dùng: /personality <name>   (* = đang hoạt động)
+cli.commands.pet.adopt_failed	(x_x) Không thể nhận nuôi '{name}': {error}
+cli.commands.pet.error	(x_x) {error}
+cli.commands.pet.fetching	(o_o) Đang lấy '{name}' từ petdex…
+cli.commands.pet.is_out	(^_^)b {name} đã ra — nó sẽ xuất hiện ngay sau đây.
+cli.commands.pet.put_away	(-_-)zzZ Đã cất thú cưng.
+cli.commands.pet.put_away_named	(-_-)zzZ Đã cất {name}.
+cli.commands.pet.scale_set	(^_^) Scale thú cưng → {scale}.
+cli.commands.pet.usage_scale	(o_o) Cách dùng: /pet scale <factor>  (vd: /pet scale 0.5)
+cli.commands.plan.from_conversation	📋 Đang lập kế hoạch từ ngữ cảnh của cuộc trò chuyện này...
+cli.commands.plan.planning	📋 Đang lập kế hoạch: {task}
+cli.commands.profile.home	Home:    {home}
+cli.commands.profile.profile	Profile: {profile}
+cli.commands.prompt_compose.editor_failed	(>_<) Không thể mở editor: {error}
+cli.commands.prompt_compose.editor_header	#! Soạn prompt của bạn bên dưới. Các dòng bắt đầu bằng '#!' sẽ bị bỏ qua.\n#! Lưu và thoát để gửi; để trống để hủy.
+cli.commands.prompt_compose.empty	(._.) Prompt trống — không gửi gì.
+cli.commands.reasoning.display_line	Hiển thị suy luận: {display} ({full})
+cli.commands.reasoning.display_off	tắt
+cli.commands.reasoning.display_off_note	Lưu ý: hiển thị suy luận đang TẮT — chạy /reasoning show để xem.
+cli.commands.reasoning.display_on	bật ✓
+cli.commands.reasoning.display_saved	✓ Hiển thị suy luận: {headline} (đã lưu)
+cli.commands.reasoning.effort_line	Mức suy luận:  {level}
+cli.commands.reasoning.effort_set	✓ Đã đặt mức suy luận thành '{effort}' {scope}
+cli.commands.reasoning.full_state_clamped	giới hạn còn 10 dòng
+cli.commands.reasoning.full_state_full	đầy đủ
+cli.commands.reasoning.headline_clamped	GIỚI HẠN còn 10 dòng
+cli.commands.reasoning.headline_full	ĐẦY ĐỦ
+cli.commands.reasoning.headline_off	TẮT
+cli.commands.reasoning.headline_on	BẬT
+cli.commands.reasoning.note_full	Khung tóm tắt sau phản hồi sẽ in toàn bộ phần suy nghĩ.
+cli.commands.reasoning.note_show	Phần suy nghĩ của model sẽ được hiển thị trong và sau mỗi phản hồi.
+cli.commands.reasoning.usage	Cách dùng: /reasoning <none|minimal|low|medium|high|xhigh|max|ultra|show|hide|full|clamp> [--global]
+cli.commands.reasoning.valid_display	Hiển thị:      show, hide
+cli.commands.reasoning.valid_levels	Mức hợp lệ: none, minimal, low, medium, high, xhigh, max, ultra
+cli.commands.reasoning.valid_scope	Phạm vi:        mặc định theo session, dùng --global để lưu lại
+cli.commands.refine.empty	Chưa có gì để refine — cuộc trò chuyện đang trống.
+cli.commands.refine.failed	/refine không khởi động được: {error}
+cli.commands.refine.focus_suffix	 (trọng tâm: {focus})
+cli.commands.refine.nothing_yet	Chưa có gì để refine — gửi tin nhắn trước.
+cli.commands.refine.started	⚗ Đang xem lại cuộc trò chuyện này trong nền{focus} — mọi cập nhật memory/skill sẽ được báo khi xong.
+cli.commands.resume.already_on	Đang ở session đó rồi.
+cli.commands.resume.compressed_redirect	Session {session_id} đã được nén thành {resolved_id}; đang resume session kế thừa cùng transcript của bạn.
+cli.commands.resume.not_found	Không tìm thấy session: {target}
+cli.commands.resume.not_found_hint	Dùng /sessions hoặc `hermes sessions list` để xem các session khả dụng.
+cli.commands.resume.resumed_empty	↻ Đã resume session {session_id}{title} — không có tin nhắn, bắt đầu mới.
+cli.commands.resume.resumed_one	↻ Đã resume session {session_id}{title} ({count} tin nhắn người dùng, tổng {total})
+cli.commands.resume.resumed_other	↻ Đã resume session {session_id}{title} ({count} tin nhắn người dùng, tổng {total})
+cli.commands.resume.tip_find_sessions	Mẹo:   Dùng /history hoặc `hermes sessions list` để tìm session.
+cli.commands.resume.usage	Cách dùng: /resume <number|session_id_or_title>
+cli.commands.review.failed	/review không khởi động được: {error}
+cli.commands.review.nothing_yet	Chưa có gì để review — gửi tin nhắn trước.
+cli.commands.rollback.all_directories	tất cả thư mục
+cli.commands.rollback.chat_turn_undone	Đã hoàn tác lượt chat để khớp trạng thái file sau khôi phục.
+cli.commands.rollback.more_lines	... ({count} dòng nữa, đang hiển thị 80 dòng đầu)
+cli.commands.rollback.no_changes_since	Không có thay đổi nào kể từ checkpoint này.
+cli.commands.rollback.none_here_showing_all	Không có checkpoint cho {cwd} — đang hiển thị tất cả thư mục.
+cli.commands.rollback.not_enabled	Checkpoints chưa được bật.\nBật bằng: hermes --checkpoints\nHoặc trong config.yaml: checkpoints: { enabled: true }
+cli.commands.rollback.restored_all	✅ Đã khôi phục tới checkpoint {hash}: {reason}
+cli.commands.rollback.restored_file	✅ Đã khôi phục {file} từ checkpoint {hash}: {reason}
+cli.commands.rollback.snapshot_saved	Một snapshot trước khi rollback đã được lưu tự động.
+cli.commands.rollback.usage_diff	Cách dùng: /rollback diff <N>
+cli.commands.sessions.none_yet	(._.) Chưa có session nào trước đó.
+cli.commands.shared.agent_busy	Agent đang bận. Đợi lượt hiện tại xong rồi thử lại {command}.
+cli.commands.shared.could_not_generate_diff	Không thể tạo diff
+cli.commands.shared.error	Lỗi: {error}
+cli.commands.shared.more_suffix	 (+{count} nữa)
+cli.commands.shared.needs_active_session	{command} cần một chat session đang hoạt động để chạy.
+cli.commands.shared.no_active_agent_session	Không có agent session nào đang hoạt động.
+cli.commands.shared.scope_save_failed	(chỉ session này; lưu config thất bại)
+cli.commands.shared.scope_saved	(đã lưu vào config)
+cli.commands.shared.scope_session	(chỉ session này — dùng --global để lưu lại)
+cli.commands.shared.set_saved	✓ Đã đặt {label} thành '{value}' (đã lưu vào config)
+cli.commands.shared.set_session_only	✓ Đã đặt {label} thành '{value}' (chỉ session này)
+cli.commands.shared.state_off	TẮT
+cli.commands.shared.state_on	BẬT
+cli.commands.shared.unavailable_no_session	{label} không khả dụng (không có session đang hoạt động).
+cli.commands.shared.unknown_argument	(._.) Đối số không rõ: {arg}
+cli.commands.shared.usage	Cách dùng: {usage}
+cli.commands.side_result.complete	{label} hoàn tất
+cli.commands.side_result.failed	❌ {label} thất bại: {error}
+cli.commands.skin.available	Khả dụng: {names}
+cli.commands.skin.available_header	Skin khả dụng:
+cli.commands.skin.banner_note	Lưu ý: màu banner sẽ cập nhật ở lần khởi động session kế tiếp.
+cli.commands.skin.colors_updated	Đã cập nhật màu prompt + TUI.
+cli.commands.skin.current	Skin hiện tại: {name}
+cli.commands.skin.custom_hint	Skin tùy chỉnh: thả file YAML vào {dir}/skins/
+cli.commands.skin.saved_suffix	 (đã lưu)
+cli.commands.skin.set_to	Đã đặt skin thành: {name}{saved}
+cli.commands.skin.unavailable	Skin engine không khả dụng.
+cli.commands.skin.unknown	Skin không rõ: {name}
+cli.commands.skin.usage	Cách dùng: /skin <name>
+cli.commands.snapshot.col_files	Tệp
+cli.commands.snapshot.col_id	ID
+cli.commands.snapshot.col_label	Nhãn
+cli.commands.snapshot.col_num	#
+cli.commands.snapshot.col_size	Kích thước
+cli.commands.snapshot.create_hint	Tạo mới: /snapshot create [label]
+cli.commands.snapshot.created	Đã tạo snapshot: {snapshot_id}
+cli.commands.snapshot.invalid_number	Số snapshot không hợp lệ. Dùng 1-{max}.
+cli.commands.snapshot.list_header	Snapshot trạng thái ({dir}/state-snapshots/):
+cli.commands.snapshot.most_recent	Mới nhất: {snapshot_id}
+cli.commands.snapshot.none_yet	Chưa có snapshot trạng thái nào.
+cli.commands.snapshot.not_found	Không tìm thấy snapshot: {snapshot_id}
+cli.commands.snapshot.nothing_to_snapshot	Không tìm thấy file trạng thái nào để snapshot.
+cli.commands.snapshot.pruned	Đã dọn {deleted} snapshot cũ (giữ lại {keep}).
+cli.commands.snapshot.restart_recommended	Nên restart các process gateway/dashboard để nhận thay đổi state.db.
+cli.commands.snapshot.restored	Đã khôi phục trạng thái từ: {snapshot_id}
+cli.commands.snapshot.unknown_subcommand	Subcommand không rõ: {subcommand}
+cli.commands.snapshot.usage	Cách dùng: /snapshot [list|create [label]|restore <id>|prune [N]]
+cli.commands.snapshot.usage_prune	Cách dùng: /snapshot prune [keep-count]
+cli.commands.snapshot.usage_restore	Cách dùng: /snapshot restore <snapshot-id>
+cli.commands.stop.interrupted_delegations	✅ Đã ngắt {count} delegation chạy nền.
+cli.commands.stop.none_running	Không có process nền nào đang chạy.
+cli.commands.stop.stopped	✅ Đã dừng {count} process.
+cli.commands.stop.stopping	Đang dừng {count} process nền...
+cli.commands.subgoal.added	✓ Đã thêm subgoal {index}: {text}
+cli.commands.subgoal.cleared_one	✓ Đã xóa {count} subgoal.
+cli.commands.subgoal.cleared_other	✓ Đã xóa {count} subgoal.
+cli.commands.subgoal.no_goal	Không có goal nào đang hoạt động. Đặt một goal bằng /goal <text>.
+cli.commands.subgoal.none_to_clear	Không có subgoal nào để xóa.
+cli.commands.subgoal.remove_needs_int	/subgoal remove: <n> phải là số nguyên (chỉ số bắt đầu từ 1).
+cli.commands.subgoal.removed	✓ Đã xóa subgoal {index}: {text}
+cli.commands.subgoal.usage_remove	Cách dùng: /subgoal remove <n>
+cli.commands.suggestions.failed	Lệnh suggestions thất bại: {error}
+cli.commands.timestamps.label	Dấu thời gian tin nhắn
+cli.commands.timestamps.usage	/timestamps [on|off|status]
+cli.commands.toggle.save_failed	Không lưu được thiết lập {setting} vào config.yaml
+cli.commands.tools.disabling	Đang tắt {names}...
+cli.commands.tools.enabling	Đang bật {names}...
+cli.commands.tools.example_mcp	Tool MCP:          /tools {subcommand} github:create_issue
+cli.commands.tools.example_toolset	Toolset tích hợp:  /tools {subcommand} web
+cli.commands.tools.session_reset	Đã reset session. Cấu hình tool mới đã có hiệu lực.
+cli.commands.tools.usage	(._.) Cách dùng: /tools {subcommand} <name> [name ...]
+cli.commands.update.cancelled	🟡 Đã hủy /update.
+cli.commands.update.choice_cancel	Hủy
+cli.commands.update.choice_cancel_desc	giữ session hiện tại
+cli.commands.update.choice_update	Cập nhật ngay
+cli.commands.update.choice_update_desc	thoát session hiện tại và cập nhật Hermes Agent
+cli.commands.update.detail	Thao tác này sẽ thoát session hiện tại và chạy `hermes update`.
+cli.commands.update.launching	☤ Đang khởi chạy cập nhật...
+cli.commands.update.managed_action	cập nhật Hermes Agent
+cli.commands.update.title	☤  Cập nhật Hermes Agent
+cli.commands.voice.unknown_subcommand	Subcommand voice không rõ: {subcommand}
+cli.commands.voice.usage	Cách dùng: /voice [on|off|tts|status]
+cli.commands.wake.disabled_in_config	Wake word bị tắt trong config (wake_word.enabled: false).
+cli.commands.wake.enabled_in_config	Wake word được bật trong config (wake_word.enabled: true).
+cli.commands.wake.unknown_subcommand	Subcommand wake không rõ: {subcommand}
+cli.commands.wake.usage	Cách dùng: /wake [on|off|status]
+cli.commands.worktree.actions_done	Đã thực hiện xong {count} action.
+cli.commands.worktree.actions_planned	Đã lên kế hoạch {count} action.
+cli.commands.worktree.active	Worktree đang hoạt động: {path}
+cli.commands.worktree.branch	Branch: {branch}
+cli.commands.worktree.enter_failed	⚠ Đã tạo worktree nhưng không thể vào được: {error}
+cli.commands.worktree.hint_new	/worktree new [name] — tạo worktree và chuyển session này vào đó
+cli.commands.worktree.hint_prune	/worktree prune      — thu hồi tree cũ và branch đã merge
+cli.commands.worktree.list_failed	Không thể liệt kê worktree.
+cli.commands.worktree.new_requires_repo	❌ /worktree new yêu cầu đang ở trong một git repository.
+cli.commands.worktree.none_active	Không có worktree nào đang hoạt động cho session này.
+cli.commands.worktree.not_in_repo	Không nằm trong git repository.
+cli.commands.worktree.not_in_repo_note	(không nằm trong git repository)
+cli.commands.worktree.nothing_to_reclaim	Không có gì để thu hồi — các tree/branch còn lại chứa công việc thật.
+cli.commands.worktree.preserved	Đã giữ lại {count} tree có công việc thật:
+cli.commands.worktree.ready	✅ Worktree sẵn sàng: {path}
+cli.commands.worktree.tools_in_worktree	Terminal và các file tool giờ hoạt động trong worktree.
+cli.commands.worktree.unknown_subcommand	Subcommand /worktree không rõ: {subcommand}
+cli.commands.worktree.usage	Cách dùng: /worktree [new [name] | list]
+cli.config.api_key_not_set	Chưa đặt!
+cli.config.label_api_key	API Key:
+cli.config.label_base_url	Base URL:
+cli.config.label_config_file	File config:
+cli.config.label_environment	Environment:
+cli.config.label_max_turns	Số lượt tối đa:
+cli.config.label_model	Model:
+cli.config.label_ssh_target	SSH Target:
+cli.config.label_started	Bắt đầu:
+cli.config.label_timeout	Timeout:
+cli.config.label_toolsets	Toolset:
+cli.config.label_verbose	Verbose:
+cli.config.label_working_dir	Thư mục làm việc:
+cli.config.loaded	(đã tải)
+cli.config.microsoft_entra_id	Microsoft Entra ID
+cli.config.not_found	(không tìm thấy)
+cli.config.section_agent	Agent
+cli.config.section_model	Model
+cli.config.section_session	Session
+cli.config.section_terminal	Terminal
+cli.config.title	(^_^) Cấu hình
+cli.config.value_not_set	chưa đặt
+cli.connect.authorized_no_tools	Đã ủy quyền. Tool không khả dụng.
+cli.connect.bell_context	thiết lập kết nối
+cli.connect.button_cancel	Hủy
+cli.connect.button_connect	Kết nối
+cli.connect.button_continue	Tiếp tục
+cli.connect.cannot_restart	Không thể khởi động lại kết nối này. Hãy hủy và yêu cầu lại agent.
+cli.connect.connected	Đã kết nối
+cli.connect.failed	Kết nối thất bại
+cli.connect.press_enter_open	Nhấn Enter để mở trong trình duyệt
+cli.connect.secret_set	Đã đặt
+cli.connect.set_up	Thiết lập {name}
+cli.connect.waiting	Đang chờ…
+cli.context.compute_failed	(._.) Không thể tính toán phân bổ context: {error}
+cli.context.header	🧠 Mức sử dụng Context — {model}
+cli.display.status_bar_hidden	Đã ẩn thanh trạng thái
+cli.display.status_bar_visible	Đã hiện thanh trạng thái
+cli.display.ui_redrawn	✓ Đã vẽ lại UI
+cli.dock.exit_code	exit {code}
+cli.dock.last_output	cuối: {detail}
+cli.dock.no_output	Chưa có output.
+cli.dock.process_goal_label	process nền
+cli.dock.process_gone	Process này không còn được theo dõi.
+cli.dock.starting	đang khởi động
+cli.dock.verdict_ago	{verdict} · {seconds}s trước
+cli.dock.verdict_killed	bị kill
+cli.dock.verdict_lost	mất dấu
+cli.editor.command_failed	Lệnh thất bại: {error}
+cli.editor.finish_active_prompt	Hoàn tất prompt đang soạn trước khi mở editor.
+cli.editor.no_input_buffer	Không có buffer nhập nào đang hoạt động cho external editor.
+cli.editor.only_interactive	External editor chỉ khả dụng trong CLI tương tác.
+cli.editor.open_failed	Mở external editor thất bại: {error}
+cli.editor.queued_next_turn	Đã xếp hàng cho lượt kế tiếp: {preview}
+cli.editor.shell_command_failed	Lệnh shell thất bại: {error}
+cli.editor.wait_for_command	Đợi lệnh hiện tại xong trước khi mở editor.
+cli.error.agent_init_failed	Hermes không thể khởi tạo kết nối model: {error}. Tin nhắn của bạn chưa được gửi. Chạy `hermes doctor` để kiểm tra thiết lập, hoặc /model để chọn provider khác.
+cli.error.auth	Key {provider} của bạn bị từ chối. Chạy `hermes model` để nhập lại.
+cli.error.billing	Tài khoản {provider} của bạn đã hết credit. Nạp thêm ở provider, hoặc chạy /model để chuyển.
+cli.error.model_not_found	'{model}' không khả dụng trên {provider}. Chạy /model để chọn model hợp lệ.
+cli.error.overloaded	{provider} đang quá tải. Gửi /retry sau một lúc, hoặc /model để chuyển.
+cli.error.rate_limit	Bị {provider} giới hạn tốc độ; đợi một phút hoặc /model để chuyển.
+cli.error.server_error	{provider} gặp lỗi nội bộ. Gửi /retry sau một lúc, hoặc /model để chuyển.
+cli.error.the_current_model	model hiện tại
+cli.error.the_provider	provider
+cli.error.timeout	{provider} không trả lời kịp. Gửi /retry, hoặc /model để chuyển.
+cli.error.unknown	Yêu cầu tới model thất bại. Chạy /model để chuyển hoặc `hermes doctor` để kiểm tra thiết lập.
+cli.error.upstream_blocked	Firewall/CDN phía trước {provider} đã chặn yêu cầu (không phải do key của bạn). Đặt User-Agent qua extra_headers, hoặc /model để chuyển.
+cli.error.with_details	{lead}\nChi tiết: {details}
+cli.exit.unknown_argument	✗ Đối số không rõ: {argument}. Dùng /exit --delete để xóa cả lịch sử session.
+cli.gateway.starting	Đang khởi động Hermes Gateway (các messaging platform)...
+cli.gateway_status.config_file	File cấu hình: {path}
+cli.gateway_status.conversations_persist	Cuộc trò chuyện được giữ cho đến khi bạn dùng /new hoặc /reset.
+cli.gateway_status.enabled	Đã bật
+cli.gateway_status.header	(✿◠‿◠) Trạng thái Gateway
+cli.gateway_status.load_error	Lỗi tải cấu hình gateway: {error}
+cli.gateway_status.not_configured	Chưa cấu hình ({env_var})
+cli.gateway_status.platform_config_header	Cấu hình Messaging Platform:
+cli.gateway_status.step_config	2. Hoặc cấu hình thiết lập trong {path}
+cli.gateway_status.step_env_vars	1. Đặt biến môi trường:
+cli.gateway_status.to_configure	Để cấu hình gateway:
+cli.gateway_status.to_start	Để khởi động gateway:
+cli.goal.barrier_lifted	▶ Rào cản goal đã được dỡ bỏ — đang tiếp tục.
+cli.goal.paused_interrupted	⏸ Goal tạm dừng — lượt đã bị ngắt. Dùng /goal resume để tiếp tục, hoặc /goal clear để dừng.
+cli.help.alias_suffix	{description} (alias của /{command})
+cli.help.attach_image_hint	Đính kèm ảnh: /image {path} hoặc bắt đầu prompt bằng đường dẫn ảnh cục bộ
+cli.help.draft_editor_hint	Editor nháp: Ctrl+G (Alt+G trong VSCode/Cursor)
+cli.help.filtered_by	Đang lọc theo '{query}' — chạy /help để xem danh sách đầy đủ.
+cli.help.header	(^_^)? Các lệnh khả dụng
+cli.help.load_n_skills	Tải {count} skill
+cli.help.matching_query	khớp '{query}'
+cli.help.multiline_hint	Nhiều dòng: Ctrl+J, Alt+Enter, hoặc \\+Enter để xuống dòng
+cli.help.n_configured	{count} đã cấu hình
+cli.help.n_installed	{count} đã cài
+cli.help.n_skills	{count} skill
+cli.help.no_skill_commands	Chưa cài lệnh skill nào.
+cli.help.paste_image_hint	Dán ảnh: Alt+V (hoặc /paste)
+cli.help.quick_commands	Lệnh nhanh
+cli.help.section_background_automation	Nền & Tự động hóa
+cli.help.section_configuration	Cấu hình
+cli.help.section_context	Context
+cli.help.section_exit	Thoát
+cli.help.section_info	Thông tin
+cli.help.section_session	Session

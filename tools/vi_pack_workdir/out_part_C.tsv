@@ -1,0 +1,203 @@
+gateway.personality.cleared	🎭 Đã xóa personality — dùng hành vi agent gốc.\n_(có hiệu lực từ tin nhắn tiếp theo)_
+gateway.personality.err_config_write	ghi config thất bại
+gateway.personality.header	🎭 **Các personality khả dụng**\n
+gateway.personality.item	• `{name}` — {preview}
+gateway.personality.none_configured	Chưa cấu hình personality nào trong `{path}/config.yaml`
+gateway.personality.none_option	• `none` — (không áp dụng personality nào)
+gateway.personality.save_failed	⚠️ Lưu thay đổi personality thất bại: {error}
+gateway.personality.set_to	🎭 Đã đặt personality thành **{name}**\n_(có hiệu lực từ tin nhắn tiếp theo)_
+gateway.personality.unknown	Personality không xác định: `{name}`\n\nKhả dụng: {available}
+gateway.personality.usage	\nCách dùng: `/personality <name>`
+gateway.picker.page_info	 ({start}–{end} trên {total})
+gateway.plan.ack_conversation	Đang lập kế hoạch từ ngữ cảnh của cuộc trò chuyện này…
+gateway.plan.ack_task	Đang lập kế hoạch: {task}
+gateway.platform.already_paused	{name} đã bị tạm dừng.
+gateway.platform.already_retrying	{name} đã ở trạng thái retry — không cần resume.
+gateway.platform.connected	Đã kết nối: {platforms}
+gateway.platform.header	**Các platform gateway**
+gateway.platform.item_paused	  · {name} — TẠM DỪNG ({reason}). Tiếp tục bằng `/platform resume {name}`.
+gateway.platform.item_retrying	  · {name} — đang retry (lần thử {attempts})
+gateway.platform.none_failed	Lỗi/tạm dừng: (không có)
+gateway.platform.not_queued_pause	{name} không có trong hàng đợi retry (nó đang kết nối hoặc chưa được bật).
+gateway.platform.not_queued_resume	{name} không có trong hàng đợi retry — không có gì để tiếp tục.
+gateway.platform.paused	✓ Đã tạm dừng {name}. Tiếp tục bằng `/platform resume {name}` hoặc `hermes gateway restart` để đặt lại.
+gateway.platform.reason_default	tạm dừng
+gateway.platform.reason_manual	tạm dừng qua /platform pause
+gateway.platform.resumed	✓ Đã tiếp tục {name} — sẽ retry vào tick watcher tiếp theo.
+gateway.platform.unknown	Platform không xác định: {name}
+gateway.platform.usage	Cách dùng: /platform <list|pause|resume> [name]\n  /platform list — xem trạng thái platform\n  /platform pause <name> — dừng retry platform đang lỗi\n  /platform resume <name> — đưa platform bị tạm dừng vào hàng đợi lại
+gateway.platform.usage_action	Cách dùng: /platform {action} <name>
+gateway.profile.header	👤 **Profile:** `{profile}`
+gateway.profile.home	📂 **Home:** `{home}`
+gateway.profile.plain	Profile: {profile}\nHome: {home}
+gateway.progress.status_fallback_long	vẫn đang làm
+gateway.progress.status_fallback_short	chờ một chút
+gateway.progress.stuck_warning	⚠️ Có vẻ tôi đang bị kẹt (không có hoạt động trong {minutes} phút). Nếu chẳng có gì xảy ra trong {remaining} phút tới, tôi sẽ từ bỏ tác vụ này. Bạn có thể tiếp tục chờ, gửi /stop để hủy, hoặc /new để bắt đầu cuộc trò chuyện mới.
+gateway.progress.task_card_title	Hermes đang làm việc
+gateway.progress.task_line	- {title} - {status}
+gateway.progress.task_status_complete	hoàn thành
+gateway.progress.task_status_error	lỗi
+gateway.progress.task_status_running	đang chạy
+gateway.progress.thinking_prefix	💬 {text}
+gateway.progress.timeout_header	⏱️ Agent không hoạt động trong {minutes} phút — không có lệnh gọi tool hay phản hồi API.
+gateway.progress.timeout_hint	Để tăng giới hạn, đặt agent.gateway_timeout trong config.yaml (giá trị tính bằng giây, 0 = không giới hạn) rồi khởi động lại gateway.\nThử lại, hoặc dùng /reset để bắt đầu mới.
+gateway.progress.timeout_last_activity	Hoạt động cuối: {activity} ({seconds} giây trước, {progress}). Agent có thể đang chờ một phản hồi API.
+gateway.progress.timeout_stuck_tool	Agent có vẻ bị kẹt ở tool `{tool}` ({seconds} giây kể từ hoạt động cuối, {progress}).
+gateway.progress.tool_head	{emoji} {tool}
+gateway.progress.tool_pending	{emoji} {tool}...
+gateway.progress.tool_preview	{emoji} {tool}: "{preview}"
+gateway.progress.tool_verbose	{emoji} {tool}({keys})\n{args}
+gateway.progress.working_heartbeat	⏳ Đang làm — {minutes} phút{detail}
+gateway.prompt_command.start_failed	Không thể khởi chạy /{command} — vui lòng thử lại.
+gateway.proxy.closed_early	⚠️ Kết nối proxy bị đóng trước khi phản hồi hoàn tất
+gateway.proxy.connection_error	⚠️ Lỗi kết nối proxy: {error}
+gateway.proxy.http_error	⚠️ Lỗi proxy ({status}): {error}
+gateway.proxy.no_response	(Không có phản hồi từ agent từ xa)
+gateway.proxy.requires_aiohttp	⚠️ Chế độ proxy cần aiohttp. Chạy: {hint}
+gateway.proxy.url_missing	⚠️ Chưa cấu hình Proxy URL (GATEWAY_PROXY_URL hoặc gateway.proxy_url)
+gateway.queue.queued	Đã vào hàng đợi cho lượt tiếp theo.
+gateway.queue.queued_depth	 ({depth} trong hàng đợi)
+gateway.queue.usage	Cách dùng: /queue <prompt>
+gateway.quick_command.error	Lỗi lệnh nhanh: {error}
+gateway.quick_command.no_command	Lệnh nhanh '/{command}' chưa định nghĩa lệnh nào.
+gateway.quick_command.no_output	Lệnh không trả về output nào.
+gateway.quick_command.no_target	Lệnh nhanh '/{command}' chưa định nghĩa đích đến.
+gateway.quick_command.timed_out	Lệnh nhanh hết thời gian chờ (30 giây).
+gateway.quick_command.unsupported_type	Lệnh nhanh '/{command}' có loại không được hỗ trợ (hỗ trợ: 'exec', 'alias').
+gateway.reasoning.block	💭 **Suy luận:**\n```\n{reasoning}\n```\n\n{response}
+gateway.reasoning.choice_hide	ẩn suy luận khỏi phản hồi
+gateway.reasoning.choice_none	none — tắt suy luận
+gateway.reasoning.choice_reset	reset — xóa ghi đè session
+gateway.reasoning.choice_show	hiện suy luận trong phản hồi
+gateway.reasoning.display_off	tắt
+gateway.reasoning.display_on	bật ✓
+gateway.reasoning.display_set_off	🧠 ✓ Hiển thị suy luận: **TẮT** cho **{platform}**
+gateway.reasoning.display_set_on	🧠 ✓ Hiển thị suy luận: **BẬT**\nPhần suy nghĩ của model sẽ hiển thị trước mỗi phản hồi trên **{platform}**.
+gateway.reasoning.level_default	medium (mặc định)
+gateway.reasoning.level_disabled	none (đã tắt)
+gateway.reasoning.more_lines	\n_... ({count} dòng nữa)_
+gateway.reasoning.picker_title	🧠 **Cài đặt suy luận**\n\n**Mức nỗ lực:** `{level}`\n**Phạm vi:** {scope}\n**Hiển thị:** {display}\n\nChọn một tùy chọn:
+gateway.reasoning.quote_label_discord	-# 💭 Suy luận
+gateway.reasoning.quote_label_md	> 💭 **Suy luận:**
+gateway.reasoning.reset_done	🧠 ✓ Đã xóa ghi đè reasoning của session; quay lại dùng config global.
+gateway.reasoning.reset_global_unsupported	⚠️ `/reasoning reset --global` không được hỗ trợ. Dùng `/reasoning <level> --global` để đổi mặc định global.
+gateway.reasoning.scope_global	config global
+gateway.reasoning.scope_session	ghi đè session
+gateway.reasoning.set_global	🧠 ✓ Đã đặt mức nỗ lực reasoning thành `{effort}` (đã lưu vào config)\n_(có hiệu lực từ tin nhắn tiếp theo)_
+gateway.reasoning.set_global_save_failed	🧠 ✓ Đã đặt mức nỗ lực reasoning thành `{effort}` (chỉ cho session — lưu config thất bại)\n_(có hiệu lực từ tin nhắn tiếp theo)_
+gateway.reasoning.set_session	🧠 ✓ Đã đặt mức nỗ lực reasoning thành `{effort}` (chỉ cho session — thêm `--global` để lưu lâu dài)\n_(có hiệu lực từ tin nhắn tiếp theo)_
+gateway.reasoning.status	🧠 **Cài đặt suy luận**\n\n**Mức nỗ lực:** `{level}`\n**Phạm vi:** {scope}\n**Hiển thị:** {display}\n\n_Cách dùng:_ `/reasoning <none|minimal|low|medium|high|xhigh|max|ultra|reset|show|hide> [--global]`
+gateway.reasoning.unknown_arg	⚠️ Tham số không hợp lệ: `{arg}`\n\n**Mức hợp lệ:** none, minimal, low, medium, high, xhigh, max, ultra\n**Hiển thị:** show, hide\n**Lưu vĩnh viễn:** thêm `--global` để giữ ngoài session này
+gateway.refine.empty	Chưa có gì để tinh chỉnh — cuộc trò chuyện đang trống.
+gateway.refine.focus_suffix	 (trọng tâm: {focus})
+gateway.refine.nothing_yet	Chưa có gì để tinh chỉnh — hãy gửi một tin nhắn trước.
+gateway.refine.start_failed	/refine khởi động thất bại: {error}
+gateway.refine.started	⚗ Đang xem lại cuộc trò chuyện này trong background{focus_suffix} — mọi cập nhật memory/skill sẽ được báo khi hoàn tất.
+gateway.refine.unavailable	Refine không khả dụng (không có session).
+gateway.reload_mcp.added	➕ Đã thêm: {names}
+gateway.reload_mcp.always_followup	ℹ️ Các lần gọi `/reload-mcp` sau sẽ chạy không cần xác nhận. Bật lại qua `approvals.mcp_reload_confirm: true` trong config.yaml.
+gateway.reload_mcp.cancelled	🟡 /reload-mcp đã hủy. Các tool MCP không đổi.
+gateway.reload_mcp.confirm_prompt	⚠️ **Xác nhận /reload-mcp**\n\nReload MCP server sẽ dựng lại bộ tool cho session này và **vô hiệu hóa prompt cache của provider** — tin nhắn tiếp theo sẽ gửi lại toàn bộ input tokens.  Với model long-context hoặc reasoning cao, điều này có thể tốn kém.\n\nChọn:\n• **Phê duyệt một lần** — reload ngay\n• **Luôn phê duyệt** — reload ngay và tắt vĩnh viễn prompt này\n• **Hủy** — giữ nguyên các tool MCP\n\n_Dự phòng bằng chữ: trả lời `/approve`, `/always`, hoặc `/cancel`._
+gateway.reload_mcp.failed	❌ Reload MCP thất bại: {error}
+gateway.reload_mcp.header	🔄 **Đã reload các MCP server**\n
+gateway.reload_mcp.none_connected	Không có MCP server nào đang kết nối.
+gateway.reload_mcp.reconnected	♻️ Đã kết nối lại: {names}
+gateway.reload_mcp.removed	➖ Đã xóa: {names}
+gateway.reload_mcp.tools_available	\n🔧 Có {tools} tool khả dụng từ {servers} server
+gateway.reload_skills.added_header	➕ **Skill đã thêm:**
+gateway.reload_skills.failed	❌ Reload skills thất bại: {error}
+gateway.reload_skills.header	🔄 **Đã reload skills**\n
+gateway.reload_skills.item_no_desc	    - {name}
+gateway.reload_skills.item_with_desc	    - {name}: {desc}
+gateway.reload_skills.no_new	Không phát hiện skill mới nào.
+gateway.reload_skills.removed_header	➖ **Skill đã xóa:**
+gateway.reload_skills.total	\n📚 Có {count} skill khả dụng
+gateway.reset.header_default	✨ Đã reset session! Bắt đầu mới.
+gateway.reset.header_new	✨ Đã bắt đầu session mới!
+gateway.reset.header_titled	✨ Đã bắt đầu session mới: {title}
+gateway.reset.tip	\n✦ Mẹo: {tip}
+gateway.reset.title_empty_untitled	\n⚠️ Tiêu đề trống sau khi dọn dẹp — session bắt đầu không có tiêu đề.
+gateway.reset.title_error_untitled	\n⚠️ {error} — session bắt đầu không có tiêu đề.
+gateway.reset.title_rejected	\n⚠️ Tiêu đề bị từ chối: {error}
+gateway.restart.in_progress	⏳ Gateway đang được khởi động lại...
+gateway.restart.restarting	♻ Đang khởi động lại gateway. Nếu bạn không nhận được thông báo trong vòng 60 giây, hãy khởi động lại từ console bằng `hermes gateway restart`.
+gateway.resume.all_requires_admin	_Lưu ý: `--all` (liệt kê chéo chat) yêu cầu đã cấu hình admin; chỉ hiển thị session của chat này._
+gateway.resume.already_on	📌 Bạn đang ở session **{name}**.
+gateway.resume.blocked_not_owner	⚠️ /resume bị chặn: '**{name}**' thuộc về người dùng hoặc chat khác. Bạn chỉ có thể resume session từ chat này.
+gateway.resume.db_unavailable	Cơ sở dữ liệu session không khả dụng.
+gateway.resume.list_failed	Không thể liệt kê session: {error}
+gateway.resume.list_footer	\nCách dùng: `/resume <session name>`
+gateway.resume.list_footer_numbered	\nCách dùng: `/resume <session name>` hoặc `/resume <number>` (vd: `/resume 1` cho session gần nhất)
+gateway.resume.list_header	📋 **Session có tên**\n
+gateway.resume.list_item	• **{title}**{preview_part}
+gateway.resume.list_item_numbered	{index}. **{title}**{preview_part}
+gateway.resume.list_preview_suffix	 — _{preview}_
+gateway.resume.matrix_blocked_no_origin	⚠️ Matrix /resume bị chặn: session có tên này không có room origin nào được ghi nhận, nên Hermes sẽ không resume nó trong room hiện tại theo mặc định. Dùng `/resume --cross-room {name}` nếu bạn chủ động muốn vượt ranh giới room.
+gateway.resume.matrix_blocked_other_room	⚠️ Matrix /resume bị chặn: session đó thuộc về một Matrix room khác ({room}). Dùng `/resume --cross-room {name}` nếu bạn chủ động muốn resume nó tại đây.
+gateway.resume.matrix_cross_room_success	⚠️ Resume chéo room: đã resume **{title}** trong Matrix room **{room}**.\nCác tin nhắn sau này trong room này sẽ dùng transcript đó cho đến khi `/reset` hoặc một `/resume` khác.{msg_part}
+gateway.resume.matrix_no_named_sessions	Không tìm thấy session có tên nào cho Matrix room này.\nDùng `/title My Session` để đặt tên cho session của room hiện tại, `/resume --all` để liệt kê mọi session Matrix, hoặc `/resume --cross-room <session name>` để chủ động vượt ranh giới room.
+gateway.resume.msg_count_one	 ({count} tin nhắn)
+gateway.resume.msg_count_other	 ({count} tin nhắn)
+gateway.resume.no_named_sessions	Không tìm thấy session có tên nào.\nDùng `/title My Session` để đặt tên cho session hiện tại, sau đó `/resume My Session` để quay lại sau.
+gateway.resume.not_found	Không tìm thấy session nào khớp '**{name}**'.\nDùng `/resume` không kèm tham số để xem các session khả dụng.
+gateway.resume.out_of_range	Chỉ số resume {index} nằm ngoài phạm vi.\nDùng `/resume` không kèm tham số để xem các session khả dụng.
+gateway.resume.parse_error	⚠️ Không thể phân tích tham số `/resume`: {error}.\nĐặt tiêu đề có dấu cách trong ngoặc kép, ví dụ: `/resume "Project A Plan"`.
+gateway.resume.resumed_many	↻ Đã resume session **{title}** ({count} tin nhắn). Cuộc trò chuyện đã được khôi phục.
+gateway.resume.resumed_no_count	↻ Đã resume session **{title}**. Cuộc trò chuyện đã được khôi phục.
+gateway.resume.resumed_one	↻ Đã resume session **{title}** ({count} tin nhắn). Cuộc trò chuyện đã được khôi phục.
+gateway.resume.switch_failed	Chuyển session thất bại.
+gateway.retry.failed_unchanged	Retry thất bại; transcript không bị thay đổi.
+gateway.retry.no_previous	Không có tin nhắn trước đó để retry.
+gateway.retry.unsafe	Không thể retry tin nhắn đó một cách an toàn: {error}
+gateway.review.nothing_yet	Chưa có gì để xem lại — hãy gửi một tin nhắn trước.
+gateway.review.start_failed	/review khởi động thất bại: {error}
+gateway.review.unavailable	Review không khả dụng (không có session).
+gateway.rollback.failed_deletes	⚠️ Không thể xóa (để nguyên tại chỗ): {files}
+gateway.rollback.invalid_number	Số checkpoint không hợp lệ. Dùng 1-{max}.
+gateway.rollback.kept_oversize	↷ Giữ nguyên (quá lớn so với checkpoint, không có bản sao đã lưu để hoàn tác): {files}
+gateway.rollback.kept_user_edits	↷ Giữ nguyên phần bạn tự sửa tay: {files}\nDùng /rollback <N> --all để khôi phục cả những phần đó.
+gateway.rollback.none_found	Không tìm thấy checkpoint nào cho {cwd}
+gateway.rollback.not_enabled	Checkpoints chưa được bật.\nBật trong config.yaml:\n```\ncheckpoints:\n  enabled: true\n```
+gateway.rollback.restore_failed	❌ {error}
+gateway.rollback.restored	✅ Đã khôi phục về checkpoint {hash}: {reason}\nSnapshot trước khi rollback đã được lưu tự động.
+gateway.save.caption	Xuất session: {filename}
+gateway.save.complete	Xuất hoàn tất.
+gateway.save.failed	Lỗi xuất session: {error}
+gateway.save.no_adapter	Không tìm thấy platform adapter để gửi tài liệu.
+gateway.save.no_messages	Không tìm thấy tin nhắn đã lưu nào cho session này ({session_id}).
+gateway.session.auto_reset_context_exhausted	\n\n🔄 Session tự reset — cuộc trò chuyện vượt quá kích thước context tối đa và không thể nén thêm. Tin nhắn tiếp theo của bạn sẽ bắt đầu một session mới.
+gateway.session.auto_reset_notice	◐ Đã reset session sau khi bị dừng. Lịch sử trò chuyện đã bị xóa.\nDùng /resume để xem và khôi phục session trước đó.\n
+gateway.session.info_acting_model	◆ Model đang chạy (được tính phí cho lần chạy này): {provider}:{model}
+gateway.session.info_context	◆ Context: {tokens} token ({source})
+gateway.session.info_endpoint	◆ Endpoint: {url}
+gateway.session.info_model	◆ Model: `{model}`
+gateway.session.info_provider	◆ Provider: {provider}
+gateway.sessions.all_requires_admin	_Lưu ý: `all` (liệt kê chéo chat) yêu cầu đã cấu hình admin; chỉ hiển thị session của chat này._
+gateway.sessions.title_all	Các session
+gateway.sessions.title_matching	Các session khớp “{query}”
+gateway.sessions.title_named	Session có tên
+gateway.sessions.usage_search	Cách dùng: `/sessions search <query>`
+gateway.set_home.err_missing_platform	Thiếu logical platform
+gateway.set_home.err_relay_unauthenticated	Relay không xác thực logical home target này
+gateway.set_home.save_failed	Lưu home channel thất bại: {error}
+gateway.set_home.success	✅ Đã đặt home channel thành **{name}** (ID: {chat_id}).\nCron job và tin nhắn chéo platform sẽ được chuyển đến đây.
+gateway.shared.agent_running_retry_later	Agent đang chạy — chờ lượt hiện tại kết thúc rồi hãy /{command}.
+gateway.shared.error_prefix	Lỗi: {error}
+gateway.shared.history_unreadable	⚠️ Hiện tại tôi không đọc được lịch sử của cuộc trò chuyện này (tin nhắn trước đó của bạn vẫn tồn tại nhưng không tải được). Chạy `hermes doctor --fix` trên host, hoặc dùng /new để bắt đầu mới.
+gateway.shared.none_marker	(không có)
+gateway.shared.none_value	không có
+gateway.shared.session_db_unavailable	Cơ sở dữ liệu session không khả dụng.
+gateway.shared.session_db_unavailable_prefix	Cơ sở dữ liệu session không khả dụng
+gateway.shared.session_not_found	Không tìm thấy session trong cơ sở dữ liệu.
+gateway.shared.unknown_error	lỗi không xác định
+gateway.shared.unknown_value	không xác định
+gateway.shared.warn_passthrough	⚠️ {error}
+gateway.shutdown.action_restarting	khởi động lại
+gateway.shutdown.action_shutting_down	tắt
+gateway.shutdown.cron_interrupted	⚠️ Job định kỳ '{job}' bị cắt ngang vì Hermes đang {action}; lần chạy này không có kết quả. Nó sẽ chạy lại đúng lịch, hoặc chạy ngay bằng `hermes cron run {job}` khi Hermes hoạt động trở lại.
+gateway.shutdown.notice_restart	⚠️ Hermes đang khởi động lại — tác vụ hiện tại của bạn sẽ bị gián đoạn. Sau khi khởi động lại xong, gửi một tin nhắn bất kỳ và tôi sẽ cố tiếp tục từ chỗ bạn đang làm dở.
+gateway.shutdown.notice_shutdown	⚠️ Hermes đang tắt — tác vụ hiện tại của bạn sẽ bị gián đoạn. Khi nó hoạt động trở lại, gửi một tin nhắn bất kỳ và tôi sẽ cố tiếp tục từ chỗ chúng ta đang làm dở.
+gateway.skills.diff_truncated	\n… (bị cắt bớt — diff đầy đủ trong ~/.hermes/pending/skills/{pending_id}.json)
+gateway.skills.disabled	Skill **{name}** đã được cài nhưng bị tắt.\nBật bằng: `hermes skills config`
+gateway.skills.disabled_for_platform	Skill **{name}** bị tắt trên {platform}.\nBật bằng: `hermes skills config`
+gateway.skills.gate_off	Tính năng phê duyệt ghi của skill đang tắt (skills.write_approval). Bật bằng /skills approval on, sau đó xem xét các bản ghi đang chờ tại đây bằng /skills pending.

@@ -1,0 +1,810 @@
+platform.api_server.provider_auth_failed	Xác thực provider thất bại
+platform.api_server.provider_error_line	⚠️ {label}: {error}
+platform.api_server.provider_rate_limited	Provider bị giới hạn tốc độ
+platform.api_server.transformed_notice	\n\n[Phản hồi đã được biến đổi sau khi streaming]\n
+platform.dingtalk.emotion.done	🥳Xong
+platform.dingtalk.emotion.thinking	🤔Đang suy nghĩ
+platform.discord.approval.already_resolved	Phê duyệt này đã được xử lý rồi~
+platform.discord.approval.by_user	{label} bởi {user}
+platform.discord.approval.confirm_title	Xác nhận
+platform.discord.approval.expired	⌛ Phê duyệt đã hết hạn — lệnh không được chạy (đã hết thời gian chờ hoặc được xử lý ở nơi khác)
+platform.discord.approval.question	Bạn có muốn Hermes chạy lệnh này không?
+platform.discord.approval.requested_command_label	Lệnh được yêu cầu:
+platform.discord.approval.resolved_always	Đã phê duyệt vĩnh viễn
+platform.discord.approval.resolved_deny	Đã từ chối
+platform.discord.approval.resolved_once	Đã phê duyệt một lần
+platform.discord.approval.resolved_session	Đã phê duyệt cho session
+platform.discord.command.approve.arg_scope	Tùy chọn: 'all', 'session', 'always', 'all session', 'all always'
+platform.discord.command.auto_args_description	Tham số: {args_hint}
+platform.discord.command.auto_description_fallback	Chạy /{name}
+platform.discord.command.bg.arg_prompt	Prompt cần chạy nền
+platform.discord.command.bg.followup	Đã khởi động tác vụ nền~
+platform.discord.command.btw.arg_question	Câu hỏi phụ cần trả lời mà không làm gián đoạn
+platform.discord.command.btw.description	Hỏi một câu hỏi phụ về cuộc hội thoại hiện tại
+platform.discord.command.btw.followup	Đã gửi câu hỏi phụ~
+platform.discord.command.compress.description	Nén context hội thoại
+platform.discord.command.deny.arg_scope	Tùy chọn: 'all' để từ chối tất cả các lệnh đang chờ
+platform.discord.command.deny.description	Từ chối một lệnh nguy hiểm đang chờ
+platform.discord.command.help.description	Hiển thị các lệnh khả dụng
+platform.discord.command.insights.arg_days	Số ngày cần phân tích (mặc định: 7)
+platform.discord.command.model.arg_name	Tên model (ví dụ anthropic/claude-sonnet-4). Để trống để xem model hiện tại.
+platform.discord.command.model.description	Xem hoặc đổi model
+platform.discord.command.new.description	Bắt đầu một cuộc hội thoại mới
+platform.discord.command.new.followup	Đã bắt đầu hội thoại mới~
+platform.discord.command.personality.arg_name	Tên personality. Để trống để liệt kê các personality khả dụng.
+platform.discord.command.personality.description	Đặt một personality
+platform.discord.command.plan.arg_task	Nội dung cần lập kế hoạch. Để trống để suy ra từ hội thoại.
+platform.discord.command.plan.description	Viết kế hoạch triển khai dạng markdown (không thực thi)
+platform.discord.command.queue.arg_prompt	Prompt cần đưa vào hàng đợi
+platform.discord.command.queue.description	Đưa prompt vào hàng đợi cho lượt sau (không làm gián đoạn)
+platform.discord.command.queue.followup	Đã đưa vào hàng đợi cho lượt sau.
+platform.discord.command.reasoning.arg_effort	Chọn một mức, đặt lại ghi đè, hoặc hiện/ẩn phần suy luận. Để trống để xem hiện tại.
+platform.discord.command.reasoning.choice_hide	hide — ẩn phần suy luận khỏi câu trả lời
+platform.discord.command.reasoning.choice_none	none — tắt suy luận
+platform.discord.command.reasoning.choice_reset	reset — xóa ghi đè của session này
+platform.discord.command.reasoning.choice_show	show — hiển thị phần suy luận trong câu trả lời
+platform.discord.command.reasoning.choice_ultra	ultra — suy luận tối đa
+platform.discord.command.reasoning.description	Xem/đổi mức suy luận, hoặc bật/tắt hiển thị nó
+platform.discord.command.reload_skills.description	Quét lại ~/.hermes/skills/ để tìm skill mới thêm hoặc đã xóa
+platform.discord.command.reset.description	Đặt lại session Hermes của bạn
+platform.discord.command.reset.followup	Đã đặt lại session~
+platform.discord.command.restart.description	Khởi động lại gateway Hermes một cách an toàn
+platform.discord.command.restart.followup	Đã yêu cầu khởi động lại~
+platform.discord.command.resume.arg_name	Tên session cần tiếp tục. Để trống để liệt kê các session.
+platform.discord.command.retry.description	Gửi lại tin nhắn cuối của bạn
+platform.discord.command.retry.followup	Đang thử lại~
+platform.discord.command.skill.arg_args	Tham số tùy chọn cho skill
+platform.discord.command.skill.arg_name	Skill cần chạy
+platform.discord.command.skill.description	Chạy một skill Hermes
+platform.discord.command.skill.unknown	Skill không rõ: `{name}`. Hãy gõ để xem gợi ý autocomplete.
+platform.discord.command.status.description	Hiển thị trạng thái session Hermes
+platform.discord.command.status.followup	Đã gửi trạng thái~
+platform.discord.command.steer.arg_prompt	Nội dung chèn vào kết quả tool kế tiếp của agent
+platform.discord.command.steer.description	Chèn một tin nhắn sau lượt gọi tool kế tiếp (không gián đoạn)
+platform.discord.command.stop.description	Dừng agent Hermes đang chạy
+platform.discord.command.stop.followup	Đã yêu cầu dừng~
+platform.discord.command.thread.arg_auto_archive	Tự lưu trữ sau số phút (60, 1440, 4320, 10080)
+platform.discord.command.thread.arg_message	Tin nhắn đầu tiên tùy chọn gửi cho Hermes trong thread
+platform.discord.command.thread.arg_name	Tên thread
+platform.discord.command.thread.created	Đã tạo thread {link}
+platform.discord.command.thread.description	Tạo một thread mới và bắt đầu session Hermes trong đó
+platform.discord.command.thread.error_both_failed	Discord từ chối tạo thread trực tiếp và phương án dự phòng cũng thất bại. Lỗi trực tiếp: {direct_error}. Lỗi dự phòng: {fallback_error}
+platform.discord.command.thread.error_dm_not_supported	Thread Discord chỉ có thể tạo trong các kênh text của server, không tạo được trong DM.
+platform.discord.command.thread.error_invalid_archive	auto_archive_duration phải là một trong: {allowed}.
+platform.discord.command.thread.error_name_required	Bắt buộc phải có tên thread.
+platform.discord.command.thread.error_no_channel	Không xác định được kênh Discord hiện tại.
+platform.discord.command.thread.error_no_parent	Không xác định được kênh text cha cho thread mới.
+platform.discord.command.thread.error_unknown	lỗi không rõ
+platform.discord.command.thread.failed	Tạo thread thất bại: {error}
+platform.discord.command.title.arg_name	Tiêu đề session. Để trống để xem hiện tại.
+platform.discord.command.title.description	Đặt hoặc xem tiêu đề session
+platform.discord.command.undo.description	Xóa lượt trao đổi cuối cùng
+platform.discord.command.update.followup	Đã bắt đầu cập nhật~
+platform.discord.command.usage.description	Hiển thị mức dùng token của session này
+platform.discord.command.voice.arg_mode	Chế độ voice: join, channel, leave, on, tts, off hoặc status
+platform.discord.command.voice.choice_channel	channel — vào kênh voice của bạn (bí danh)
+platform.discord.command.voice.choice_join	join — vào kênh voice của bạn
+platform.discord.command.voice.choice_leave	leave — rời kênh voice
+platform.discord.command.voice.choice_mode_off	off — chỉ text
+platform.discord.command.voice.choice_mode_on	on — trả lời bằng voice cho tin nhắn voice
+platform.discord.command.voice.choice_status	status — xem chế độ hiện tại
+platform.discord.command.voice.choice_tts	tts — trả lời bằng voice cho mọi tin nhắn
+platform.discord.command.voice.description	Bật/tắt chế độ trả lời bằng voice
+platform.discord.forum.default_title	Bài viết mới
+platform.discord.limits.response_truncated	⚠️ **Phản hồi bị cắt bớt** — câu trả lời vượt giới hạn gửi ({max_messages} tin nhắn). {dropped_chars} ký tự chưa được gửi; toàn bộ phản hồi nằm trong log của session.
+platform.discord.media.image_skipped_too_large	⚠️ Đã bỏ qua `{filename}` — {size_mb} MB vượt giới hạn tải lên {limit_mb} MB của Discord.
+platform.discord.media.upload_too_large	⚠️ Không thể đính kèm `{filename}` — {size_mb} MB vượt giới hạn tải lên {limit_mb} MB của Discord cho kênh này. Hãy nén file hoặc chia sẻ bằng link thay thế.
+platform.discord.picker.already_resolved	Đã xử lý rồi~
+platform.discord.picker.back	◀ Quay lại
+platform.discord.picker.cancel	Hủy
+platform.discord.picker.cancelled	Đã hủy chọn model.
+platform.discord.picker.choice_default_title	Chọn một tùy chọn
+platform.discord.picker.choice_error	Lỗi khi áp dụng lựa chọn: {error}
+platform.discord.picker.choice_expired	⏱ Lựa chọn đã hết hạn — không có thay đổi nào.
+platform.discord.picker.choice_placeholder	Chọn một tùy chọn...
+platform.discord.picker.current	hiện tại
+platform.discord.picker.expired	⏱ Lựa chọn đã hết hạn — không đổi model.
+platform.discord.picker.expired_toast	Lựa chọn model đã hết hạn.
+platform.discord.picker.model_placeholder	Chọn một model từ {provider}
+platform.discord.picker.more_available	Còn {count} lựa chọn nữa — gõ `/model <name>` trực tiếp
+platform.discord.picker.provider_option	{provider} ({count} model)
+platform.discord.picker.provider_placeholder	Chọn một provider...
+platform.discord.picker.select_model	Provider: **{provider}**\nChọn một model:{extra}
+platform.discord.picker.select_provider	Model hiện tại: `{model}`\nProvider: {provider}\n\nChọn một provider:
+platform.discord.picker.switch_anyway	Vẫn chuyển
+platform.discord.picker.switch_error	Lỗi khi chuyển model: {error}
+platform.discord.picker.switched_title	⚙ Đã chuyển model
+platform.discord.picker.switching	Đang chuyển sang `{model}`...
+platform.discord.picker.switching_title	⚙ Đang chuyển model
+platform.discord.picker.title	⚙ Cấu hình model
+platform.discord.picker.unknown_model	không rõ
+platform.discord.prompt.affirm	Có
+platform.discord.prompt.already_answered	Đã trả lời rồi~
+platform.discord.prompt.answered_by	Đã trả lời bởi {user}: {choice}
+platform.discord.prompt.awaiting_typed	Đang chờ câu trả lời dạng text từ {user}…
+platform.discord.prompt.clarify_already_answered	Prompt này đã được trả lời rồi~
+platform.discord.prompt.clarify_hint_buttons	Chọn một mục bên dưới, hoặc bấm ✏️ Khác để gõ câu trả lời riêng.
+platform.discord.prompt.clarify_hint_text	Trả lời trong kênh này bằng câu trả lời của bạn.
+platform.discord.prompt.clarify_title	Hermes cần bạn nhập thông tin
+platform.discord.prompt.default_hint	 (mặc định: {default})
+platform.discord.prompt.expired_footer	⏱ Prompt đã hết hạn — không có hành động nào được thực hiện
+platform.discord.prompt.negate	Không
+platform.discord.prompt.other	✏️ Khác (gõ câu trả lời)
+platform.discord.prompt.truncated_marker	... [bị cắt bớt]
+platform.discord.prompt.update_title	Cập nhật cần bạn nhập thông tin
+platform.discord.security.unauthorized_slash_alert	⚠️ Cố gắng dùng lệnh slash Discord trái phép\nUser: {user_name} ({user_id})\nKênh: {chan_id} (guild {guild_id})\nLệnh: {command_text}\nLý do: {reason}
+platform.discord.slash_confirm.already_resolved	Prompt này đã được xử lý rồi~
+platform.discord.slash_confirm.always_approve	Luôn phê duyệt
+platform.discord.slash_confirm.approve_once	Phê duyệt một lần
+platform.discord.slash_confirm.cancel	Hủy
+platform.discord.slash_confirm.resolved_always	Đã phê duyệt vĩnh viễn
+platform.discord.slash_confirm.resolved_cancel	Đã hủy
+platform.discord.slash_confirm.resolved_once	Đã phê duyệt một lần
+platform.discord.thread.auto_create_failed	⚠️ Hermes không thể tạo thread Discord cho tin nhắn này, nên yêu cầu chưa được xử lý. Vui lòng thử lại.
+platform.discord.thread.auto_create_failed_generic	Yêu cầu chưa được xử lý. Vui lòng thử lại.
+platform.discord.thread.default_name	Hermes
+platform.discord.thread.handoff_seed	🧵 Bàn giao Hermes: **{name}**
+platform.discord.thread.seed_message	🧵 Thread được tạo bởi Hermes: **{name}**
+platform.discord.voice.ack_1	Để tôi xem xét việc đó.
+platform.discord.voice.ack_2	Một chút nhé.
+platform.discord.voice.ack_3	Đang kiểm tra ngay đây.
+platform.discord.voice.ack_4	Cho tôi một giây.
+platform.discord.voice.ack_5	Đang làm ngay.
+platform.discord.voice.left_inactivity	Đã rời kênh voice (hết thời gian chờ do không hoạt động).
+platform.email.image_line	Ảnh: {url}
+platform.email.standalone_subject	Hermes Agent
+platform.feishu.approval.action_always	Luôn
+platform.feishu.approval.action_session	Session
+platform.feishu.approval.resolved_always	Đã phê duyệt vĩnh viễn
+platform.feishu.approval.resolved_by_user	{icon} **{label}** bởi {user}
+platform.feishu.approval.resolved_deny	Đã từ chối
+platform.feishu.approval.resolved_fallback	Đã xử lý
+platform.feishu.approval.resolved_once	Đã phê duyệt một lần
+platform.feishu.approval.resolved_session	Đã phê duyệt cho session
+platform.feishu.media.gif_downgraded	[GIF đã chuyển thành file]
+platform.feishu.media.gif_downgraded_caption	[GIF đã chuyển thành file]\n{caption}
+platform.feishu.update_prompt.answer_no	✗ Không
+platform.feishu.update_prompt.answer_yes	✓ Có
+platform.feishu.update_prompt.answered_by	Đã trả lời bởi **{user}**
+platform.feishu.update_prompt.answered_title	{icon} Prompt cập nhật đã được trả lời: {answer}
+platform.feishu.update_prompt.default_hint	\n\nMặc định: `{default}`
+platform.feishu.update_prompt.title	☤ Cập nhật cần bạn nhập thông tin
+platform.feishu.update_prompt.word_no	Không
+platform.feishu.update_prompt.word_yes	Có
+platform.google_chat.attachment_fallback.activate	**Để bật tính năng này:** gửi `/setup-files` và làm theo hướng dẫn.
+platform.google_chat.attachment_fallback.explain	Google Chat chỉ cho phép đính kèm file khi bot có quyền rõ ràng từ bạn (user OAuth). Đây là sự đồng ý một lần thực hiện ngay trong cuộc chat này.
+platform.google_chat.attachment_fallback.header	⚠️ Tôi không thể đính kèm **{filename}**.
+platform.google_chat.attachment_fallback.host_path	Trong lúc đó file đang nằm trên host: `{path}`
+platform.google_chat.clarify.header	Câu hỏi
+platform.google_chat.clarify.other_button	Khác / gõ câu trả lời
+platform.google_chat.clarify.question	❓ {question}
+platform.google_chat.setup_files.active	✅ Gửi đính kèm gốc đang **hoạt động** cho `{who}`.\nToken: `{token_path}`\nGửi `/setup-files revoke` để tắt.
+platform.google_chat.setup_files.authorized	✅ Đã cấp quyền! Gửi đính kèm gốc hiện đã hoạt động. Thử yêu cầu tôi gửi cho bạn một file PDF.
+platform.google_chat.setup_files.done_output	✅ Xong.\n```\n{output}\n```
+platform.google_chat.setup_files.exchange_failed	❌ Trao đổi token thất bại. Code có thể đã hết hạn hoặc URL bị lỗi. Gửi `/setup-files start` để nhận URL OAuth mới.
+platform.google_chat.setup_files.exchanged_not_loaded	⚠️ Đã trao đổi token nhưng gateway không thể nạp thông tin xác thực mới vào bộ nhớ. Hãy khởi động lại gateway và token tại `{token_path}` sẽ được nhận.\nKết quả helper:\n```\n{output}\n```
+platform.google_chat.setup_files.helper_error	❌ Lỗi: {error}
+platform.google_chat.setup_files.no_client_credentials	⚠️ Chưa lưu thông tin xác thực client nào cho profile này. Gửi `/setup-files` (không tham số) để xem hướng dẫn thiết lập.
+platform.google_chat.setup_files.not_authorized_yet	🔧 Đã lưu thông tin xác thực client nhưng bạn chưa cấp quyền. Gửi `/setup-files start` để bắt đầu.
+platform.google_chat.setup_files.not_configured	🔧 Gửi đính kèm gốc **chưa được cấu hình**.\n**Bước 1 (một lần, trên host):** tạo OAuth client credentials tại https://console.cloud.google.com/apis/credentials → *Create credentials* → *OAuth client ID* → *Desktop app*. Tải file JSON về. Sau đó chạy trên host:\n```\npython -m plugins.platforms.google_chat.oauth --client-secret /path/to/client_secret.json\n```\n**Bước 2:** quay lại đây và gửi `/setup-files start`.
+platform.google_chat.setup_files.revoke_completed	Đã hoàn tất thu hồi (một số bước có thể đã bị bỏ qua).
+platform.google_chat.setup_files.revoke_error	❌ Lỗi khi thu hồi: {error}
+platform.google_chat.setup_files.revoked	Đã thu hồi.
+platform.google_chat.setup_files.start_failed	❌ Không thể tạo URL OAuth. Kiểm tra log của gateway và xác nhận client_secret.json còn hợp lệ.
+platform.google_chat.setup_files.start_instructions	1. Mở URL này trong trình duyệt của bạn và cấp quyền:\n{auth_url}\n\n2. Sau khi bấm *Allow*, trình duyệt sẽ không tải được `http://localhost:1/?...&code=...`. Điều đó là bình thường.\n\n3. Sao chép toàn bộ URL lỗi từ thanh địa chỉ của trình duyệt và dán lại vào đây dạng: `/setup-files <PASTE_URL>` (hoặc chỉ giá trị `code=...`).\n\nMẹo: URL chứa quyền truy cập của bạn — hãy giữ kín nó.
+platform.google_chat.setup_files.who_shared	shared (cũ)
+platform.google_chat.typing.interrupted	(bị gián đoạn)
+platform.google_chat.typing.no_reply	(không có trả lời)
+platform.google_chat.typing.thinking	Hermes đang suy nghĩ…
+platform.homeassistant.notification_title	Hermes Agent
+platform.irc.quit_message	Hermes Agent đang tắt
+platform.irc.standalone_quit	đã gửi
+platform.line.pending.button_label	Xem câu trả lời
+platform.line.pending.delivered	Đã trả lời ✅
+platform.line.pending.expired	Yêu cầu đó đã hết hạn — hãy gửi lại tin nhắn của bạn.
+platform.line.pending.interrupted	Lượt chạy bị gián đoạn trước khi hoàn tất.
+platform.line.pending.still_thinking	🤔 Vẫn đang suy nghĩ. Bấm bên dưới để lấy câu trả lời khi đã sẵn sàng.
+platform.line.standalone.attachments_not_deliverable	[Đã tạo {count} file đính kèm; không thể gửi đi từ cron]
+platform.matrix.approval.expired	Prompt phê duyệt này đã hết hạn. Chạy lại lệnh nếu bạn vẫn muốn phê duyệt.
+platform.matrix.approval.invalid_reaction	Reaction đó không hợp lệ cho prompt phê duyệt này.
+platform.matrix.approval.legend_always	♾️ = phê duyệt luôn
+platform.matrix.approval.legend_deny	❎ = từ chối
+platform.matrix.approval.legend_intro	Bạn cũng có thể bấm reaction để phê duyệt:
+platform.matrix.approval.legend_once	✅ = phê duyệt một lần
+platform.matrix.approval.legend_session	🌀 = phê duyệt cho session này
+platform.matrix.approval.typed_hint_always	Trả lời `!approve session` để phê duyệt pattern này cho session, `!approve always` để phê duyệt vĩnh viễn, `!approve` để chạy một lần, hoặc `!deny` để hủy.
+platform.matrix.approval.typed_hint_once	Trả lời `!approve` để chạy một lần, hoặc `!deny` để hủy.
+platform.matrix.approval.typed_hint_session	Trả lời `!approve session` để phê duyệt pattern này cho session, `!approve` để chạy một lần, hoặc `!deny` để hủy.
+platform.matrix.handoff.default_name	Session Hermes
+platform.matrix.media.image_download_failed	Tôi không thể tải ảnh xuống và tải lên Matrix. URL nguồn không được hiển thị vì có thể chứa token riêng tư.
+platform.matrix.picker.current_model	Model hiện tại: `{model}`
+platform.matrix.picker.current_suffix	{label} ← hiện tại
+platform.matrix.picker.failed	{action} thất bại: {error}
+platform.matrix.picker.invalid_choice_reaction	Reaction đó không nằm trong các lựa chọn khả dụng.
+platform.matrix.picker.invalid_model_reaction	Reaction đó không nằm trong các lựa chọn model khả dụng.
+platform.matrix.picker.no_models	Không có model nào đã xác thực khả dụng cho session này.
+platform.matrix.picker.provider	Provider: {provider}
+platform.matrix.picker.react_choice	Thả reaction để chọn.
+platform.matrix.picker.react_model	Thả reaction để chọn model:
+platform.matrix.picker.title	⚙ **Cấu hình model**
+platform.matrix.picker.verb_apply_selection	áp dụng lựa chọn
+platform.matrix.picker.verb_switch_model	chuyển model
+platform.matrix.reaction.not_requester	Chỉ người dùng đã yêu cầu hành động này mới dùng được các nút điều khiển này.
+platform.matrix.reaction.unauthorized	Chỉ người dùng Matrix được cấp quyền mới dùng được các nút điều khiển này.
+platform.relay.confirm_always_approve	Luôn phê duyệt
+platform.relay.confirm_approve_once	Phê duyệt một lần
+platform.relay.confirm_cancel	Hủy
+platform.relay.prompt_expired	⌛ Prompt đó không còn chờ câu trả lời nữa. Hãy gửi trả lời của bạn như một tin nhắn bình thường.
+platform.relay.prompt_other	✏️ Khác (gõ câu trả lời)
+platform.shared.approval_expired	⌛ Phê duyệt đã hết hạn — lệnh không được chạy (đã hết thời gian chờ hoặc được xử lý ở nơi khác).
+platform.shared.handoff.default_name	session
+platform.shared.media.attachment_failed	⚠️ Không thể gửi file đính kèm.
+platform.shared.media.file_failed	⚠️ Không thể gửi file đính kèm ({name}).
+platform.shared.media.image_failed	⚠️ Không thể gửi ảnh đính kèm.
+platform.shared.media.video_failed	⚠️ Không thể gửi video đính kèm.
+platform.shared.model_picker_expired	⏳ Trình chọn model này đã hết hạn — vui lòng chạy /model lại.
+platform.shared.not_authorized	⛔ Chưa được cấp quyền.
+platform.shared.truncated_suffix	\n...(bị cắt bớt)
+platform.shared.unknown	không rõ
+platform.signal.batch_pacing_notice	(Sắp có thêm ảnh — tạm dừng ~{wait} do giới hạn tốc độ của Signal, đợt {batch}/{total}.)
+platform.signal.wait_minutes	{count} phút
+platform.signal.wait_seconds	{count} giây
+platform.slack.approval.fallback_text	⚠️ Cần phê duyệt lệnh: {command}
+platform.slack.approval.resolved_always	✅ Được phê duyệt vĩnh viễn bởi {user}
+platform.slack.approval.resolved_deny	❌ Bị từ chối bởi {user}
+platform.slack.approval.resolved_once	✅ Được phê duyệt một lần bởi {user}
+platform.slack.approval.resolved_session	✅ Được phê duyệt cho session bởi {user}
+platform.slack.clarify.awaiting	✏️ Đang chờ câu trả lời dạng text từ {user}…
+platform.slack.clarify.choice_n	lựa chọn {n}
+platform.slack.clarify.expired	⏳ Prompt này đã hết hạn — vui lòng gửi yêu cầu mới. (bởi {user})
+platform.slack.clarify.option_n	Tùy chọn {n}
+platform.slack.clarify.other	✏️ Khác…
+platform.slack.clarify.resolved	✅ {user}: {choice}
+platform.slack.confirm.always_approve	Luôn phê duyệt
+platform.slack.confirm.approve_once	Phê duyệt một lần
+platform.slack.confirm.cancel	Hủy
+platform.slack.confirm.default_title	Xác nhận
+platform.slack.confirm.resolved_always	🔒 Được phê duyệt vĩnh viễn bởi {user}
+platform.slack.confirm.resolved_cancel	❌ Đã hủy bởi {user}
+platform.slack.feedback.bad	Phản hồi kém
+platform.slack.feedback.bad_a11y	Gửi phản hồi tiêu cực về câu trả lời này
+platform.slack.feedback.good	Phản hồi tốt
+platform.slack.feedback.good_a11y	Gửi phản hồi tích cực về câu trả lời này
+platform.slack.handoff.seed	:thread: Bàn giao Hermes — *{name}*
+platform.slack.picker.back	◀ Quay lại
+platform.slack.picker.cancel	Hủy
+platform.slack.picker.cancelled	❌ Đã hủy chọn model.
+platform.slack.picker.choose_model	Chọn một model từ {provider}…
+platform.slack.picker.choose_provider	Chọn một provider…
+platform.slack.picker.fallback_model	⚙ Cấu hình model — {provider}
+platform.slack.picker.fallback_provider	⚙ Cấu hình model — chọn một provider
+platform.slack.picker.model_header	*⚙ Cấu hình model*\n\nProvider: *{provider}*\nChọn một model:{extra}
+platform.slack.picker.more_available	\n*Còn {count} lựa chọn nữa — gõ `/model <name>` trực tiếp*
+platform.slack.picker.no_models_for_provider	Không có model nào khả dụng cho `{provider}`.
+platform.slack.picker.provider_header	*⚙ Cấu hình model*\nModel hiện tại: `{model}`\nProvider: {provider}\n\nChọn một provider:{extra}
+platform.slack.picker.switch_failed	❌ Chuyển model thất bại: {error}
+platform.slack.picker.switch_failed_header	⚙ Chuyển model thất bại
+platform.slack.picker.switched_header	⚙ Đã chuyển model
+platform.slack.picker.switching	⚙ Đang chuyển sang `{model}`…
+platform.slack.slash.reply_truncated	\n\n_[Câu trả lời bị cắt bớt: còn {count} phần nữa vượt giới hạn trả lời ephemeral của Slack.]_
+platform.slack.slash.running	Đang chạy `/{command}`…
+platform.slack.status.still_working	vẫn đang xử lý… ({elapsed})
+platform.slack.status.thinking	đang suy nghĩ...
+platform.slack.task_card.title	Hermes đang làm việc
+platform.teams.approval.requires_allowlist	⛔ Các nút phê duyệt yêu cầu cấu hình TEAMS_ALLOWED_USERS.
+platform.teams.approval.resolved_always	✅ Cho phép vĩnh viễn
+platform.teams.approval.resolved_deny	❌ Đã từ chối
+platform.teams.approval.resolved_once	✅ Cho phép (một lần)
+platform.teams.approval.resolved_session	✅ Cho phép (session)
+platform.teams.approval.unknown_action	Hành động không rõ.
+platform.teams.summary.action_items	Việc cần làm
+platform.teams.summary.empty	Không có bản tóm tắt.
+platform.teams.summary.heading	Tóm tắt
+platform.teams.summary.key_decisions	Quyết định chính
+platform.teams.summary.none_item	Không có
+platform.teams.summary.risks	Rủi ro
+platform.teams.summary.summary_line	Tóm tắt: {summary}
+platform.teams.summary.title	Cuộc họp {meeting_id}
+platform.teams.summary.title_fallback	tóm tắt
+platform.telegram.approval.action_always	✅ Luôn
+platform.telegram.approval.action_deny	❌ Từ chối
+platform.telegram.approval.action_once	✅ Cho phép một lần
+platform.telegram.approval.action_session	✅ Session
+platform.telegram.approval.expired	⌛ Phê duyệt đã hết hạn
+platform.telegram.approval.expired_detail	{label} — không có lệnh nào đang chờ. Nó đã hết thời gian chờ (và bị từ chối) hoặc được xử lý ở nơi khác.
+platform.telegram.approval.resolved_always	✅ Đã phê duyệt vĩnh viễn
+platform.telegram.approval.resolved_by_user	{label} bởi {user}
+platform.telegram.approval.resolved_deny	❌ Đã từ chối
+platform.telegram.approval.resolved_generic	Đã xử lý
+platform.telegram.approval.resolved_once	✅ Đã phê duyệt một lần
+platform.telegram.approval.resolved_session	✅ Đã phê duyệt cho session
+platform.telegram.approval.toast_already_resolved	Phê duyệt này đã được xử lý.
+platform.telegram.approval.toast_invalid_data	Dữ liệu phê duyệt không hợp lệ.
+platform.telegram.gmail_triage.appended_by	— {label} bởi {user}
+platform.telegram.gmail_triage.done_archive	✓ đã lưu trữ
+platform.telegram.gmail_triage.done_draft	✓ đã soạn thư trả lời
+platform.telegram.gmail_triage.done_mute	✓ đã tắt tiếng
+platform.telegram.gmail_triage.done_mute_domain	✓ đã tắt tiếng tên miền
+platform.telegram.gmail_triage.done_send	✓ đã gửi thư soạn
+platform.telegram.gmail_triage.done_spam	✓ đã đánh dấu spam
+platform.telegram.gmail_triage.done_trust	✓ đã đánh dấu tin cậy
+platform.telegram.gmail_triage.done_trust_domain	✓ đã đánh dấu tin cậy tên miền
+platform.telegram.gmail_triage.done_vip	✓ đã đánh dấu VIP
+platform.telegram.gmail_triage.done_vip_domain	✓ đã đánh dấu VIP tên miền
+platform.telegram.gmail_triage.error	❌ Lỗi {verb}: {error}
+platform.telegram.gmail_triage.exit_code	exit {code}
+platform.telegram.gmail_triage.failed	❌ {verb} thất bại: {detail}
+platform.telegram.gmail_triage.invalid_data	Dữ liệu gmail-triage không hợp lệ.
+platform.telegram.gmail_triage.script_missing	❌ Thiếu {script}
+platform.telegram.gmail_triage.timed_out	❌ {verb} quá thời gian chờ
+platform.telegram.gmail_triage.unknown_verb	Hành động không rõ: {verb}
+platform.telegram.install_hint	Chạy `hermes setup` để cài đặt hỗ trợ Telegram.
+platform.telegram.media.download_failed	⚠️ Không thể tải xuống {kind}{name} của bạn ({error}). Vui lòng thử gửi lại.
+platform.telegram.media.kind_attachment	file đính kèm
+platform.telegram.media.kind_audio	file âm thanh
+platform.telegram.media.kind_photo	ảnh
+platform.telegram.media.kind_video	file video
+platform.telegram.media.kind_voice	tin nhắn voice
+platform.telegram.media.named_suffix	 ({name})
+platform.telegram.picker.apply_error	Lỗi khi áp dụng lựa chọn: {error}
+platform.telegram.picker.back	◀ Quay lại
+platform.telegram.picker.cancel	✗ Hủy
+platform.telegram.picker.cancelled	Đã hủy chọn model.
+platform.telegram.picker.confirm_selection	Xác nhận lựa chọn model
+platform.telegram.picker.current_model	Model hiện tại: {model}
+platform.telegram.picker.expired	Trình chọn đã hết hạn.
+platform.telegram.picker.expired_model	Trình chọn đã hết hạn — dùng lại /model.
+platform.telegram.picker.expired_rerun	Trình chọn đã hết hạn — chạy lại lệnh.
+platform.telegram.picker.group_not_found	Không tìm thấy group.
+platform.telegram.picker.invalid_model_index	Chỉ số model không hợp lệ.
+platform.telegram.picker.invalid_page	Trang không hợp lệ.
+platform.telegram.picker.invalid_selection	Lựa chọn không hợp lệ.
+platform.telegram.picker.more_available	Còn {count} lựa chọn nữa — gõ `/model <name>` trực tiếp
+platform.telegram.picker.next	Tiếp ▶
+platform.telegram.picker.prev	◀ Trước
+platform.telegram.picker.provider_family	Nhóm provider: {family}
+platform.telegram.picker.provider_label	Provider: {provider}
+platform.telegram.picker.provider_not_found	Không tìm thấy provider.
+platform.telegram.picker.select_model	Chọn một model:
+platform.telegram.picker.select_provider	Chọn một provider:
+platform.telegram.picker.switch_anyway	Vẫn chuyển
+platform.telegram.picker.switch_error	Lỗi khi chuyển model: {error}
+platform.telegram.picker.switch_failed	Chuyển model thất bại.
+platform.telegram.picker.switched	Đã chuyển model!
+platform.telegram.picker.title	Cấu hình model
+platform.telegram.picker.unknown_model	không rõ
+platform.telegram.prompt.affirm	✓ Có
+platform.telegram.prompt.affirm_word	Có
+platform.telegram.prompt.awaiting_typed	Đang chờ câu trả lời dạng text từ {user}…
+platform.telegram.prompt.default_hint	 (mặc định: {default})
+platform.telegram.prompt.expired_body	⚠️ Câu hỏi này đã hết hạn hoặc session đã đặt lại — vui lòng /retry.
+platform.telegram.prompt.expired_toast	⚠️ Prompt này đã hết hạn — vui lòng /retry.
+platform.telegram.prompt.invalid_choice	Lựa chọn không hợp lệ.
+platform.telegram.prompt.negate	✗ Không
+platform.telegram.prompt.negate_word	Không
+platform.telegram.prompt.other	✏️ Khác (gõ câu trả lời)
+platform.telegram.prompt.type_answer	✏️ Gõ câu trả lời của bạn vào chat.
+platform.telegram.prompt.update_answered	Prompt cập nhật đã được trả lời: {answer}
+platform.telegram.prompt.update_header	Cập nhật cần bạn nhập thông tin:
+platform.telegram.prompt.update_sent	Đã gửi '{answer}' đến tiến trình cập nhật.
+platform.telegram.slash_confirm.already_resolved	Prompt này đã được xử lý.
+platform.telegram.slash_confirm.always_approve	🔒 Luôn phê duyệt
+platform.telegram.slash_confirm.approve_once	✅ Phê duyệt một lần
+platform.telegram.slash_confirm.cancel	❌ Hủy
+platform.telegram.slash_confirm.resolved_always	🔒 Luôn phê duyệt
+platform.telegram.slash_confirm.resolved_cancel	❌ Đã hủy
+platform.telegram.slash_confirm.resolved_once	✅ Đã phê duyệt một lần
+platform.telegram.user_fallback	Người dùng
+platform.wecom.media.file_too_large	Kích thước file {size_mb}MB vượt giới hạn 20MB của WeCom nên không thể gửi. Thử nén file hoặc giảm kích thước.
+platform.wecom.media.kind_image	Ảnh
+platform.wecom.media.kind_video	Video
+platform.wecom.media.kind_voice	Tin nhắn voice
+platform.wecom.media.size_downgraded	{label} kích thước {size_mb}MB vượt giới hạn {cap}; đã gửi dưới dạng file thay thế.
+platform.wecom.media.voice_format_downgraded	Định dạng voice {content_type} không được hỗ trợ (WeCom chỉ nhận AMR); đã gửi dưới dạng file thay thế.
+platform.weixin.voice_as_attachment	[tin nhắn voice dưới dạng file đính kèm]
+platform.whatsapp.approval_expired	⌛ Phê duyệt đã hết hạn — lệnh không được chạy (đã hết thời gian chờ hoặc được xử lý ở nơi khác).
+platform.whatsapp.approve_button	✅ Phê duyệt
+platform.whatsapp.approved	✅ Đã phê duyệt.
+platform.whatsapp.clarify_list_button	Chọn
+platform.whatsapp.clarify_list_section	Các tùy chọn
+platform.whatsapp.clarify_other_description	Gõ câu trả lời của riêng bạn
+platform.whatsapp.clarify_other_title	✏️ Khác
+platform.whatsapp.clarify_type_answer	✏️ Gõ câu trả lời của bạn:
+platform.whatsapp.denied	❌ Đã từ chối.
+platform.whatsapp.deny_button	❌ Từ chối
+platform.whatsapp.slash_confirm_always	🔒 Luôn
+platform.whatsapp.slash_confirm_cancel	❌ Hủy
+platform.whatsapp.slash_confirm_once	✅ Phê duyệt một lần
+platform.yuanbao.owner_command_denied	⚠️ {command} chỉ khả dụng cho người tạo trong chế độ chat riêng
+platform.yuanbao.slow_response_notice	Tác vụ này hơi phức tạp — vẫn đang xử lý, vui lòng giữ kết nối...
+tips.placeholder.p01	Hỏi bất cứ điều gì, hoặc gõ / để xem các lệnh…
+tips.placeholder.p02	Tóm tắt những gì có trong thư mục này
+tips.placeholder.p03	Soạn thư trả lời email cuối cùng trong hộp thư của tôi
+tips.placeholder.p04	Lập kế hoạch cho một tính năng, rồi xây dựng từng bước
+tips.placeholder.p05	Tìm và sửa một test đang lỗi
+tips.placeholder.p06	Nghiên cứu chủ đề này và viết cho tôi một bản báo cáo ngắn
+tips.placeholder.p07	Repo này gần đây có gì thay đổi?
+tips.placeholder.p08	Chuyển các ghi chú này thành danh sách việc cần làm
+tips.placeholder.p09	Giải thích lỗi này và cách khắc phục
+tips.placeholder.p10	Đặt lời nhắc hoặc lên lịch tác vụ định kỳ
+tips.placeholder.p11	Gõ / để duyệt các lệnh, hoặc Ctrl+P để mở palette
+tips.t001	/bg <prompt> chạy một tác vụ trong session riêng trong khi session hiện tại vẫn rảnh; /btw <question> trả lời câu hỏi phụ về hội thoại này mà không làm gián đoạn.
+tips.t002	/branch tách session hiện tại để bạn khám phá một hướng đi khác mà không mất tiến độ.
+tips.t003	/compress nén thủ công context hội thoại khi nó trở nên quá dài.
+tips.t004	/rollback liệt kê các checkpoint filesystem — khôi phục file mà agent đã sửa về bất kỳ trạng thái trước đó nào.
+tips.t005	/rollback diff 2 xem trước những gì đã thay đổi kể từ checkpoint 2 mà không khôi phục gì.
+tips.t006	/rollback 2 src/file.py khôi phục một file duy nhất từ checkpoint cụ thể.
+tips.t007	/title "my project" đặt tên cho session — sau đó tiếp tục bằng /resume hoặc hermes -c.
+tips.t008	/resume tiếp tục đúng chỗ bạn đang dở trong session đã đặt tên trước đó.
+tips.t009	/queue <prompt> đưa tin nhắn vào hàng đợi cho lượt sau mà không gián đoạn lượt hiện tại.
+tips.t010	/undo xóa lượt trao đổi user/assistant cuối cùng khỏi hội thoại.
+tips.t011	/retry gửi lại tin nhắn cuối của bạn — hữu ích khi câu trả lời của agent chưa đúng lắm.
+tips.t012	/verbose luân phiên chế độ hiển thị tiến trình tool: off → new → all → verbose.
+tips.t013	/reasoning high tăng độ sâu suy luận của model. /reasoning show hiển thị phần suy luận.
+tips.t014	/fast bật/tắt xử lý ưu tiên để nhận phản hồi API nhanh hơn (tùy provider).
+tips.t015	/yolo bỏ qua mọi prompt phê duyệt lệnh nguy hiểm trong phần còn lại của session.
+tips.t016	/model cho phép đổi model giữa session — thử /model sonnet hoặc /model gpt-5.
+tips.t017	/model --global đổi model mặc định của bạn vĩnh viễn.
+tips.t018	/personality pirate đặt một personality vui nhộn — 14 lựa chọn có sẵn từ kawaii đến shakespeare.
+tips.t019	/skin đổi theme CLI — thử ares, mono, slate, poseidon hoặc charizard.
+tips.t020	/statusbar bật/tắt thanh hiển thị thường trực model, token, % context đã dùng, chi phí và thời lượng.
+tips.t021	/tools disable browser tạm gỡ các tool browser cho session hiện tại.
+tips.t022	/browser connect gắn các tool browser vào trình duyệt họ Chromium đang chạy của bạn qua CDP.
+tips.t023	/plugins liệt kê các plugin đã cài và trạng thái của chúng.
+tips.t024	/cron quản lý các tác vụ định kỳ — thiết lập prompt lặp lại với gửi kết quả tới bất kỳ nền tảng nào.
+tips.t025	/reload-mcp nạp lại cấu hình MCP server mà không cần khởi động lại.
+tips.t026	/usage hiển thị mức dùng token, phân bổ chi phí và thời lượng session.
+tips.t027	/insights hiển thị phân tích sử dụng trong 30 ngày gần nhất.
+tips.t028	/paste kiểm tra clipboard của bạn có ảnh và đính kèm vào tin nhắn kế tiếp.
+tips.t029	/profile hiển thị profile đang hoạt động và thư mục home của nó.
+tips.t030	/config xem nhanh cấu hình hiện tại của bạn.
+tips.t031	/stop kết thúc mọi tiến trình nền do agent khởi tạo.
+tips.t032	@file:path/to/file.py chèn nội dung file trực tiếp vào tin nhắn của bạn.
+tips.t033	@file:main.py:10-50 chỉ chèn các dòng 10-50 của file.
+tips.t034	@folder:src/ chèn cây thư mục dưới dạng danh sách.
+tips.t035	@diff chèn các thay đổi git chưa staged vào tin nhắn.
+tips.t036	@staged chèn các thay đổi git đã staged (git diff --staged).
+tips.t037	@git:5 chèn 5 commit cuối cùng kèm toàn bộ patch.
+tips.t038	@url:https://example.com lấy và chèn nội dung một trang web.
+tips.t039	Gõ @ sẽ kích hoạt hoàn thiện đường dẫn filesystem — điều hướng đến bất kỳ file nào một cách tương tác.
+tips.t040	Kết hợp nhiều tham chiếu: "Review @file:main.py and @file:test.py for consistency."
+tips.t041	Alt+Enter chèn xuống dòng cho input nhiều dòng. (Windows Terminal chặn Alt+Enter — dùng Ctrl+Enter thay thế.)
+tips.t042	Ctrl+C gián đoạn agent. Nhấn đúp trong 2 giây để thoát bắt buộc.
+tips.t043	Ctrl+Z tạm dừng Hermes chạy nền — chạy fg trong shell để tiếp tục.
+tips.t044	Tab chấp nhận text gợi ý mờ hoặc hoàn thiện lệnh slash.
+tips.t045	Gõ tin nhắn mới trong khi agent đang chạy để gián đoạn và định hướng lại nó.
+tips.t046	Alt+V dán ảnh từ clipboard vào hội thoại.
+tips.t047	Dán 5+ dòng sẽ tự lưu thành file và chèn tham chiếu gọn thay thế.
+tips.t048	hermes -c tiếp tục session CLI gần nhất của bạn. hermes -c "project name" tiếp tục theo tiêu đề.
+tips.t049	hermes -w tạo một git worktree biệt lập — hoàn hảo cho các workflow agent song song.
+tips.t050	hermes -w -q "Fix issue #42" kết hợp biệt lập worktree với một truy vấn một lần.
+tips.t051	hermes chat -t web,terminal chỉ bật các toolset cụ thể cho một session tập trung.
+tips.t052	hermes chat -s github-pr-workflow nạp sẵn một skill khi khởi động.
+tips.t053	hermes chat -q "query" chạy một truy vấn đơn không tương tác rồi thoát.
+tips.t054	hermes chat --max-turns 1000 ghi đè giới hạn mặc định 500 lượt mỗi turn.
+tips.t055	hermes chat --checkpoints bật chụp nhanh filesystem trước mọi thay đổi file gây phá hủy.
+tips.t056	hermes --yolo bỏ qua mọi prompt phê duyệt lệnh nguy hiểm trong suốt session.
+tips.t057	hermes chat --source telegram gắn thẻ session để lọc trong hermes sessions list.
+tips.t058	hermes -p work chat chạy dưới một profile cụ thể mà không đổi mặc định của bạn.
+tips.t059	hermes doctor --fix chẩn đoán và tự sửa các vấn đề cấu hình và phụ thuộc.
+tips.t060	hermes dump xuất một bản tóm tắt thiết lập gọn — rất tiện cho báo cáo lỗi.
+tips.t061	hermes config set KEY VALUE tự điều hướng secret vào .env và phần còn lại vào config.yaml.
+tips.t062	hermes config edit mở config.yaml trong editor mặc định của bạn.
+tips.t063	hermes config check quét các tùy chọn cấu hình bị thiếu hoặc cũ.
+tips.t064	hermes sessions browse mở trình chọn session tương tác có tìm kiếm.
+tips.t065	hermes sessions stats hiển thị số lượng session theo nền tảng và kích thước database.
+tips.t066	hermes sessions prune --older-than 30 dọn các session cũ.
+tips.t067	hermes skills search react --source skills-sh tìm kiếm trong thư mục công khai skills.sh.
+tips.t068	hermes skills check quét các skill hub đã cài để tìm bản cập nhật từ nguồn gốc.
+tips.t069	hermes skills tap add myorg/skills-repo thêm nguồn skill GitHub tùy chỉnh.
+tips.t070	hermes skills snapshot export setup.json xuất cấu hình skill của bạn để sao lưu hoặc chia sẻ.
+tips.t071	hermes mcp add github --command npx thêm MCP server từ dòng lệnh.
+tips.t072	hermes mcp serve chạy chính Hermes như một MCP server cho các agent khác.
+tips.t073	hermes auth add cho phép thêm nhiều API key để xoay vòng nhóm thông tin xác thực.
+tips.t074	hermes completion bash >> ~/.bashrc bật hoàn thiện tab cho mọi lệnh và profile.
+tips.t075	hermes logs -f theo dõi agent.log theo thời gian thực. --level WARNING --since 1h lọc đầu ra.
+tips.t076	hermes backup tạo file zip sao lưu toàn bộ thư mục home Hermes của bạn.
+tips.t077	hermes profile create coder tạo một profile biệt lập và biến nó thành lệnh riêng.
+tips.t078	hermes profile create work --clone sao chép cấu hình và key hiện tại sang profile mới.
+tips.t079	hermes update đồng bộ skill mới đóng gói sẵn đến TẤT CẢ các profile tự động.
+tips.t080	hermes gateway install thiết lập Hermes như một dịch vụ hệ thống (systemd/launchd).
+tips.t081	hermes memory setup cho phép cấu hình provider bộ nhớ ngoài (Honcho, Mem0, v.v.).
+tips.t082	hermes webhook subscribe tạo các route webhook theo sự kiện với xác thực HMAC.
+tips.t083	Tiết kiệm chi phí: hermes tools tắt các tool không dùng, hermes skills config cắt bớt skill.
+tips.t084	/reasoning low hoặc /reasoning minimal giảm độ sâu suy luận dưới mức mặc định (medium) — phản hồi nhanh hơn, rẻ hơn.
+tips.t085	hermes models định tuyến tác vụ vision, nén và phụ trợ sang model rẻ hơn — cắt hơn 85% chi phí token nền mà không hạ model chat chính.
+tips.t086	Đặt display.bell_on_complete: true trong config.yaml để nghe chuông khi các tác vụ dài hoàn tất.
+tips.t087	Đặt display.streaming: true để thấy token xuất hiện theo thời gian thực khi model sinh nội dung.
+tips.t088	Đặt display.show_reasoning: true để theo dõi chuỗi suy luận (chain-of-thought) của model.
+tips.t089	Đặt display.compact: true để giảm khoảng trắng trong đầu ra, thông tin dày hơn.
+tips.t090	Đặt display.busy_input_mode: queue để xếp hàng tin nhắn thay vì gián đoạn agent, hoặc steer để chèn giữa lúc chạy qua /steer.
+tips.t091	Đặt display.resume_display: minimal để bỏ qua phần tóm tắt lại toàn bộ hội thoại khi tiếp tục session.
+tips.t092	Đặt compression.threshold: 0.50 để kiểm soát thời điểm tự nén kích hoạt (mặc định: 50% context).
+tips.t093	Đặt agent.max_turns: 1000 để agent thực hiện nhiều bước gọi tool hơn mỗi lượt.
+tips.t094	Đặt file_read_max_chars: 200000 để tăng nội dung tối đa cho mỗi lần gọi read_file.
+tips.t095	Đặt approvals.mode: smart để LLM tự phê duyệt lệnh an toàn và tự từ chối lệnh nguy hiểm.
+tips.t096	Đặt fallback_model trong config.yaml để tự động chuyển sang provider dự phòng khi lỗi.
+tips.t097	Đặt privacy.redact_pii: true để băm user ID và số điện thoại trước khi gửi cho LLM.
+tips.t098	Đặt browser.record_sessions: true để tự ghi các phiên browser thành video WebM.
+tips.t099	Đặt worktree: true trong config.yaml để luôn tạo git worktree (giống hermes -w).
+tips.t100	Đặt security.website_blocklist.enabled: true để chặn các tên miền cụ thể khỏi web tools.
+tips.t101	Đặt cron.wrap_response: false để gửi đầu ra thô của agent không kèm header/footer cron.
+tips.t102	HERMES_TIMEZONE ghi đè múi giờ server bằng chuỗi IANA bất kỳ.
+tips.t103	Thay thế biến môi trường hoạt động trong config.yaml: dùng cú pháp ${VAR_NAME}.
+tips.t104	Quick commands trong config.yaml chạy lệnh shell tức thì, tốn 0 token.
+tips.t105	Personality tùy chỉnh có thể định nghĩa trong config.yaml dưới agent.personalities.
+tips.t106	provider_routing kiểm soát sắp xếp, whitelist và blacklist provider OpenRouter.
+tips.t107	execute_code chạy script Python gọi các tool Hermes theo chương trình — kết quả không vào context.
+tips.t108	delegate_task khởi tạo tới 10 sub-agent chạy đồng thời theo mặc định (delegation.max_concurrent_children) với context biệt lập cho công việc song song.
+tips.t109	web_extract hoạt động với URL PDF — đưa link PDF bất kỳ và nó chuyển thành markdown.
+tips.t110	search_files dựa trên ripgrep và nhanh hơn grep — hãy dùng nó thay cho grep trong terminal.
+tips.t111	patch dùng 9 chiến lược khớp mờ nên khác biệt nhỏ về khoảng trắng không làm hỏng việc sửa.
+tips.t112	patch hỗ trợ định dạng V4A để sửa nhiều file hàng loạt trong một lần gọi.
+tips.t113	read_file gợi ý tên file tương tự khi không tìm thấy file.
+tips.t114	read_file tự khử trùng lặp — đọc lại file không đổi sẽ trả về stub nhẹ.
+tips.t115	browser_vision chụp ảnh màn hình và phân tích bằng AI — dùng được cho CAPTCHA và nội dung trực quan.
+tips.t116	browser_console có thể chạy biểu thức JavaScript trong ngữ cảnh trang.
+tips.t117	image_generate tạo ảnh với FLUX 2 Pro và tự động upscale 2x.
+tips.t118	text_to_speech chuyển text thành âm thanh — hiển thị bong bóng voice trên Telegram.
+tips.t119	send_message có thể gửi đến mọi nền tảng nhắn tin đã kết nối ngay trong session.
+tips.t120	Tool todo giúp agent theo dõi các tác vụ nhiều bước phức tạp trong session.
+tips.t121	session_search tìm kiếm toàn văn trên TẤT CẢ các hội thoại trước đây.
+tips.t122	Agent tự lưu lựa chọn, chỉnh sửa và thông tin môi trường vào memory.
+tips.t123	/moa điều phối một prompt khó qua bộ model Mixture of Agents đã cấu hình.
+tips.t124	Lệnh terminal hỗ trợ chế độ nền với notify_on_complete cho tác vụ chạy dài.
+tips.t125	Tiến trình nền terminal hỗ trợ watch_patterns để báo động theo dòng đầu ra cụ thể.
+tips.t126	Tool terminal hỗ trợ 6 backend: local, Docker, SSH, Modal, Daytona và Singularity.
+tips.t127	Mỗi profile có config, API key, memory, session, skill và cron job riêng.
+tips.t128	Tên profile trở thành lệnh shell — 'hermes profile create coder' tạo ra lệnh 'coder'.
+tips.t129	hermes profile export coder -o backup.tar.gz tạo một bản lưu trữ profile di động.
+tips.t130	Nếu hai profile vô tình dùng chung bot token, gateway thứ hai bị chặn kèm thông báo lỗi rõ ràng.
+tips.t131	Session tự sinh tiêu đề mô tả sau lượt trao đổi đầu tiên — không cần đặt tên thủ công.
+tips.t132	Tiêu đề session hỗ trợ dòng dõi: "my project" → "my project #2" → "my project #3".
+tips.t133	Khi thoát, Hermes in lệnh tiếp tục kèm session ID và số liệu.
+tips.t134	hermes sessions export backup.jsonl xuất mọi session để sao lưu hoặc phân tích.
+tips.t135	hermes -r SESSION_ID tiếp tục một session trước đó bất kỳ theo ID của nó.
+tips.t136	Memory là ảnh chụp cố định — thay đổi chỉ xuất hiện trong system prompt ở lần chạy session kế tiếp.
+tips.t137	Các mục memory tự động được quét theo mẫu prompt injection và rò rỉ dữ liệu.
+tips.t138	Agent có hai kho memory: ghi chú cá nhân (~2200 ký tự) và user profile (~1375 ký tự).
+tips.t139	Các chỉnh sửa bạn đưa cho agent ("không, làm kiểu này") thường được tự lưu vào memory.
+tips.t140	Hơn 80 skill đóng gói sẵn phủ github, creative, mlops, productivity, research và nhiều hơn nữa.
+tips.t141	Mọi skill đã cài tự động trở thành lệnh slash — gõ / để xem tất cả.
+tips.t142	hermes skills install official/security/1password cài các skill tùy chọn từ repo.
+tips.t143	Skill có thể giới hạn trên hệ điều hành cụ thể — một số chỉ tải trên macOS hoặc Linux.
+tips.t144	skills.external_dirs trong config.yaml cho phép tải skill từ thư mục tùy chỉnh.
+tips.t145	Agent có thể tự tạo skill của mình như bộ nhớ thủ tục (procedural memory) qua skill_manage.
+tips.t146	/plan viết kế hoạch triển khai dạng markdown vào .hermes/plans/ mà không thực thi gì.
+tips.t147	Cron job có thể gắn skill: hermes cron add --skill blogwatcher "Check for new posts".
+tips.t148	Đích gửi của cron bao gồm telegram, discord, slack, email, sms và hơn 12 nền tảng nữa.
+tips.t149	Nếu phản hồi cron bắt đầu bằng [SILENT], việc gửi bị ẩn đi — hữu ích cho job chỉ theo dõi.
+tips.t150	Cron hỗ trợ độ trễ tương đối (30m), chu kỳ (every 2h), biểu thức cron và mốc thời gian ISO.
+tips.t151	Cron job chạy trong session agent hoàn toàn mới — prompt phải tự chứa đầy đủ ngữ cảnh.
+tips.t152	Voice mode hoạt động mà không cần API key nếu faster-whisper đã cài (speech-to-text địa phương miễn phí).
+tips.t153	Năm TTS provider khả dụng: Edge TTS (miễn phí), ElevenLabs, OpenAI, NeuTTS (chạy local miễn phí), MiniMax.
+tips.t154	/voice on bật voice mode trong CLI. Ctrl+B bật/tắt ghi âm push-to-talk.
+tips.t155	Streaming TTS đọc từng câu ngay khi sinh — bạn không phải đợi toàn bộ phản hồi.
+tips.t156	Tin nhắn voice trên Telegram, Discord, WhatsApp và Slack được tự động phiên âm.
+tips.t157	Hermes chạy trên 21 nền tảng nhắn tin: Telegram, Discord, Slack, WhatsApp, Signal, Matrix, IRC, Microsoft Teams, email và nhiều hơn nữa.
+tips.t158	hermes gateway install thiết lập Hermes thành dịch vụ hệ thống khởi động cùng máy.
+tips.t159	DingTalk dùng Stream Mode — không cần webhook hay URL công khai.
+tips.t160	BlueBubbles đưa iMessage đến Hermes qua một server macOS chạy local.
+tips.t161	Route webhook hỗ trợ xác thực HMAC, giới hạn tốc độ và lọc sự kiện.
+tips.t162	API server cung cấp endpoint tương thích OpenAI, dùng được với Open WebUI và LibreChat.
+tips.t163	Chế độ kênh voice Discord: bot vào phòng voice, phiên âm lời nói và trả lời bằng giọng nói.
+tips.t164	group_sessions_per_user: true cho mỗi người một session riêng trong group chat.
+tips.t165	/sethome đánh dấu một chat là kênh home để nhận kết quả cron job.
+tips.t166	Gateway hỗ trợ timeout dựa trên không hoạt động — agent đang chạy có thể chạy vô thời hạn.
+tips.t167	Phê duyệt lệnh nguy hiểm có 4 mức: once, session, always (cho phép vĩnh viễn), deny.
+tips.t168	Chế độ phê duyệt thông minh dùng LLM để tự phê duyệt lệnh an toàn và đánh dấu lệnh nguy hiểm.
+tips.t169	Bảo vệ SSRF chặn mạng riêng, loopback, link-local và địa chỉ metadata cloud.
+tips.t170	Quét pre-exec của Tirith phát hiện giả mạo URL homograph và mẫu pipe-to-interpreter.
+tips.t171	Tiến trình con MCP nhận môi trường đã lọc — chỉ các biến hệ thống an toàn được đi qua.
+tips.t172	File context (.hermes.md, AGENTS.md) được quét bảo mật prompt injection trước khi nạp.
+tips.t173	command_allowlist trong config.yaml phê duyệt vĩnh viễn các mẫu lệnh shell cụ thể.
+tips.t174	Context tự nén khi đạt ngưỡng — memory được flush và lịch sử được tóm tắt.
+tips.t175	Thanh trạng thái chuyển vàng, rồi cam, rồi đỏ khi context lấp đầy.
+tips.t176	SOUL.md là file định danh chính của agent — tùy biến nó để định hình hành vi.
+tips.t177	Hermes nạp context dự án từ .hermes.md, AGENTS.md, CLAUDE.md hoặc .cursorrules (khớp đầu tiên).
+tips.t178	File AGENTS.md trong thư mục con được phát hiện dần khi agent đi vào từng thư mục.
+tips.t179	File context bị giới hạn 20.000 ký tự với cơ chế cắt head/tail thông minh.
+tips.t180	Năm browser provider: Chromium local, Browserbase, Browser Use, Camofox và Firecrawl.
+tips.t181	Camofox là trình duyệt chống phát hiện — bản fork Firefox với giả lập fingerprint bằng C++.
+tips.t182	browser_navigate tự trả về snapshot trang — không cần gọi browser_snapshot sau đó.
+tips.t183	browser_vision với annotate=true phủ nhãn số lên các phần tử tương tác.
+tips.t184	hermes mcp mở trình chọn tương tác các MCP được Nous phê duyệt, cài chỉ với một phím.
+tips.t185	hermes mcp catalog liệt kê các MCP server do Nous phê duyệt đi kèm repo.
+tips.t186	hermes mcp install <name> cài một mục trong catalog, hỏi thông tin xác thực và cho bạn chọn tool nào sẽ bật.
+tips.t187	MCP server được cấu hình trong config.yaml — hỗ trợ cả hai transport stdio và HTTP.
+tips.t188	Lọc tool theo từng server: tools.include whitelist và tools.exclude blacklist các tool cụ thể.
+tips.t189	MCP server tự sinh toolset lúc chạy — hermes tools có thể bật/tắt từng nền tảng.
+tips.t190	Hỗ trợ MCP OAuth: auth: oauth bật cấp quyền qua trình duyệt với PKCE.
+tips.t191	Checkpoint không tốn chi phí khi không có file nào bị sửa — bật theo mặc định.
+tips.t192	Một snapshot trước rollback được lưu tự động để bạn có thể hoàn tác lại lần undo.
+tips.t193	/rollback cũng hoàn tác cả lượt hội thoại, nên agent không nhớ các thay đổi đã rollback.
+tips.t194	Checkpoint dùng shadow repo trong ~/.hermes/checkpoints/ — .git của dự án bạn không bao giờ bị đụng tới.
+tips.t195	batch_runner.py xử lý hàng trăm prompt song song để tạo dữ liệu huấn luyện.
+tips.t196	hermes chat -Q bật quiet mode cho mục đích chạy chương trình — ẩn banner và spinner.
+tips.t197	Lưu trajectory (--save-trajectories) ghi lại toàn bộ dấu vết sử dụng tool để huấn luyện model.
+tips.t198	Ba loại plugin: general (tools/hooks), memory provider và context engine.
+tips.t199	hermes plugins install owner/repo cài plugin trực tiếp từ GitHub.
+tips.t200	Memory provider ngoài: Honcho, OpenViking, Mem0 có sẵn; Hindsight và khác cài qua hermes plugins install.
+tips.t201	Hook plugin gồm pre/post_tool_call, pre/post_llm_call và transform_terminal_output để chuẩn hóa đầu ra.
+tips.t202	Prompt caching (Anthropic) giảm chi phí nhờ tái sử dụng các tiền tố system prompt đã cache.
+tips.t203	Agent tự sinh tiêu đề session trong thread nền — không ảnh hưởng độ trễ.
+tips.t204	Định tuyến model thông minh có thể tự chuyển query đơn giản sang model rẻ hơn.
+tips.t205	Lệnh slash hỗ trợ khớp tiền tố: /h dẫn đến /help, /mod dẫn đến /model.
+tips.t206	Kéo đường dẫn file vào terminal tự động đính kèm ảnh hoặc gửi làm context.
+tips.t207	.worktreeinclude ở gốc repo liệt kê file gitignored cần sao chép vào worktree.
+tips.t208	hermes acp chạy Hermes như một ACP server cho tích hợp VS Code, Zed và JetBrains.
+tips.t209	Provider tùy chỉnh: lưu các endpoint đặt tên trong config.yaml dưới custom_providers.
+tips.t210	HERMES_EPHEMERAL_SYSTEM_PROMPT chèn system prompt không bao giờ được lưu vào lịch sử.
+tips.t211	credential_pool_strategies hỗ trợ xoay vòng fill_first, round_robin, least_used và random.
+tips.t212	hermes auth add nous hoặc hermes auth add openai-codex thiết lập provider qua OAuth.
+tips.t213	API server hỗ trợ cả Chat Completions và Responses API với trạng thái phía server.
+tips.t214	tool_preview_length: 0 trong config hiển thị đường dẫn file đầy đủ trong bảng hoạt động của spinner.
+tips.t215	hermes status --deep chạy kiểm tra chẩn đoán sâu hơn trên mọi thành phần.
+tips.t216	Cron job có thể gắn script Python (--script) có stdout được chèn vào prompt làm context.
+tips.t217	Script cron nằm trong ~/.hermes/scripts/ và chạy trước agent — hoàn hảo cho pipeline thu thập dữ liệu.
+tips.t218	prefill_messages_file trong config.yaml chèn ví dụ few-shot vào mọi lần gọi API, không bao giờ lưu vào lịch sử.
+tips.t219	SOUL.md thay thế hoàn toàn định danh mặc định của agent — viết lại để biến Hermes thành của riêng bạn.
+tips.t220	SOUL.md được gieo sẵn personality mặc định ở lần chạy đầu. Hãy sửa nó để tùy biến.
+tips.t221	/compress <focus topic> dành 60-70% ngân sách tóm tắt cho chủ đề của bạn và cắt mạnh phần còn lại.
+tips.t222	Từ lần nén thứ hai trở đi, bộ nén cập nhật bản tóm tắt trước thay vì bắt đầu lại từ đầu.
+tips.t223	Trước khi gateway đặt lại session, Hermes tự flush các thông tin quan trọng vào memory ở nền.
+tips.t224	network.force_ipv4: true trong config.yaml sửa tình trạng treo trên server IPv6 hỏng — monkey-patches socket.
+tips.t225	Tool terminal chú thích các exit code phổ biến: grep trả về 1 = 'Không tìm thấy kết quả khớp (không phải lỗi)'.
+tips.t226	Lệnh terminal foreground thất bại tự thử lại tới 3 lần với backoff luỹ thừa (2s, 4s, 8s).
+tips.t227	Lệnh sudo trần tự được viết lại để bơm SUDO_PASSWORD từ .env — không cần nhập tương tác.
+tips.t228	Helper của execute_code yêu cầu import rõ ràng: from hermes_tools import json_parse, shell_quote, retry.
+tips.t229	7 sandbox tool của execute_code (web_search, terminal, read/write/search/patch) dùng RPC — không bao giờ vào context.
+tips.t230	Đọc cùng một vùng file 3+ lần sẽ kích hoạt cảnh báo. Từ lần 4 trở đi bị chặn cứng để tránh vòng lặp.
+tips.t231	write_file và patch phát hiện file bị sửa bên ngoài kể từ lần đọc cuối và cảnh báo về sự cũ.
+tips.t232	Định dạng patch V4A hỗ trợ directive Add File, Delete File và Move File — không chỉ Update.
+tips.t233	MCP server có thể yêu cầu LLM completion ngược lại qua sampling — agent trở thành tool của server.
+tips.t234	MCP server gửi notifications/tools/list_changed để kích hoạt đăng ký lại tool tự động mà không cần khởi động lại.
+tips.t235	delegate_task với acp_command: 'claude' khởi chạy Claude Code như một agent con từ bất kỳ nền tảng nào.
+tips.t236	Delegation có thread heartbeat — hoạt động của agent con được truyền về agent cha, tránh gateway timeout.
+tips.t237	Khi provider trả về HTTP 402 (payment required), auxiliary client tự chuyển sang provider kế tiếp.
+tips.t238	agent.tool_use_enforcement định hướng các model hay mô tả hành động thay vì gọi tool — tự động cho GPT/Codex.
+tips.t239	agent.restart_after_turn_timeout để các turn đang chạy hoàn tất trước khi /restart vào stop(); restart_drain_timeout chỉ là ngân sách ngắt cưỡng bức sau khi stop() bắt đầu.
+tips.t240	agent.api_max_retries (mặc định 3) kiểm soát số lần agent thử lại một lần gọi API thất bại trước khi báo lỗi — hạ xuống để fallback nhanh hơn.
+tips.t241	Gateway cache các thể hiện AIAgent theo session — phá cache này sẽ làm hỏng prompt caching của Anthropic.
+tips.t242	Bất kỳ website nào cũng có thể công bố skill qua /.well-known/skills/index.json — skills hub tự động khám phá chúng.
+tips.t243	Nhật ký audit skill tại ~/.hermes/skills/.hub/audit.log ghi lại mọi thao tác cài đặt và gỡ bỏ.
+tips.t244	Git worktree cũ tự được dọn khi khởi động: tree sạch, đã merge hết bị cắt; công việc chưa commit hoặc chưa push luôn được giữ lại.
+tips.t245	Profile giới hạn trạng thái Hermes qua HERMES_HOME; tiến trình con của host tool vẫn giữ HOME thật trừ khi terminal.home_mode là profile.
+tips.t246	Biến môi trường HERMES_HOME_MODE (octal, ví dụ 0701) đặt quyền thư mục tùy chỉnh cho việc duyệt thư mục của web server.
+tips.t247	Container mode: đặt .container-mode trong HERMES_HOME và CLI trên host tự exec vào container.
+tips.t248	Ctrl+C có 5 mức ưu tiên: hủy ghi âm → hủy prompt → hủy picker → gián đoạn agent → thoát.
+tips.t249	Mọi lần gián đoạn trong lúc agent chạy được ghi vào ~/.hermes/interrupt_debug.log kèm dấu thời gian.
+tips.t250	BROWSER_CDP_URL kết nối browser tools với trình duyệt họ Chromium đang chạy bất kỳ — nhận WebSocket, HTTP hoặc host:port.
+tips.t251	BROWSERBASE_ADVANCED_STEALTH=true bật chống phát hiện nâng cao với Chromium tùy chỉnh (gói Scale).
+tips.t252	CLI tự chuyển sang compact mode trên terminal hẹp hơn 80 cột.
+tips.t253	Quick commands hỗ trợ hai loại: exec (chạy trực tiếp lệnh shell) và alias (chuyển hướng sang lệnh khác).
+tips.t254	Model delegation theo tác vụ: delegation.model và delegation.provider trong config điều hướng sub-agent sang model rẻ hơn.
+tips.t255	delegation.reasoning_effort kiểm soát độc lập độ sâu suy luận của sub-agent.
+tips.t256	display.platforms trong config.yaml cho phép ghi đè hiển thị theo từng nền tảng: {telegram: {tool_progress: all}}.
+tips.t257	human_delay.mode trong config giả lập tốc độ gõ của con người — khoảng min_ms/max_ms cấu hình được.
+tips.t258	Migration phiên bản config chạy tự động khi nạp — key config mới xuất hiện mà không cần can thiệp thủ công.
+tips.t259	Model GPT và Codex được hướng dẫn system prompt đặc biệt về kỷ luật tool và nghĩa vụ gọi tool.
+tips.t260	Model Gemini nhận directive riêng về đường dẫn tuyệt đối, gọi tool song song và lệnh không tương tác.
+tips.t261	context.engine trong config.yaml có thể đặt thành tên plugin để dùng chiến lược quản lý context khác.
+tips.t262	Snapshot trang browser trên 15.000 ký tự bị cắt hoặc tự tóm tắt; snapshot đầy đủ được lưu vào cache/web để đọc bằng read_file.
+tips.t263	Bộ nén chạy một lượt tiền xử lý rẻ tiền: đầu ra tool trên 200 ký tự được thay bằng placeholder trước khi LLM chạy.
+tips.t264	Khi nén thất bại, các lần thử tiếp theo bị tạm dừng 10 phút để tránh dồn API.
+tips.t265	Lệnh nguy hiểm dài (>70 ký tự) có tùy chọn 'view' trong prompt phê duyệt để xem toàn bộ text trước.
+tips.t266	Trực quan mức âm thanh hiển thị thanh ▁▂▃▄▅▆▇ trong lúc ghi voice dựa trên RMS của micro.
+tips.t267	Tên profile không được trùng với binary sẵn có trên PATH — 'hermes profile create ls' sẽ bị từ chối.
+tips.t268	hermes profile create backup --clone-all sao chép mọi thứ (config, key, SOUL.md, memory, skill, session).
+tips.t269	Phím ghi voice cấu hình được qua voice.record_key trong config.yaml — không chỉ Ctrl+B.
+tips.t270	File .cursorrules và .cursor/rules/*.mdc được tự phát hiện và nạp làm context dự án.
+tips.t271	File context hỗ trợ phát hiện 10+ mẫu prompt injection — Unicode vô hình, 'ignore instructions', cố gắng exfiltrate.
+tips.t272	GPT-5 và Codex dùng role 'developer' thay vì 'system' trong định dạng tin nhắn.
+tips.t273	Ghi đè auxiliary theo tác vụ: auxiliary.vision.provider, auxiliary.compression.model, v.v. trong config.yaml.
+tips.t274	Auxiliary client coi 'main' như một alias provider — phân giải thành provider + model chính thực tế của bạn.
+tips.t275	hermes claw migrate --dry-run xem trước việc migration OpenClaw mà không ghi gì.
+tips.t276	Đường dẫn file dán kèm dấu ngoặc kép hoặc khoảng trắng đã escape được xử lý tự động — không cần dọn thủ công.
+tips.t277	Lệnh slash không bao giờ kích hoạt cơ chế thu gọn dán lớn — /command với tham số dài vẫn hoạt động đúng.
+tips.t278	Trong interrupt mode, lệnh slash gõ trong khi agent đang chạy bỏ qua logic gián đoạn và chạy ngay.
+tips.t279	HERMES_DEV=1 bỏ qua phát hiện container mode cho mục đích phát triển local.
+tips.t280	Mỗi MCP server có toolset riêng (mcp-servername) có thể bật/tắt độc lập qua hermes tools.
+tips.t281	Placeholder ${ENV_VAR} của MCP trong config được phân giải lúc khởi chạy server — gồm cả biến từ ~/.hermes/.env.
+tips.t282	Skill từ repo tin cậy (NousResearch) nhận mức bảo mật 'trusted'; skill cộng đồng được quét kỹ hơn.
+tips.t283	Khu cách ly skill tại ~/.hermes/skills/.hub/quarantine/ chứa các skill đang chờ rà soát bảo mật.
+tips.t284	/steer <prompt> chèn một ghi chú sau lần gọi tool kế tiếp — định hướng giữa tác vụ mà không gián đoạn.
+tips.t285	/goal <text> đặt mục tiêu Ralph-loop cố định — Hermes tự tiếp tục turn sau turn cho đến khi judge báo xong.
+tips.t286	/snapshot create [label] lưu snapshot trạng thái đầy đủ của cấu hình Hermes; /snapshot restore <id> hoàn tác sau này.
+tips.t287	/copy [N] sao chép câu trả lời assistant cuối vào clipboard, hoặc câu thứ N tính từ cuối nếu có số.
+tips.t288	/redraw buộc vẽ lại toàn bộ UI, sửa lệch terminal sau khi resize tmux hoặc lỗi chọn bằng chuột.
+tips.t289	/agents (alias /tasks) hiển thị các agent đang hoạt động và tác vụ nền đang chạy trong session hiện tại.
+tips.t290	/footer bật/tắt footer gateway trên câu trả lời cuối, hiển thị model, % context và cwd.
+tips.t291	/busy queue|steer|interrupt kiểm soát việc nhấn Enter khi Hermes đang làm việc.
+tips.t292	/topic trong Telegram DM bật chế độ topic đa session do người dùng quản lý — /topic <id> khôi phục session cũ ngay trong chat.
+tips.t293	/approve session|always chạy lệnh nguy hiểm đang chờ với phạm vi tin cậy bạn chọn; /deny từ chối nó.
+tips.t294	/restart khởi động lại gateway một cách an toàn sau khi các lượt chạy đang thực hiện kết thúc, rồi ping người yêu cầu khi đã hoạt động trở lại.
+tips.t295	/kanban boards switch <slug> đổi board Kanban đa dự án đang hoạt động ngay từ trong chat.
+tips.t296	/reload nạp lại ~/.hermes/.env vào session đang chạy — nhận API key mới mà không cần khởi động lại.
+tips.t297	cronjob với no_agent=True chạy script theo lịch và gửi stdout trực tiếp — 0 token, 0 LLM.
+tips.t298	stdout rỗng của script cron nghĩa là tick im lặng — không gửi gì, hoàn hảo cho watchdog ngưỡng.
+tips.t299	HERMES_CRON_MAX_PARALLEL (mặc định 4) giới hạn số cron job chạy mỗi tick để các đợt dồn cục không bão hòa key của bạn.
+tips.t300	Gateway hook nằm dưới ~/.hermes/hooks/<name>/ với HOOK.yaml + handler.py — handler phải tên là `handle`.
+tips.t301	Sự kiện hook gồm gateway:startup, session:start, agent:step và đăng ký wildcard command:*.
+tips.t302	Thả một checklist ~/.hermes/BOOT.md và hook gateway:startup sẽ chạy nó như một agent one-shot mỗi lần khởi động.
+tips.t303	hermes curator run --dry-run xem trước curator sẽ lưu trữ hoặc hợp nhất gì mà không thay đổi bất cứ thứ gì.
+tips.t304	hermes curator pin <skill> neo cứng một skill chống cả lưu trữ tự động lẫn tool skill_manage của agent.
+tips.t305	hermes curator rollback khôi phục skill từ snapshot trước khi chạy — bản sao lưu nằm dưới skills/.curator_backups/.
+tips.t306	hermes auth reset <provider> [target] xóa cooldown và cờ cạn kiệt trên cả nhóm credential hoặc một credential theo index, id hoặc label.
+tips.t307	credential_pool_strategies.<provider>: round_robin xoay vòng key đều nhau thay vì mặc định fill_first.
+tips.t308	use_gateway: true trên từng tool điều hướng web, image, tts hoặc browser qua gói đăng ký Nous của bạn — không cần key thêm.
+tips.t309	provider_routing.data_collection: deny loại trừ các provider lưu dữ liệu trên OpenRouter.
+tips.t310	provider_routing.require_parameters: true chỉ điều hướng tới provider hỗ trợ mọi tham số trong yêu cầu của bạn.
+tips.t311	HERMES_TUI_RESUME=1 tự gắn lại vào session TUI gần nhất khi khởi chạy — tiện sau khi SSH đứt kết nối.
+tips.t312	HERMES_TUI_THEME=light|dark|<hex> ép theme TUI trên terminal không đặt COLORFGBG.
+tips.t313	Ctrl+G hoặc Ctrl+X Ctrl+E trong TUI mở buffer nhập liệu trong $EDITOR cho prompt nhiều dòng dài.
+tips.t314	TUI render LaTeX inline — $E=mc^2$ hiển thị thành ký hiệu math Unicode thay vì TeX thô.
+tips.t315	hermes dashboard khởi chạy web UI local tại 127.0.0.1:9119 — không có dữ liệu nào rời khỏi localhost.
+tips.t316	hermes dashboard nhúng toàn bộ TUI Hermes vào trình duyệt qua xterm.js và WebSocket PTY.
+tips.t317	Thả một file YAML trong ~/.hermes/dashboard-themes/ với hai màu palette để đổi giao diện toàn bộ dashboard.
+tips.t318	Plugin dashboard dạng drop-in: manifest.json + bundle JS trong ~/.hermes/dashboard-plugins/ — không cần build npm.
+tips.t319	layoutVariant: cockpit trong theme dashboard thêm thanh trái 260px mà plugin có thể điền qua slot sidebar.
+tips.t320	display.tool_progress_command: true mở /verbose trên các nền tảng nhắn tin; mặc định chỉ có trên CLI.
+tips.t321	HERMES_BACKGROUND_NOTIFICATIONS=result chỉ báo khi tác vụ nền hoàn tất (so với concise/all/error/off).
+tips.t322	HERMES_WRITE_SAFE_ROOT giới hạn write_file/patch vào các tiền tố thư mục; nhiều đường dẫn qua os.pathsep (: hoặc ;).
+tips.t323	HERMES_IGNORE_RULES bỏ qua tự nạp AGENTS.md, SOUL.md, .cursorrules, memory và skill nạp sẵn.
+tips.t324	HERMES_ACCEPT_HOOKS tự phê duyệt shell hook chưa từng gặp khai báo trong config.yaml mà không cần prompt TTY.
+tips.t325	auxiliary.goal_judge.model điều hướng judge của /goal sang model rẻ, nhanh để giữ chi phí loop gần bằng 0.
+tips.t326	Checkpoint bỏ qua thư mục có hơn 50.000 file để tránh thao tác git chậm trên monorepo khổng lồ.
+tips.t327	tts.provider: piper chạy TTS local 44 ngôn ngữ trên CPU — voice tự tải về ~/.hermes/cache/piper-voices/.
+tips.t328	tts.providers.<name>.type: command ghim mọi engine TTS CLI với placeholder {input_path} và {output_path}.
+tips.t329	API_SERVER_ENABLED=true chạy endpoint tương thích OpenAI song song với gateway, dùng cho Open WebUI và LibreChat.
+tips.t330	GATEWAY_PROXY_URL chạy thiết lập tách rời: I/O nền tảng chạy local, việc của agent giao cho API server ở xa.
+tips.t331	MATRIX_DEVICE_ID ghim device ID ổn định cho E2EE — không có nó, key xoay vòng mỗi lần khởi động và giải mã lịch sử bị hỏng.
+tips.t332	TELEGRAM_WEBHOOK_SECRET bắt buộc khi TELEGRAM_WEBHOOK_URL được đặt — tạo bằng openssl rand -hex 32.
+tips.t333	batch_runner.py --resume khớp nội dung các prompt đã hoàn tất theo text để sắp lại dataset không chạy lại phần đã xong.
+tips.t334	/new bắt đầu session mới ngay tại chỗ (alias /reset) — session ID mới, lịch sử sạch, CLI vẫn mở.
+tips.t335	/clear xóa màn hình terminal VÀ bắt đầu session mới — một phím tắt cho việc reset trực quan.
+tips.t336	/history in hội thoại hiện tại ngay trong màn hình không cần rời CLI — tiện để đọc lại nhanh.
+tips.t337	/save ghi hội thoại hiện tại ra đĩa mà không kết thúc session.
+tips.t338	/status hiển thị nhanh thông tin session: ID, tiêu đề, model, mức dùng token và thời gian đã trôi.
+tips.t339	/image <path> đính kèm file ảnh local cho prompt kế tiếp mà không cần dán hay kéo-thả.
+tips.t340	/platforms hiển thị trạng thái gateway và các nền tảng nhắn tin ngay trong chat.
+tips.t341	/commands phân trang toàn bộ danh sách lệnh slash + skill đã cài — hữu ích trên nền tảng không có hoàn thiện tab.
+tips.t342	/toolsets liệt kê mọi toolset khả dụng để bạn biết -t/--toolsets nhận gì.
+tips.t343	/voice tts bật chế độ chỉ TTS — agent trả lời bằng giọng nói nhưng bạn vẫn gõ prompt.
+tips.t344	/reload-skills quét lại ~/.hermes/skills/ để skill thả vào xuất hiện mà không cần khởi động lại session.
+tips.t345	/indicator kaomoji|emoji|unicode|ascii chọn kiểu chỉ báo bận của TUI hiển thị trong lúc agent chạy.
+tips.t346	/debug tải lên gói hỗ trợ (thông tin hệ thống + log) và trả về link chia sẻ — hoạt động cả trong chat.
+tips.t347	hermes -z "<prompt>" là dạng one-shot thuần nhất: câu trả lời cuối trên stdout, không gì khác — lý tưởng để pipe trong script.
+tips.t348	hermes chat --pass-session-id chèn session ID vào system prompt để agent có thể tự tham chiếu.
+tips.t349	hermes chat --image path/to/pic.png đính kèm ảnh local vào một truy vấn -q duy nhất, không cần bước upload riêng.
+tips.t350	hermes chat --ignore-user-config bỏ qua cấu hình người dùng đang hoạt động — báo lỗi tái lập được và lượt chạy CI.
+tips.t351	hermes chat --source tool gắn thẻ các chat chạy chương trình để chúng không làm lộn xộn hermes sessions list.
+tips.t352	hermes dump --show-keys gồm dấu vân tay API key đã che bớt để debug hỗ trợ sâu hơn.
+tips.t353	hermes sessions rename <ID> "new title" đổi tên session cũ bất kỳ; hermes sessions delete <ID> xóa một session.
+tips.t354	hermes import khôi phục bản zip backup Hermes đầy đủ; bản xuất JSON/JSONL session được nhập từ trang Sessions của dashboard.
+tips.t355	hermes fallback quản lý chuỗi fallback_model tương tác — không cần sửa tay config.yaml.
+tips.t356	hermes pairing xoay vòng token ghép nối DM — người nhắn tin đầu tiên sau khi xoay sẽ chiếm quyền truy cập bot.
+tips.t357	hermes setup dẫn người dùng lần đầu qua provider, key và kết nối nền tảng trong một luồng tương tác duy nhất.
+tips.t358	hermes status --deep chạy quét sức khỏe toàn bộ mọi thành phần; hermes status thường là bản xem nhanh.
+tips.t359	HERMES_AGENT_TIMEOUT=0 tắt cơ chế kill do không hoạt động của gateway với agent đang chạy — dùng cho các lượt nghiên cứu dài.
+tips.t360	HERMES_ENABLE_PROJECT_PLUGINS=1 tự nạp plugin trong repo từ ./.hermes/plugins/ — được kiểm soát tin cậy theo thiết kế.
+tips.t361	HERMES_DISABLE_FILE_STATE_GUARD=1 tắt cơ chế 'file đã đổi kể từ khi bạn đọc' trên patch và write_file.
+tips.t362	HERMES_ALLOW_PRIVATE_URLS=true cho web tools chạm tới localhost và mạng riêng — tắt theo mặc định trong gateway mode.
+tips.t363	HERMES_OPTIONAL_SKILLS=name1,name2 tự cài các skill catalog tùy chọn thêm vào ở lần chạy đầu theo profile.
+tips.t364	HERMES_BUNDLED_SKILLS trỏ tới cây skill đóng gói tùy chỉnh — được Homebrew và Nix packaging dùng.
+tips.t365	HERMES_DUMP_REQUEST_STDOUT=1 dump mọi payload yêu cầu API ra stdout thay vì file log.
+tips.t366	HERMES_OAUTH_TRACE=1 ghi log các lần trao đổi và làm mới token OAuth đã che bớt để debug xác thực provider.
+tips.t367	HERMES_STREAM_RETRIES (mặc định 3) kiểm soát số lần kết nối lại giữa luồng khi lỗi mạng tạm thời.
+tips.t368	HERMES_GATEWAY_BUSY_ACK_ENABLED=false tắt các tin nhắn xác nhận ⚡/⏳/⏩ khi người dùng nhắn cho agent đang bận.
+tips.t369	HERMES_AGENT_NOTIFY_INTERVAL (mặc định 180s) đặt tần suất gateway báo tiến độ trong các turn dài.
+tips.t370	HERMES_RESTART_DRAIN_TIMEOUT (mặc định 900s) giới hạn thời gian /restart chờ các lượt chạy đang thực hiện trước khi buộc dừng.
+tips.t371	HERMES_CHECKPOINT_TIMEOUT (mặc định 30s) giới hạn thời gian tạo checkpoint filesystem — tăng lên với monorepo lớn.
+tips.t372	image_gen.model trong config.yaml chọn model FAL: flux-2/klein, gpt-image-2, nano-banana-pro và nhiều hơn nữa.
+tips.t373	image_gen.provider điều hướng sinh ảnh qua plugin (OpenAI Images, Codex, FAL) thay vì mặc định.
+tips.t374	AUXILIARY_VISION_BASE_URL + AUXILIARY_VISION_API_KEY trỏ phân tích vision tới endpoint tương thích OpenAI bất kỳ.
+tips.t375	security.tirith_fail_open: false khiến Hermes chặn lệnh khi chính trình quét tirith gặp lỗi.
+tips.t376	Biến môi trường TIRITH_FAIL_OPEN ghi đè cấu hình tirith_fail_open — cách bật/tắt nhanh không cần sửa config.yaml.
+tips.t377	Chat với --source tool bị loại khỏi hermes sessions list theo mặc định — đặt --source rõ ràng để thấy chúng.
+tips.t378	Session ID có tiền tố dấu thời gian (20250305_091523_abcd) nên sắp xếp tự nhiên trong ls và jq.
+tips.t379	API_SERVER_MODEL_NAME tùy biến tên model trên /v1/models — cần thiết cho thiết lập Open WebUI đa profile.
+tips.t380	Plugin dashboard được phục vụ từ /dashboard-plugins/<name>/ — thả file vào ~/.hermes/dashboard-plugins/.
