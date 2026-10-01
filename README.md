@@ -8,9 +8,8 @@
 
 ```bash
 # Copy the pack into your Hermes plugins directory
-git clone https://github.com/moken627-hub/hermes-lang-vi.git
-mkdir -p ~/.hermes/plugins
-cp -r hermes-lang-vi ~/.hermes/plugins/
+hermes plugins install https://github.com/moken627-hub/hermes-lang-vi
+# (pin to the reviewed release: hermes plugins install https://github.com/moken627-hub/hermes-lang-vi#v1.1.0)
 
 # Enable it
 hermes config set plugins.enabled '["hermes-lang-vi", ...existing...]'
