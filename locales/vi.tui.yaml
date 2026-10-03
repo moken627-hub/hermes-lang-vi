@@ -931,7 +931,7 @@
 "slashCmd.session.personality.changedCleared": "tính cách: {0} · đã xóa bản ghi"
 "slashCmd.session.personality.defaultValue": "mặc định"
 "slashCmd.session.pet.noOutput": "/pet: không có đầu ra"
-"slashCmd.session.pet.warning": "cảnh báo: {0}\\n{1}"
+"slashCmd.session.pet.warning": "cảnh báo: {0}\n{1}"
 "slashCmd.session.reasoning.current": "reasoning: {0}"
 "slashCmd.session.reasoning.currentWithDisplay": "reasoning: {0} · hiển thị {1}"
 "slashCmd.session.sessions.busyGuardAction": "chuyển phiên"

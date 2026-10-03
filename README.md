@@ -2,7 +2,7 @@
 
 **Vietnamese language pack for [Hermes Agent](https://github.com/NousResearch/hermes-agent)** — full UI translation across every surface: gateway, CLI, TUI, Desktop, approval prompts, tips, slash-command descriptions.
 
-**9,600 keys** — built on the official language-pack plugin spec announced by Teknium (Oct 2026): core `vi.yaml` (3,434) + `vi.tui.yaml` (1,244) + `vi.desktop.yaml` (4,922).
+**9,598 keys** — built on the official language-pack plugin spec announced by Teknium (Oct 2026): core `vi.yaml` (3,432) + `vi.tui.yaml` (1,244) + `vi.desktop.yaml` (4,922).
 
 ## Install
 
@@ -23,7 +23,7 @@ Validate:
 
 ```bash
 hermes plugins validate ~/.hermes/plugins/hermes-lang-vi
-# locale vi — vi.yaml: 3434 key(s) ...
+# locale vi — vi.yaml: 3432 key(s) ...
 # locale vi.tui — vi.tui.yaml: 1244 key(s) ...
 # locale vi.desktop — vi.desktop.yaml: 4922 key(s) ...
 # Validation passed.
@@ -35,8 +35,8 @@ Menu brackets, token lists and confirmation prompts that Hermes parses byte-exac
 
 - Approval menus `[o]nce | [s]ession | [D]eny` stay in English (hard-parsed)
 - `pm/extras.py` first-run `[Y/n]` stays verbatim (hard-parsed `{"y","yes"}`)
-- `cli.shared.yes_initial`/`no_initial` are localized (`c`/`k`) — `cli_output.py` accepts the localized initial natively
-- Placeholders `{name}`, `{0}`, `{1}`, literal `\n`, URLs, CLI flags: 100% preserved (validated 3,434+1,244+4,922 vs EN catalogs)
+- `cli.shared.yes_initial` is localized (`c`) — `cli_output.py` accepts the localized initial natively
+- Placeholders `{name}`, `{0}`, `{1}`, URLs and CLI flags: 100% preserved; multi-line values are double-quoted so `\n` decodes as a real newline, exactly like `en.yaml` (validated 3,432+1,244+4,922 vs EN catalogs)
 
 ## Quality gates
 

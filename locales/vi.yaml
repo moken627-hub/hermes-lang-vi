@@ -252,7 +252,6 @@ cli:
   clarify:
     bell_context: làm rõ
     label: Làm rõ
-    timed_out_locked_answers: (làm rõ hết thời gian chờ sau {timeout}s — trả về các câu trả lời đã khóa)
   command:
     ambiguous: 'Lệnh không rõ ràng: {command}'
     did_you_mean_many: 'Ý bạn là: {candidates}?'
@@ -282,7 +281,7 @@ cli:
       started: '🔄 Task nền #{number} đã bắt đầu: "{preview}"'
       task_id: 'Task ID: {task_id}'
       title_suffix: '(nền #{number})'
-      usage: 'Cách dùng: /bg <prompt>\nVí dụ: /bg Tóm tắt các tin nóng trên HN hôm nay\n(Để hỏi nhanh về cuộc trò chuyện này, dùng /btw <question>.)\nTask chạy trong một session riêng và kết quả sẽ hiển thị tại đây khi xong.'
+      usage: "Cách dùng: /bg <prompt>\nVí dụ: /bg Tóm tắt các tin nóng trên HN hôm nay\n(Để hỏi nhanh về cuộc trò chuyện này, dùng /btw <question>.)\nTask chạy trong một session riêng và kết quả sẽ hiển thị tại đây khi xong."
     blueprint:
       failed: 'Lệnh cron blueprint thất bại: {error}'
     branch:
@@ -346,7 +345,7 @@ cli:
       no_answer: (Không có câu trả lời được tạo)
       no_credentials: '(>_<) Không thể trả lời câu hỏi ngoài lề: không có credentials hợp lệ.'
       title_suffix: (btw)
-      usage: 'Cách dùng: /btw <question>\nVí dụ: /btw lỗi đó nằm ở file nào?\nTrả lời nhanh một câu hỏi về cuộc trò chuyện này mà không làm gián đoạn nó.\n(Để chạy task nền độc lập, dùng /bg <prompt>.)'
+      usage: "Cách dùng: /btw <question>\nVí dụ: /btw lỗi đó nằm ở file nào?\nTrả lời nhanh một câu hỏi về cuộc trò chuyện này mà không làm gián đoạn nó.\n(Để chạy task nền độc lập, dùng /bg <prompt>.)"
     bundles:
       create_hint: 'Tạo bằng: hermes bundles create <name> --skill <s1> --skill <s2>'
       default_desc: Tải {count} skill
@@ -382,7 +381,7 @@ cli:
       create_failed: '(x_x) Tạo job thất bại: {error}'
       created: '(^_^)b Đã tạo job: {job_id}'
       current_jobs: 'Job hiện tại:'
-      did_not_run: '(x_x) Không chạy job: {name} ({job_id})\n  {reason}'
+      did_not_run: "(x_x) Không chạy job: {name} ({job_id})\n  {reason}"
       id: 'ID: {job_id}'
       job_not_found: '(._.) Không tìm thấy job: {job_id}'
       last_run: 'Lần chạy cuối: {when} ({status})'
@@ -396,7 +395,7 @@ cli:
       no_jobs_hint: Không có job nào đã lên lịch. Dùng '/cron add' để tạo.
       overview_commands: 'Lệnh:'
       overview_title: (^_^) Task đã lên lịch
-      overview_usage: /cron list\n/cron add "every 2h" "Kiểm tra trạng thái server" [--skill blogwatcher]\n/cron edit <job_id> --schedule "every 4h" --prompt "Task mới"\n/cron edit <job_id> --skill blogwatcher --skill maps\n/cron edit <job_id> --remove-skill blogwatcher\n/cron edit <job_id> --clear-skills\n/cron pause <job_id>\n/cron resume <job_id>\n/cron run <job_id>\n/cron remove <job_id>
+      overview_usage: "/cron list\n/cron add \"every 2h\" \"Kiểm tra trạng thái server\" [--skill blogwatcher]\n/cron edit <job_id> --schedule \"every 4h\" --prompt \"Task mới\"\n/cron edit <job_id> --skill blogwatcher --skill maps\n/cron edit <job_id> --remove-skill blogwatcher\n/cron edit <job_id> --clear-skills\n/cron pause <job_id>\n/cron resume <job_id>\n/cron run <job_id>\n/cron remove <job_id>"
       pause_failed: '(x_x) Tạm dừng job thất bại: {error}'
       paused: '(^_^)b Đã tạm dừng job: {name} ({job_id})'
       prompt: 'Prompt: {prompt}'
@@ -429,7 +428,7 @@ cli:
       label_working: Unstaged
       more_lines: '... ({count} dòng nữa — {hint})'
       no_session_changes: Không có thay đổi — Hermes chưa sửa file nào ở đây.
-      not_enabled: 'Checkpoints chưa được bật nên chưa có baseline session.\nBật bằng: hermes --checkpoints\nHoặc trong config.yaml: checkpoints: { enabled: true }\n(/diff thường vẫn chạy — nó dùng git trực tiếp.)'
+      not_enabled: "Checkpoints chưa được bật nên chưa có baseline session.\nBật bằng: hermes --checkpoints\nHoặc trong config.yaml: checkpoints: { enabled: true }\n(/diff thường vẫn chạy — nó dùng git trực tiếp.)"
       stat_hint: chạy /diff --stat để xem tóm tắt
       stat_hint_session: chạy /diff session --stat để xem tóm tắt
       untracked: 'Chưa theo dõi:'
@@ -577,7 +576,7 @@ cli:
       profile: 'Profile: {profile}'
     prompt_compose:
       editor_failed: '(>_<) Không thể mở editor: {error}'
-      editor_header: "#! Soạn prompt của bạn bên dưới. Các dòng bắt đầu bằng '#!' sẽ bị bỏ qua.\\n#! Lưu và thoát để gửi; để trống để hủy."
+      editor_header: "#! Soạn prompt của bạn bên dưới. Các dòng bắt đầu bằng '#!' sẽ bị bỏ qua.\n#! Lưu và thoát để gửi; để trống để hủy."
       empty: (._.) Prompt trống — không gửi gì.
     reasoning:
       display_line: 'Hiển thị suy luận: {display} ({full})'
@@ -624,7 +623,7 @@ cli:
       more_lines: '... ({count} dòng nữa, đang hiển thị 80 dòng đầu)'
       no_changes_since: Không có thay đổi nào kể từ checkpoint này.
       none_here_showing_all: Không có checkpoint cho {cwd} — đang hiển thị tất cả thư mục.
-      not_enabled: 'Checkpoints chưa được bật.\nBật bằng: hermes --checkpoints\nHoặc trong config.yaml: checkpoints: { enabled: true }'
+      not_enabled: "Checkpoints chưa được bật.\nBật bằng: hermes --checkpoints\nHoặc trong config.yaml: checkpoints: { enabled: true }"
       restored_all: '✅ Đã khôi phục tới checkpoint {hash}: {reason}'
       restored_file: '✅ Đã khôi phục {file} từ checkpoint {hash}: {reason}'
       snapshot_saved: Một snapshot trước khi rollback đã được lưu tự động.
@@ -824,7 +823,7 @@ cli:
     timeout: '{provider} không trả lời kịp. Gửi /retry, hoặc /model để chuyển.'
     unknown: Yêu cầu tới model thất bại. Chạy /model để chuyển hoặc `hermes doctor` để kiểm tra thiết lập.
     upstream_blocked: Firewall/CDN phía trước {provider} đã chặn yêu cầu (không phải do key của bạn). Đặt User-Agent qua extra_headers, hoặc /model để chuyển.
-    with_details: '{lead}\nChi tiết: {details}'
+    with_details: "{lead}\nChi tiết: {details}"
   exit:
     unknown_argument: '✗ Đối số không rõ: {argument}. Dùng /exit --delete để xóa cả lịch sử session.'
   gateway:
@@ -987,7 +986,7 @@ cli:
     choice_cancel_hint: giữ nguyên các tool MCP
     choice_once: Phê duyệt một lần
     choice_once_hint: reload ngay
-    detail: Reload các MCP server sẽ xây lại bộ tool cho session này và\nlàm mất hiệu lực prompt cache của provider. Tin nhắn tiếp theo sẽ\ngửi lại toàn bộ input tokens (có thể tốn kém trên model long-context\nhoặc suy luận cao).
+    detail: "Reload các MCP server sẽ xây lại bộ tool cho session này và\nlàm mất hiệu lực prompt cache của provider. Tin nhắn tiếp theo sẽ\ngửi lại toàn bộ input tokens (có thể tốn kém trên model long-context\nhoặc suy luận cao)."
     once_verb: reload
     reconnected: '♻️  Đã kết nối lại: {names}'
     reloading: 🔄 Đang reload các MCP server...
@@ -1123,7 +1122,7 @@ cli:
     yolo_state_locked_on: khóa BẬT
   session_store:
     unavailable_plain: 'CẢNH BÁO: Kho session không khả dụng — hội thoại này sẽ KHÔNG được lưu và không thể tiếp tục sau. Lý do: {reason}. {action}'
-    unavailable_rich: '[bold yellow]⚠ Kho session không khả dụng[/bold yellow] — hội thoại này sẽ [bold]KHÔNG được lưu[/bold] và không thể tiếp tục sau. Tìm kiếm session cũ cũng bị tắt.\n  Lý do: {reason}.\n  {action}\n  [dim]Chi tiết: {details}[/dim]'
+    unavailable_rich: "[bold yellow]⚠ Kho session không khả dụng[/bold yellow] — hội thoại này sẽ [bold]KHÔNG được lưu[/bold] và không thể tiếp tục sau. Tìm kiếm session cũ cũng bị tắt.\n  Lý do: {reason}.\n  {action}\n  [dim]Chi tiết: {details}[/dim]"
   shared:
     ago_hours: '{hours} giờ trước'
     ago_minutes: '{minutes} phút trước'
@@ -1152,7 +1151,6 @@ cli:
     more_not_shown: còn nữa không hiển thị
     n_more: '{count} nữa'
     no_active_agent: (._.) Không có agent nào đang chạy -- hãy gửi tin nhắn trước.
-    no_initial: k
     noun_model: model
     unknown: không rõ
     unknown_error: Lỗi không xác định
@@ -1196,7 +1194,7 @@ cli:
     run_model_to_retry: Chạy 'hermes model' để thử lại.
     sign_in_lost: mất đăng nhập
     sign_in_was_lost: Đăng nhập {provider} bị mất ({reason}); chạy `hermes auth add {provider}` để đăng nhập lại.
-    stdin_unusable: '\nLỗi: stdin không dùng được ({error}).\nĐiều này có thể xảy ra với một số bản cài Python nhất định (ví dụ uv-managed cPython trên macOS)\nnơi kqueue không thể đăng ký fd 0.\nThử cài lại Python qua pyenv hoặc Homebrew, rồi chạy lại: hermes setup'
+    stdin_unusable: "\nLỗi: stdin không dùng được ({error}).\nĐiều này có thể xảy ra với một số bản cài Python nhất định (ví dụ uv-managed cPython trên macOS)\nnơi kqueue không thể đăng ký fd 0.\nThử cài lại Python qua pyenv hoặc Homebrew, rồi chạy lại: hermes setup"
     switching_to_fallback: '⚠️  {reason} — chuyển sang fallback: {provider} / {model}'
     tirith_unavailable: ⚠ tirith security scanner đã bật nhưng không khả dụng — quét lệnh sẽ chỉ dùng khớp mẫu
     unknown_toolsets: 'Cảnh báo: Toolsets không rõ: {names}'
@@ -1520,19 +1518,19 @@ cli:
     session_delete_missing: ✗ Không tìm thấy session {session_id} để xóa
     session_deleted: ✓ Đã xóa session {session_id}
     shutting_down: Đang tắt… (đang hoàn tất session)
-    stdin_unavailable: 'Lỗi: stdin (fd 0) không khả dụng.\nĐiều này có thể xảy ra với một số bản cài Python nhất định (ví dụ uv-managed cPython trên macOS).\nThử cài lại Python qua pyenv hoặc Homebrew, rồi chạy lại: hermes setup'
+    stdin_unavailable: "Lỗi: stdin (fd 0) không khả dụng.\nĐiều này có thể xảy ra với một số bản cài Python nhất định (ví dụ uv-managed cPython trên macOS).\nThử cài lại Python qua pyenv hoặc Homebrew, rồi chạy lại: hermes setup"
     steer_failed_queued: Steer thất bại ({error}) — đã xếp hàng cho lượt tiếp theo.
     steered: "⏩ Đã steer: '{preview}'"
     sudo_body: Nhập mật khẩu bên dưới (ẩn), hoặc nhấn Enter để bỏ qua
     sudo_title: 🔐 Cần Mật Khẩu Sudo
     suspend_unsupported: Suspend (Ctrl+Z) không được hỗ trợ trên Windows.
     suspended: '{agent_name} đã bị tạm dừng. Chạy `fg` để đưa {agent_name} trở lại.'
-    vault_code_body: '{site} đang yêu cầu mã dùng một lần (tin nhắn, email hoặc authenticator app).\nGõ mã rồi nhấn Enter; {agent_name} sẽ nhập mã vào trang cho bạn.\nEnter trên dòng trống để bỏ qua. Model không bao giờ thấy mã.'
+    vault_code_body: "{site} đang yêu cầu mã dùng một lần (tin nhắn, email hoặc authenticator app).\nGõ mã rồi nhấn Enter; {agent_name} sẽ nhập mã vào trang cho bạn.\nEnter trên dòng trống để bỏ qua. Model không bao giờ thấy mã."
     vault_code_title: 🔐 Mã xác minh cho {site}
-    vault_save_body: Agent đã đến trang đăng nhập nhưng chưa có đăng nhập nào được lưu cho trang này.\nGõ email / tên người dùng bạn đăng nhập (sẽ hiển thị), rồi nhấn Enter.\nEnter trên dòng trống để bỏ qua. Không gì ở đây được hiển thị cho model.
-    vault_save_pw_body: Giờ đến mật khẩu (ẩn). Nó được mã hóa trên máy này, gắn với\n{origin}, và điền vào trang mà model không bao giờ thấy.\nEnter trên dòng trống để bỏ qua.
+    vault_save_body: "Agent đã đến trang đăng nhập nhưng chưa có đăng nhập nào được lưu cho trang này.\nGõ email / tên người dùng bạn đăng nhập (sẽ hiển thị), rồi nhấn Enter.\nEnter trên dòng trống để bỏ qua. Không gì ở đây được hiển thị cho model."
+    vault_save_pw_body: "Giờ đến mật khẩu (ẩn). Nó được mã hóa trên máy này, gắn với\n{origin}, và điền vào trang mà model không bao giờ thấy.\nEnter trên dòng trống để bỏ qua."
     vault_save_title: 🔐 Lưu đăng nhập cho {site}
-    vault_unlock_body: Agent muốn đăng nhập vào một trang bằng đăng nhập đã lưu trong {backend}.\nGõ master password (ẩn) để mở khóa cho session này.\nEnter trên dòng trống để giữ khóa. Model không bao giờ thấy mật khẩu.
+    vault_unlock_body: "Agent muốn đăng nhập vào một trang bằng đăng nhập đã lưu trong {backend}.\nGõ master password (ẩn) để mở khóa cho session này.\nEnter trên dòng trống để giữ khóa. Model không bao giờ thấy mật khẩu."
     vault_unlock_title: 🔐 Mở khóa {backend}
     voice_recording_failed: 'Ghi âm giọng nói thất bại: {error}'
     welcome: Chào mừng đến Hermes Agent! Gõ tin nhắn hoặc /help để xem lệnh.
@@ -1578,9 +1576,9 @@ cli:
     enable_first_hint: 'Bật chế độ giọng nói trước: /voice on'
     enabled: Đã bật chế độ giọng nói{tts_status}
     err_audio_capture: Chế độ giọng nói cần khả năng thu âm.
-    err_mic_access: Chế độ giọng nói cần quyền truy cập micro.\nChạy pkg install termux-api và cài app Android Termux:API, rồi thử lại /voice on.
-    err_stt_provider: Chế độ giọng nói cần một STT provider để chuyển văn bản.\nChạy hermes tools và cấu hình Speech-to-Text, rồi khởi động lại Hermes.
-    err_termux_app_missing: Phát hiện gói lệnh Termux:API nhưng thiếu app Android.\nCài/cập nhật app Android Termux:API, rồi thử lại /voice on.
+    err_mic_access: "Chế độ giọng nói cần quyền truy cập micro.\nChạy pkg install termux-api và cài app Android Termux:API, rồi thử lại /voice on."
+    err_stt_provider: "Chế độ giọng nói cần một STT provider để chuyển văn bản.\nChạy hermes tools và cấu hình Speech-to-Text, rồi khởi động lại Hermes."
+    err_termux_app_missing: "Phát hiện gói lệnh Termux:API nhưng thiếu app Android.\nCài/cập nhật app Android Termux:API, rồi thử lại /voice on."
     hint_continuous: tự dừng khi im lặng | {shortcut} để dừng & thoát chế độ liên tục
     hint_stop: '{shortcut} để dừng'
     hint_termux: Thu âm qua Termux:API | {shortcut} để dừng
@@ -1824,7 +1822,7 @@ explainer:
   persistence:
     compression: lượt đã bị dừng vì một tiến trình khác đang nén phiên này. Tin nhắn của bạn có lẽ đã được lưu — vui lòng gửi lại sau khi quá trình nén hoàn tất.
     compression_closed: lượt đã bị dừng vì phiên này đã được thay thế bởi quá trình nén ngữ cảnh và phần chạy tiếp theo của nó không thể được tiếp nhận. Bản lưu trữ vẫn khỏe mạnh — hãy làm mới client (hoặc bắt đầu một lượt mới) để nó nhận session id mới, rồi gửi lại tin nhắn của bạn.
-    corrupt: lượt đã bị dừng vì cơ sở dữ liệu trạng thái báo hỏng cấu trúc (bản ghi hội thoại sẽ bị mất khi khởi động lại). Giải phóng dung lượng đĩa sẽ không giúp được gì. Các cách khôi phục:\n1. Chạy `hermes {profile_arg}doctor --fix`\n2. Dừng gateway, rồi khôi phục bằng:\n   hermes {profile_arg}sessions recover --source {db_path} --inspect-only\n   (nếu báo có thể khôi phục) hermes {profile_arg}sessions recover --source {db_path} --output recovered-state.db\n   — khôi phục sẽ chụp bản sao tệp bị hỏng trước tiên; KHÔNG chạy `sqlite3 ... ".recover"` trên state.db đang chạy, sqlite3 CLI có lỗ hổng có thể làm hỏng thêm\n3. Khôi phục từ bản sao lưu trong {backups_dir}/\nSau đó gửi lại tin nhắn của bạn.
+    corrupt: "lượt đã bị dừng vì cơ sở dữ liệu trạng thái báo hỏng cấu trúc (bản ghi hội thoại sẽ bị mất khi khởi động lại). Giải phóng dung lượng đĩa sẽ không giúp được gì. Các cách khôi phục:\n1. Chạy `hermes {profile_arg}doctor --fix`\n2. Dừng gateway, rồi khôi phục bằng:\n   hermes {profile_arg}sessions recover --source {db_path} --inspect-only\n   (nếu báo có thể khôi phục) hermes {profile_arg}sessions recover --source {db_path} --output recovered-state.db\n   — khôi phục sẽ chụp bản sao tệp bị hỏng trước tiên; KHÔNG chạy `sqlite3 ... \".recover\"` trên state.db đang chạy, sqlite3 CLI có lỗ hổng có thể làm hỏng thêm\n3. Khôi phục từ bản sao lưu trong {backups_dir}/\nSau đó gửi lại tin nhắn của bạn."
     default: 'Hermes không thể lưu hội thoại này, nên đã dừng thay vì mất tin nhắn của bạn. Nguyên nhân có thể: ổ đĩa hết dung lượng, hoặc một tiến trình Hermes khác đang giữ cơ sở dữ liệu. Đóng các cửa sổ Hermes khác, chạy `hermes {profile_arg}doctor` để kiểm tra bộ lưu trữ, rồi gửi lại tin nhắn của bạn.'
     deleted_wal: 'một tiến trình Hermes khác vẫn đang giữ bản sao cũ của write-ahead log trong cơ sở dữ liệu phiên, nên Hermes đã ngừng ghi để giữ an toàn cho tệp và tin nhắn này chưa được lưu (một bản sao được giữ trong {home}/sessions/). Không có gì bị mất. Thoát mọi tiến trình Hermes trên profile này (ứng dụng Desktop, `hermes {profile_arg}gateway stop`, dashboard, cron), chạy `hermes {profile_arg}doctor` — nó sẽ chỉ ra tiến trình nào vẫn đang giữ log — rồi khởi động Hermes lại và gửi lại tin nhắn của bạn một lần nữa. Không chạy `doctor --fix` hay xóa bất kỳ tệp state.db nào trong lúc các tiến trình đó còn chạy. Hướng dẫn: {recovery_docs}'
     disk: 'Hermes không thể lưu hội thoại này vào đĩa, nên đã dừng thay vì mất tin nhắn của bạn. Ổ đĩa có lẽ đã đầy: hãy giải phóng bớt dung lượng (hoặc sửa quyền truy cập trên {home}/state.db), rồi gửi lại tin nhắn của bạn.'
@@ -1865,39 +1863,39 @@ gateway:
     session_plural: ✅ Đã phê duyệt các lệnh (mẫu được phê duyệt cho session này) ({count} lệnh). Agent đang tiếp tục...
     session_singular: ✅ Đã phê duyệt lệnh (mẫu được phê duyệt cho session này). Agent đang tiếp tục...
   background:
-    complete_header: '✅ Tác vụ background hoàn tất\nPrompt: "{preview}"\n\n'
+    complete_header: "✅ Tác vụ background hoàn tất\nPrompt: \"{preview}\"\n\n"
     exit_code: mã thoát {code}
     failed: ❌ Tác vụ background "{preview}" của bạn thất bại trước khi hoàn tất. Gửi lại /bg để thử, hoặc dùng /agents để xem gì vẫn đang chạy.
-    final_output: '{header}\n\nKết quả cuối:\n```\n{output}\n```'
-    last_output: . Kết quả gần nhất:\n```\n{tail}\n```
+    final_output: "{header}\n\nKết quả cuối:\n```\n{output}\n```"
+    last_output: ". Kết quả gần nhất:\n```\n{tail}\n```"
     no_credentials: ❌ Tác vụ background không khởi động được vì chưa cấu hình đăng nhập AI model nào. Dùng /login, hoặc chạy `hermes setup` trên máy chủ.
     no_response: (Không có phản hồi nào được tạo)
-    recent_output: '{header}\n\nKết quả gần đây:\n```\n{output}\n```'
-    rerun_hint: \nHãy yêu cầu tôi chạy lại hoặc hiển thị toàn bộ log.
-    started: '🔄 Đã bắt đầu tác vụ background: "{preview}"\nTask ID: {task_id}\nBạn cứ trò chuyện tiếp — kết quả sẽ hiện khi xong.'
+    recent_output: "{header}\n\nKết quả gần đây:\n```\n{output}\n```"
+    rerun_hint: "\nHãy yêu cầu tôi chạy lại hoặc hiển thị toàn bộ log."
+    started: "🔄 Đã bắt đầu tác vụ background: \"{preview}\"\nTask ID: {task_id}\nBạn cứ trò chuyện tiếp — kết quả sẽ hiện khi xong."
     still_running: ⏳ Tác vụ background vẫn đang chạy
     task_failed: ❌ Tác vụ background thất bại
     task_finished: ✅ Tác vụ background đã hoàn tất
-    usage: 'Cách dùng: /bg <prompt>\nVí dụ: /bg Tóm tắt các tin nổi bật trên HN hôm nay\n\nChạy prompt trong một session riêng. Bạn cứ trò chuyện tiếp — kết quả sẽ hiện ở đây khi xong.'
+    usage: "Cách dùng: /bg <prompt>\nVí dụ: /bg Tóm tắt các tin nổi bật trên HN hôm nay\n\nChạy prompt trong một session riêng. Bạn cứ trò chuyện tiếp — kết quả sẽ hiện ở đây khi xong."
   blueprint:
     failed: 'Lệnh cron blueprint thất bại: {error}'
   branch:
-    branched_many: '⑂ Đã rẽ nhánh sang **{title}** ({count} tin nhắn đã sao chép)\nGốc: `{parent}`\nNhánh: `{new}`\nDùng `/resume` để quay lại bản gốc.'
-    branched_one: '⑂ Đã rẽ nhánh sang **{title}** ({count} tin nhắn đã sao chép)\nGốc: `{parent}`\nNhánh: `{new}`\nDùng `/resume` để quay lại bản gốc.'
-    branched_thread_many: '⑂ Đã rẽ nhánh sang **{title}** trong thread mới ({count} tin nhắn đã sao chép)\nThread: {thread}\nGốc: `{parent}` — chat này vẫn ở lại thread đó\nNhánh: `{new}`\nDùng `/branch --here` để rẽ nhánh trong chat này.'
-    branched_thread_one: '⑂ Đã rẽ nhánh sang **{title}** trong thread mới ({count} tin nhắn đã sao chép)\nThread: {thread}\nGốc: `{parent}` — chat này vẫn ở lại thread đó\nNhánh: `{new}`\nDùng `/branch --here` để rẽ nhánh trong chat này.'
+    branched_many: "⑂ Đã rẽ nhánh sang **{title}** ({count} tin nhắn đã sao chép)\nGốc: `{parent}`\nNhánh: `{new}`\nDùng `/resume` để quay lại bản gốc."
+    branched_one: "⑂ Đã rẽ nhánh sang **{title}** ({count} tin nhắn đã sao chép)\nGốc: `{parent}`\nNhánh: `{new}`\nDùng `/resume` để quay lại bản gốc."
+    branched_thread_many: "⑂ Đã rẽ nhánh sang **{title}** trong thread mới ({count} tin nhắn đã sao chép)\nThread: {thread}\nGốc: `{parent}` — chat này vẫn ở lại thread đó\nNhánh: `{new}`\nDùng `/branch --here` để rẽ nhánh trong chat này."
+    branched_thread_one: "⑂ Đã rẽ nhánh sang **{title}** trong thread mới ({count} tin nhắn đã sao chép)\nThread: {thread}\nGốc: `{parent}` — chat này vẫn ở lại thread đó\nNhánh: `{new}`\nDùng `/branch --here` để rẽ nhánh trong chat này."
     create_failed: 'Không tạo được nhánh: {error}'
     db_unavailable: Cơ sở dữ liệu session không khả dụng.
     no_conversation: Chưa có cuộc trò chuyện để rẽ nhánh — hãy gửi tin nhắn trước.
     switch_failed: Đã tạo nhánh nhưng không chuyển sang được.
     thread_fallback: Không tạo được thread nào ở đây, nên nhánh đã thay thế session của chat này.
   btw:
-    answer: '💬 /btw: "{preview}"\n\n{answer}'
-    failed: '❌ /btw thất bại: "{preview}"\n{error}'
+    answer: "💬 /btw: \"{preview}\"\n\n{answer}"
+    failed: "❌ /btw thất bại: \"{preview}\"\n{error}"
     no_history: Chưa có cuộc trò chuyện nào — hãy gửi câu hỏi của bạn như một tin nhắn bình thường.
     no_provider: '❌ Không thể trả lời câu hỏi bên lề: chưa cấu hình thông tin đăng nhập provider nào.'
-    started: '💬 Câu hỏi bên lề: "{preview}"\nTrả lời từ một bản chụp của cuộc trò chuyện này — công việc hiện tại vẫn tiếp diễn.'
-    usage: 'Cách dùng: /btw <question>\nVí dụ: /btw lỗi đó nằm trong file nào?\n\nTrả lời nhanh một câu hỏi bên lề về cuộc trò chuyện này mà không làm gián đoạn nó. Để chạy tác vụ background độc lập, dùng /bg <prompt>.'
+    started: "💬 Câu hỏi bên lề: \"{preview}\"\nTrả lời từ một bản chụp của cuộc trò chuyện này — công việc hiện tại vẫn tiếp diễn."
+    usage: "Cách dùng: /btw <question>\nVí dụ: /btw lỗi đó nằm trong file nào?\n\nTrả lời nhanh một câu hỏi bên lề về cuộc trò chuyện này mà không làm gián đoạn nó. Để chạy tác vụ background độc lập, dùng /bg <prompt>."
   bundles:
     default_desc: Nạp {count} skill
     header: '**Skill Bundles** ({count} đã cài):'
@@ -1906,8 +1904,8 @@ gateway:
     invoke_hint_plain: Gọi bundle bằng /<slug> để nạp tất cả skill của nó.
     item: • `/{slug}` — {desc} _({count} skill)_
     item_plain: /{slug} — {desc} ({count} skill)
-    none: 'Chưa cài skill bundle nào.\nTạo một bundle trên máy chủ bằng:\n  `hermes bundles create <name> --skill <s1> --skill <s2>`\nThư mục: `{dir}`'
-    none_plain: 'Chưa cài skill bundle nào.\nTạo bằng: hermes bundles create <name> --skill <s1> --skill <s2>\nThư mục: {dir}'
+    none: "Chưa cài skill bundle nào.\nTạo một bundle trên máy chủ bằng:\n  `hermes bundles create <name> --skill <s1> --skill <s2>`\nThư mục: `{dir}`"
+    none_plain: "Chưa cài skill bundle nào.\nTạo bằng: hermes bundles create <name> --skill <s1> --skill <s2>\nThư mục: {dir}"
     unavailable: 'Hệ thống con bundle không khả dụng: {error}'
   busy:
     ack: '{head}{detail}{tail}'
@@ -1942,9 +1940,9 @@ gateway:
     reject_model: Agent đang chạy — hãy đợi hoặc dùng /stop trước, rồi mới đổi model.
     running_tool: 'đang chạy: {tool}'
     save_failed: Không lưu được chế độ busy input vào config. Chế độ không đổi.
-    set: Đã đặt chế độ busy input thành **`{mode}`** (đã lưu).\n_{behavior}_
+    set: "Đã đặt chế độ busy input thành **`{mode}`** (đã lưu).\n_{behavior}_"
     slash_rejected: ⏳ Agent đang chạy — `/{command}` không chạy được giữa lượt. Hãy đợi phản hồi hiện tại hoặc dùng `/stop` trước.
-    status: '**Chế độ busy input: `{mode}`\nTin nhắn khi đang bận: _{behavior}_\nĐổi bằng `/busy queue`, `/busy steer`, hoặc `/busy interrupt`.'
+    status: "**Chế độ busy input: `{mode}`\nTin nhắn khi đang bận: _{behavior}_\nĐổi bằng `/busy queue`, `/busy steer`, hoặc `/busy interrupt`."
     steered_head: ⏩ Đã dẫn vào phiên chạy hiện tại
     steered_subagents_head: ⏩ Đã dẫn vào phiên chạy hiện tại và (các) subagent đang hoạt động của nó
     steered_subagents_tail: . Tin nhắn của bạn sẽ đến sau lệnh gọi tool kế tiếp của chúng.
@@ -1993,9 +1991,9 @@ gateway:
   config_save_failed: '⚠️ Không lưu được config: {error}'
   confirm:
     cancelled: 🟡 Đã hủy /{command}. Cuộc trò chuyện không đổi.
-    destructive_optout: '\n\nℹ️ Sau này /clear, /new, /reset và /undo sẽ chạy mà không cần xác nhận. Bật lại qua `approvals.destructive_slash_confirm: true` trong config.yaml.'
-    destructive_optout_save_failed: '\n\n⚠️ Không lưu được lựa chọn đó (config.yaml không ghi được), nên /clear, /new, /reset và /undo sẽ hỏi lại lần sau. Để tắt hẳn, đặt `approvals.destructive_slash_confirm: false` trong config.yaml.'
-    destructive_prompt: '⚠️ **Xác nhận /{command}**\n\n{detail}\n\nChọn:\n• **Phê duyệt một lần** — chỉ thực hiện lần này\n• **Luôn phê duyệt** — thực hiện và tắt nhắc này vĩnh viễn\n• **Hủy** — giữ cuộc trò chuyện hiện tại\n\n_Fallback dạng chữ: trả lời `{prefix}approve`, `{prefix}always`, hoặc `{prefix}cancel`._'
+    destructive_optout: "\n\nℹ️ Sau này /clear, /new, /reset và /undo sẽ chạy mà không cần xác nhận. Bật lại qua `approvals.destructive_slash_confirm: true` trong config.yaml."
+    destructive_optout_save_failed: "\n\n⚠️ Không lưu được lựa chọn đó (config.yaml không ghi được), nên /clear, /new, /reset và /undo sẽ hỏi lại lần sau. Để tắt hẳn, đặt `approvals.destructive_slash_confirm: false` trong config.yaml."
+    destructive_prompt: "⚠️ **Xác nhận /{command}**\n\n{detail}\n\nChọn:\n• **Phê duyệt một lần** — chỉ thực hiện lần này\n• **Luôn phê duyệt** — thực hiện và tắt nhắc này vĩnh viễn\n• **Hủy** — giữ cuộc trò chuyện hiện tại\n\n_Fallback dạng chữ: trả lời `{prefix}approve`, `{prefix}always`, hoặc `{prefix}cancel`._"
     detail_new: Việc này bắt đầu session mới và bỏ lịch sử trò chuyện hiện tại.
     detail_undo_many: Việc này xóa {count} lượt người dùng gần nhất khỏi lịch sử.
     detail_undo_one: Việc này xóa lượt trao đổi user/assistant gần nhất khỏi lịch sử.
@@ -2062,10 +2060,10 @@ gateway:
   diff:
     err_default: Không tạo được diff
     failed: '{error}'
-    more_untracked: \n... và {count} mục nữa
+    more_untracked: "\n... và {count} mục nữa"
     no_changes: Không có thay đổi.
-    not_enabled: 'Chưa bật checkpoints nên không có baseline của session.\nBật trong config.yaml:\n```\ncheckpoints:\n  enabled: true\n```\n/diff thường vẫn hoạt động — nó dùng git trực tiếp.'
-    truncated_note: \n... (đã cắt bớt — tổng cộng {lines} dòng; dùng /diff --stat để xem tóm tắt)
+    not_enabled: "Chưa bật checkpoints nên không có baseline của session.\nBật trong config.yaml:\n```\ncheckpoints:\n  enabled: true\n```\n/diff thường vẫn hoạt động — nó dùng git trực tiếp."
+    truncated_note: "\n... (đã cắt bớt — tổng cộng {lines} dòng; dùng /diff --stat để xem tóm tắt)"
     untracked_label: '**Chưa được theo dõi (untracked):**'
   draining: ⏳ Đang dừng {count} agent đang hoạt động trước khi khởi động lại...
   errors:
@@ -2076,7 +2074,7 @@ gateway:
     context_overflow: ⚠️ Cuộc trò chuyện đã trở nên quá dài để tôi đọc hết trong một lượt. Dùng /compress để rút gọn lịch sử, hoặc /new để bắt đầu cuộc trò chuyện mới.
     empty_response_model_label: Model
     generic_failed: ⚠️ Đã xảy ra lỗi và tôi không thể hoàn tất câu trả lời này. Dùng /retry để thử lại, hoặc /new để bắt đầu cuộc trò chuyện mới. Chi tiết kỹ thuật nằm trong gateway log (`hermes logs`).
-    generic_failed_with_hint: ⚠️ Đã xảy ra lỗi và tôi không thể hoàn tất câu trả lời này.{hint}\nDùng /retry để thử lại, hoặc /new để bắt đầu cuộc trò chuyện mới. Chi tiết kỹ thuật nằm trong gateway log (`hermes logs`).
+    generic_failed_with_hint: "⚠️ Đã xảy ra lỗi và tôi không thể hoàn tất câu trả lời này.{hint}\nDùng /retry để thử lại, hoặc /new để bắt đầu cuộc trò chuyện mới. Chi tiết kỹ thuật nằm trong gateway log (`hermes logs`)."
     hint_auth: ' Đăng nhập vào dịch vụ AI model của bạn đã hết hạn hoặc API key không đúng. Dùng /login tại đây, hoặc chạy `{relogin}` trên máy chủ.'
     hint_overloaded: ' Dịch vụ AI model đang quá tải tạm thời. Chờ một chút rồi dùng /retry.'
     hint_quota: ' Số dư hoặc hạn mức dịch vụ AI model của bạn đã hết. Nạp thêm trên trang web của dịch vụ, hoặc dùng /model để đổi model.'
@@ -2109,14 +2107,14 @@ gateway:
     reason_label: Lý do bị đánh dấu
     smart_deny_heading: ⚠️ **Smart DENY — chủ sở hữu ghi đè cho một thao tác duy nhất:**
     smart_deny_line: 'Smart DENY: ghi đè của chủ sở hữu chỉ áp dụng cho riêng thao tác này.'
-    text_body: '{heading}\n```\n{command}\n```\n{reason_label}: {reason}\n\n'
+    text_body: "{heading}\n```\n{command}\n```\n{reason_label}: {reason}\n\n"
     text_choice_always: '`{prefix}approve always` để cho phép vĩnh viễn'
     text_choice_deny: '`{prefix}deny` để hủy'
     text_choice_joiner: ', '
-    text_choice_last: ', hoặc {choice}.\n'
+    text_choice_last: ", hoặc {choice}.\n"
     text_choice_once: Trả lời `{prefix}approve` để chạy nó một lần
     text_choice_session: '`{prefix}approve session` để cho phép pattern này trong phần còn lại của session'
-    timed_out_card_body: '{notice}\n```\n{command}\n```'
+    timed_out_card_body: "{notice}\n```\n{command}\n```"
     timed_out_notice: ⌛ Phê duyệt đã hết hạn sau {window} — lệnh KHÔNG được chạy. Hãy bảo tôi thử lại nếu bạn vẫn muốn chạy, hoặc tăng approvals.timeout trong config.yaml.
   fast:
     choice_auto: auto — nhanh trong vài giây đầu của mỗi lượt
@@ -2127,20 +2125,20 @@ gateway:
     label_fast: FAST
     label_normal: NORMAL
     not_supported: ⚡ /fast chỉ khả dụng cho các model OpenAI hỗ trợ Priority Processing.
-    picker_title: '⚡ **Priority Processing**\n\nChế độ hiện tại: `{mode}`\n\nChọn một mục:'
-    saved: '⚡ ✓ Priority Processing: **{label}** (đã lưu vào config)\n_(áp dụng từ tin nhắn tiếp theo)_'
+    picker_title: "⚡ **Priority Processing**\n\nChế độ hiện tại: `{mode}`\n\nChọn một mục:"
+    saved: "⚡ ✓ Priority Processing: **{label}** (đã lưu vào config)\n_(áp dụng từ tin nhắn tiếp theo)_"
     session_only: '⚡ ✓ Priority Processing: **{label}** (chỉ session này)'
-    status: '⚡ Priority Processing\n\nChế độ hiện tại: `{mode}`\n\n_Cách dùng:_ `/fast <normal|fast|auto|cold|ultrafast|status>`'
+    status: "⚡ Priority Processing\n\nChế độ hiện tại: `{mode}`\n\n_Cách dùng:_ `/fast <normal|fast|auto|cold|ultrafast|status>`"
     status_fast: fast
     status_normal: normal
     ultrafast_not_supported: '⚡ Ultrafast chỉ khả dụng cho GPT-6 Astra (model hiện tại: `{model}`).'
-    unknown_arg: '⚠️ Đối số không hợp lệ: `{arg}`\n\n**Các tùy chọn hợp lệ:** normal, fast, auto, cold, ultrafast, status'
+    unknown_arg: "⚠️ Đối số không hợp lệ: `{arg}`\n\n**Các tùy chọn hợp lệ:** normal, fast, auto, cold, ultrafast, status"
   footer:
-    example_line: '\nVí dụ: `{preview}`'
-    saved: '📎 Runtime footer: **{state}**{example}\n_(đã lưu toàn cục — áp dụng từ tin nhắn tiếp theo)_'
+    example_line: "\nVí dụ: `{preview}`"
+    saved: "📎 Runtime footer: **{state}**{example}\n_(đã lưu toàn cục — áp dụng từ tin nhắn tiếp theo)_"
     state_off: "OFF"
     state_on: "ON"
-    status: '📎 Runtime footer: **{state}**\nCác trường: `{fields}`\nNền tảng: `{platform}`'
+    status: "📎 Runtime footer: **{state}**\nCác trường: `{fields}`\nNền tảng: `{platform}`"
     usage: 'Cách dùng: `/footer [on|off|status]`'
   goal:
     gate_add_admin_only: ⛔ /goal gate add yêu cầu một gateway admin được cấu hình rõ ràng (allow_admin_from cho DM, group_allow_admin_from cho nhóm).
@@ -2148,8 +2146,8 @@ gateway:
     no_goal_set: Chưa đặt mục tiêu.
     no_resume: Không có mục tiêu để tiếp tục.
     paused: '⏸ Mục tiêu đã tạm dừng: {goal}'
-    resumed: '▶ Mục tiêu đã tiếp tục: {goal}\nTiếp tục ngay — tôi sẽ thực hiện bước tiếp theo luôn.'
-    set: '⊙ Đã đặt mục tiêu (ngân sách {budget} lượt): {goal}\nTôi sẽ tiếp tục làm việc cho đến khi mục tiêu hoàn thành, bạn tạm dừng/xóa nó, hoặc ngân sách cạn kiệt.\nĐiều khiển: /goal status · /goal pause · /goal resume · /goal clear'
+    resumed: "▶ Mục tiêu đã tiếp tục: {goal}\nTiếp tục ngay — tôi sẽ thực hiện bước tiếp theo luôn."
+    set: "⊙ Đã đặt mục tiêu (ngân sách {budget} lượt): {goal}\nTôi sẽ tiếp tục làm việc cho đến khi mục tiêu hoàn thành, bạn tạm dừng/xóa nó, hoặc ngân sách cạn kiệt.\nĐiều khiển: /goal status · /goal pause · /goal resume · /goal clear"
     unavailable: Mục tiêu không khả dụng trên session này.
   goal_cleared: ✓ Đã xóa mục tiêu.
   heartbeat:
@@ -2161,13 +2159,13 @@ gateway:
     paused: '⏸ Heartbeat đã tạm dừng: {prompt}'
     prompt_required: 'Cách dùng: /heartbeat every <interval> <prompt> — bắt buộc phải có prompt.'
     resumed: '▶ Heartbeat đã tiếp tục (mỗi {interval}): {prompt}'
-    set: '♥ Đã đặt heartbeat (mỗi {interval}): {prompt}\nKích hoạt như một lượt bình thường mỗi khi session này rảnh và đã hết khoảng thời gian. Chỉ tồn tại trong lúc gateway đang chạy — dùng `hermes cron` cho các lịch trình lâu dài.'
+    set: "♥ Đã đặt heartbeat (mỗi {interval}): {prompt}\nKích hoạt như một lượt bình thường mỗi khi session này rảnh và đã hết khoảng thời gian. Chỉ tồn tại trong lúc gateway đang chạy — dùng `hermes cron` cho các lịch trình lâu dài."
     unavailable: Heartbeat không khả dụng (không có session).
-    usage: 'Cách dùng: /heartbeat every <interval> <prompt>  (vd: /heartbeat every 10m Check CI)\nNgoài ra: /heartbeat status | pause | resume | clear'
+    usage: "Cách dùng: /heartbeat every <interval> <prompt>  (vd: /heartbeat every 10m Check CI)\nNgoài ra: /heartbeat status | pause | resume | clear"
   help:
-    header: 📖 **Các lệnh của Hermes**\n
-    more_use_commands: \n... và {count} lệnh nữa. Dùng `/commands` để xem danh sách đầy đủ, có phân trang.
-    skill_header: '\n⚡ **Lệnh Skill** ({count} đang hoạt động):'
+    header: "📖 **Các lệnh của Hermes**\n"
+    more_use_commands: "\n... và {count} lệnh nữa. Dùng `/commands` để xem danh sách đầy đủ, có phân trang."
+    skill_header: "\n⚡ **Lệnh Skill** ({count} đang hoạt động):"
   hooks:
     command_blocked: Lệnh `/{command}` đã bị một hook chặn.
   init:
@@ -2216,8 +2214,8 @@ gateway:
       gave_up: đã từ bỏ (hết số lần retry)
       guidance: Đây là thông báo trạng thái tác vụ tự động, không phải yêu cầu phân tách lại tác vụ. Hãy kiểm tra board hiện tại trước khi tạo các tác vụ tiếp theo; không tạo lại các tác vụ hoặc đồ thị đã tồn tại.
       handoff: 'Kết quả: {summary}'
-      message: '[kanban] Tác vụ {task_id} {status}.\nTiêu đề: {title}\nNgười được giao: @{assignee}\nBoard: {board}\n\nKiểm tra kết quả hoặc quyết định bước tiếp theo.'
-      review_detail: 'Phản hồi review: {reason}\nHãy kiểm tra card hiện có và lần review hiện tại của nó; trả công việc về cùng tác vụ triển khai. Đừng coi BLOCK này là phê duyệt và đừng tạo tác vụ trùng lặp.'
+      message: "[kanban] Tác vụ {task_id} {status}.\nTiêu đề: {title}\nNgười được giao: @{assignee}\nBoard: {board}\n\nKiểm tra kết quả hoặc quyết định bước tiếp theo."
+      review_detail: "Phản hồi review: {reason}\nHãy kiểm tra card hiện có và lần review hiện tại của nó; trả công việc về cùng tác vụ triển khai. Đừng coi BLOCK này là phê duyệt và đừng tạo tác vụ trùng lặp."
       review_requested: đã chuyển sang review; phần triển khai đã xong
       status_default: trạng thái đã thay đổi
       status_joiner: ', '
@@ -2226,9 +2224,9 @@ gateway:
     ack_conversation: Đang học một skill từ cuộc trò chuyện này…
     ack_described: Đang học một skill từ những gì bạn mô tả…
   login:
-    free_tier_remaining: \nMột số cuộc trò chuyện vẫn đang dùng free tier; hãy dùng /model trong các cuộc trò chuyện đó để đổi model.
+    free_tier_remaining: "\nMột số cuộc trò chuyện vẫn đang dùng free tier; hãy dùng /model trong các cuộc trò chuyện đó để đổi model."
   loop:
-    goal_defers_note: '\nLưu ý: một /goal đang hoạt động đang điều khiển session này — các lần thức dậy của loop sẽ bị hoãn cho đến khi mục tiêu hoàn thành, tạm dừng hoặc park.'
+    goal_defers_note: "\nLưu ý: một /goal đang hoạt động đang điều khiển session này — các lần thức dậy của loop sẽ bị hoãn cho đến khi mục tiêu hoàn thành, tạm dừng hoặc park."
     no_session: Loop không khả dụng (không có session đang hoạt động).
     unavailable: Loop không khả dụng.
   memory:
@@ -2246,7 +2244,7 @@ gateway:
     err_stale_override: đã lưu vào config.yaml, nhưng override cũ trong session chưa được xóa ({error})
     err_switch_failed: Đổi model sang {model} thất bại ({error}); vẫn giữ {current}.
     error_prefix: 'Lỗi: {error}'
-    guard_confirm: '⚠️ **{title}**\n\n{message}\n\n_Cách dự phòng bằng văn bản: trả lời `{prefix}approve` để đổi hoặc `{prefix}cancel` để giữ model hiện tại._'
+    guard_confirm: "⚠️ **{title}**\n\n{message}\n\n_Cách dự phòng bằng văn bản: trả lời `{prefix}approve` để đổi hoặc `{prefix}cancel` để giữ model hiện tại._"
     max_output_label: 'Đầu ra tối đa: {tokens} token'
     more_models_suffix: ' (+{count} model nữa)'
     next_turn_only: '    (chỉ lượt tiếp theo — khôi phục sau một câu trả lời)'
@@ -2271,13 +2269,13 @@ gateway:
       file: tệp
       image: ảnh
       video: video
-    no_home_channel: 📬 Chưa đặt home channel cho {platform}. Home channel là nơi Hermes gửi kết quả cron job và tin nhắn đa nền tảng.\n\nGõ {sethome_cmd} để đặt cuộc trò chuyện này làm home channel của bạn, hoặc bỏ qua nếu không muốn.
-    plain_fallback_prefix: (Định dạng phản hồi gặp lỗi, dùng văn bản thuần:)\n\n{content}
+    no_home_channel: "📬 Chưa đặt home channel cho {platform}. Home channel là nơi Hermes gửi kết quả cron job và tin nhắn đa nền tảng.\n\nGõ {sethome_cmd} để đặt cuộc trò chuyện này làm home channel của bạn, hoặc bỏ qua nếu không muốn."
+    plain_fallback_prefix: "(Định dạng phản hồi gặp lỗi, dùng văn bản thuần:)\n\n{content}"
     turn_error: Xin lỗi, tôi gặp một lỗi.
-    turn_error_detailed: Xin lỗi, tôi gặp một lỗi ({error_type}).\n{error_detail}\nThử lại hoặc dùng /reset để bắt đầu session mới.
+    turn_error_detailed: "Xin lỗi, tôi gặp một lỗi ({error_type}).\n{error_detail}\nThử lại hoặc dùng /reset để bắt đầu session mới."
     turn_error_no_details: không có chi tiết
   pairing:
-    code_reply: 'Chào bạn! Tôi chưa nhận ra bạn, nên tôi không thể trả lời cho đến khi người vận hành bot này phê duyệt bạn.\n\nMã pairing của bạn: `{code}` (có hiệu lực trong {validity})\n\nNếu bạn là người chạy bot này, hãy mở terminal và chạy: `{approve_cmd}`. Nếu không, hãy gửi lệnh đó cho chủ bot. Sau khi được phê duyệt, hãy gửi lại tin nhắn của bạn.'
+    code_reply: "Chào bạn! Tôi chưa nhận ra bạn, nên tôi không thể trả lời cho đến khi người vận hành bot này phê duyệt bạn.\n\nMã pairing của bạn: `{code}` (có hiệu lực trong {validity})\n\nNếu bạn là người chạy bot này, hãy mở terminal và chạy: `{approve_cmd}`. Nếu không, hãy gửi lệnh đó cho chủ bot. Sau khi được phê duyệt, hãy gửi lại tin nhắn của bạn."
     rate_limited: Hiện có quá nhiều yêu cầu pairing. Hãy chờ vài phút rồi gửi lại tin nhắn của bạn.
     validity_hour: '{hours} giờ'
     validity_hours: '{hours} giờ'
@@ -2288,16 +2286,16 @@ gateway:
     reason_suffix: ' (lý do: {reason})'
     resumed: ▶️ Đã tiếp tục — công việc mới được chấp nhận trở lại.
   personality:
-    cleared: 🎭 Đã xóa personality — dùng hành vi agent gốc.\n_(có hiệu lực từ tin nhắn tiếp theo)_
+    cleared: "🎭 Đã xóa personality — dùng hành vi agent gốc.\n_(có hiệu lực từ tin nhắn tiếp theo)_"
     err_config_write: ghi config thất bại
-    header: 🎭 **Các personality khả dụng**\n
+    header: "🎭 **Các personality khả dụng**\n"
     item: • `{name}` — {preview}
     none_configured: Chưa cấu hình personality nào trong `{path}/config.yaml`
     none_option: • `none` — (không áp dụng personality nào)
     save_failed: '⚠️ Lưu thay đổi personality thất bại: {error}'
-    set_to: 🎭 Đã đặt personality thành **{name}**\n_(có hiệu lực từ tin nhắn tiếp theo)_
-    unknown: 'Personality không xác định: `{name}`\n\nKhả dụng: {available}'
-    usage: '\nCách dùng: `/personality <name>`'
+    set_to: "🎭 Đã đặt personality thành **{name}**\n_(có hiệu lực từ tin nhắn tiếp theo)_"
+    unknown: "Personality không xác định: `{name}`\n\nKhả dụng: {available}"
+    usage: "\nCách dùng: `/personality <name>`"
   picker:
     page_info: ' ({start}–{end} trên {total})'
   plan:
@@ -2318,12 +2316,12 @@ gateway:
     reason_manual: tạm dừng qua /platform pause
     resumed: ✓ Đã tiếp tục {name} — sẽ retry vào tick watcher tiếp theo.
     unknown: 'Platform không xác định: {name}'
-    usage: 'Cách dùng: /platform <list|pause|resume> [name]\n  /platform list — xem trạng thái platform\n  /platform pause <name> — dừng retry platform đang lỗi\n  /platform resume <name> — đưa platform bị tạm dừng vào hàng đợi lại'
+    usage: "Cách dùng: /platform <list|pause|resume> [name]\n  /platform list — xem trạng thái platform\n  /platform pause <name> — dừng retry platform đang lỗi\n  /platform resume <name> — đưa platform bị tạm dừng vào hàng đợi lại"
     usage_action: 'Cách dùng: /platform {action} <name>'
   profile:
     header: 👤 **Profile:** `{profile}`
     home: 📂 **Home:** `{home}`
-    plain: 'Profile: {profile}\nHome: {home}'
+    plain: "Profile: {profile}\nHome: {home}"
   progress:
     status_fallback_long: vẫn đang làm
     status_fallback_short: chờ một chút
@@ -2335,13 +2333,13 @@ gateway:
     task_status_running: đang chạy
     thinking_prefix: 💬 {text}
     timeout_header: ⏱️ Agent không hoạt động trong {minutes} phút — không có lệnh gọi tool hay phản hồi API.
-    timeout_hint: Để tăng giới hạn, đặt agent.gateway_timeout trong config.yaml (giá trị tính bằng giây, 0 = không giới hạn) rồi khởi động lại gateway.\nThử lại, hoặc dùng /reset để bắt đầu mới.
+    timeout_hint: "Để tăng giới hạn, đặt agent.gateway_timeout trong config.yaml (giá trị tính bằng giây, 0 = không giới hạn) rồi khởi động lại gateway.\nThử lại, hoặc dùng /reset để bắt đầu mới."
     timeout_last_activity: 'Hoạt động cuối: {activity} ({seconds} giây trước, {progress}). Agent có thể đang chờ một phản hồi API.'
     timeout_stuck_tool: Agent có vẻ bị kẹt ở tool `{tool}` ({seconds} giây kể từ hoạt động cuối, {progress}).
     tool_head: '{emoji} {tool}'
     tool_pending: '{emoji} {tool}...'
     tool_preview: '{emoji} {tool}: "{preview}"'
-    tool_verbose: '{emoji} {tool}({keys})\n{args}'
+    tool_verbose: "{emoji} {tool}({keys})\n{args}"
     working_heartbeat: ⏳ Đang làm — {minutes} phút{detail}
   prompt_command:
     start_failed: Không thể khởi chạy /{command} — vui lòng thử lại.
@@ -2364,7 +2362,7 @@ gateway:
     timed_out: Lệnh nhanh hết thời gian chờ (30 giây).
     unsupported_type: "Lệnh nhanh '/{command}' có loại không được hỗ trợ (hỗ trợ: 'exec', 'alias')."
   reasoning:
-    block: 💭 **Suy luận:**\n```\n{reasoning}\n```\n\n{response}
+    block: "💭 **Suy luận:**\n```\n{reasoning}\n```\n\n{response}"
     choice_hide: ẩn suy luận khỏi phản hồi
     choice_none: none — tắt suy luận
     choice_reset: reset — xóa ghi đè session
@@ -2372,22 +2370,22 @@ gateway:
     display_off: tắt
     display_on: bật ✓
     display_set_off: '🧠 ✓ Hiển thị suy luận: **TẮT** cho **{platform}**'
-    display_set_on: '🧠 ✓ Hiển thị suy luận: **BẬT**\nPhần suy nghĩ của model sẽ hiển thị trước mỗi phản hồi trên **{platform}**.'
+    display_set_on: "🧠 ✓ Hiển thị suy luận: **BẬT**\nPhần suy nghĩ của model sẽ hiển thị trước mỗi phản hồi trên **{platform}**."
     level_default: medium (mặc định)
     level_disabled: none (đã tắt)
-    more_lines: \n_... ({count} dòng nữa)_
-    picker_title: '🧠 **Cài đặt suy luận**\n\n**Mức nỗ lực:** `{level}`\n**Phạm vi:** {scope}\n**Hiển thị:** {display}\n\nChọn một tùy chọn:'
+    more_lines: "\n_... ({count} dòng nữa)_"
+    picker_title: "🧠 **Cài đặt suy luận**\n\n**Mức nỗ lực:** `{level}`\n**Phạm vi:** {scope}\n**Hiển thị:** {display}\n\nChọn một tùy chọn:"
     quote_label_discord: -# 💭 Suy luận
     quote_label_md: '> 💭 **Suy luận:**'
     reset_done: 🧠 ✓ Đã xóa ghi đè reasoning của session; quay lại dùng config global.
     reset_global_unsupported: ⚠️ `/reasoning reset --global` không được hỗ trợ. Dùng `/reasoning <level> --global` để đổi mặc định global.
     scope_global: config global
     scope_session: ghi đè session
-    set_global: 🧠 ✓ Đã đặt mức nỗ lực reasoning thành `{effort}` (đã lưu vào config)\n_(có hiệu lực từ tin nhắn tiếp theo)_
-    set_global_save_failed: 🧠 ✓ Đã đặt mức nỗ lực reasoning thành `{effort}` (chỉ cho session — lưu config thất bại)\n_(có hiệu lực từ tin nhắn tiếp theo)_
-    set_session: 🧠 ✓ Đã đặt mức nỗ lực reasoning thành `{effort}` (chỉ cho session — thêm `--global` để lưu lâu dài)\n_(có hiệu lực từ tin nhắn tiếp theo)_
-    status: 🧠 **Cài đặt suy luận**\n\n**Mức nỗ lực:** `{level}`\n**Phạm vi:** {scope}\n**Hiển thị:** {display}\n\n_Cách dùng:_ `/reasoning <none|minimal|low|medium|high|xhigh|max|ultra|reset|show|hide> [--global]`
-    unknown_arg: '⚠️ Tham số không hợp lệ: `{arg}`\n\n**Mức hợp lệ:** none, minimal, low, medium, high, xhigh, max, ultra\n**Hiển thị:** show, hide\n**Lưu vĩnh viễn:** thêm `--global` để giữ ngoài session này'
+    set_global: "🧠 ✓ Đã đặt mức nỗ lực reasoning thành `{effort}` (đã lưu vào config)\n_(có hiệu lực từ tin nhắn tiếp theo)_"
+    set_global_save_failed: "🧠 ✓ Đã đặt mức nỗ lực reasoning thành `{effort}` (chỉ cho session — lưu config thất bại)\n_(có hiệu lực từ tin nhắn tiếp theo)_"
+    set_session: "🧠 ✓ Đã đặt mức nỗ lực reasoning thành `{effort}` (chỉ cho session — thêm `--global` để lưu lâu dài)\n_(có hiệu lực từ tin nhắn tiếp theo)_"
+    status: "🧠 **Cài đặt suy luận**\n\n**Mức nỗ lực:** `{level}`\n**Phạm vi:** {scope}\n**Hiển thị:** {display}\n\n_Cách dùng:_ `/reasoning <none|minimal|low|medium|high|xhigh|max|ultra|reset|show|hide> [--global]`"
+    unknown_arg: "⚠️ Tham số không hợp lệ: `{arg}`\n\n**Mức hợp lệ:** none, minimal, low, medium, high, xhigh, max, ultra\n**Hiển thị:** show, hide\n**Lưu vĩnh viễn:** thêm `--global` để giữ ngoài session này"
   refine:
     empty: Chưa có gì để tinh chỉnh — cuộc trò chuyện đang trống.
     focus_suffix: ' (trọng tâm: {focus})'
@@ -2399,30 +2397,30 @@ gateway:
     added: '➕ Đã thêm: {names}'
     always_followup: 'ℹ️ Các lần gọi `/reload-mcp` sau sẽ chạy không cần xác nhận. Bật lại qua `approvals.mcp_reload_confirm: true` trong config.yaml.'
     cancelled: 🟡 /reload-mcp đã hủy. Các tool MCP không đổi.
-    confirm_prompt: '⚠️ **Xác nhận /reload-mcp**\n\nReload MCP server sẽ dựng lại bộ tool cho session này và **vô hiệu hóa prompt cache của provider** — tin nhắn tiếp theo sẽ gửi lại toàn bộ input tokens.  Với model long-context hoặc reasoning cao, điều này có thể tốn kém.\n\nChọn:\n• **Phê duyệt một lần** — reload ngay\n• **Luôn phê duyệt** — reload ngay và tắt vĩnh viễn prompt này\n• **Hủy** — giữ nguyên các tool MCP\n\n_Dự phòng bằng chữ: trả lời `/approve`, `/always`, hoặc `/cancel`._'
+    confirm_prompt: "⚠️ **Xác nhận /reload-mcp**\n\nReload MCP server sẽ dựng lại bộ tool cho session này và **vô hiệu hóa prompt cache của provider** — tin nhắn tiếp theo sẽ gửi lại toàn bộ input tokens.  Với model long-context hoặc reasoning cao, điều này có thể tốn kém.\n\nChọn:\n• **Phê duyệt một lần** — reload ngay\n• **Luôn phê duyệt** — reload ngay và tắt vĩnh viễn prompt này\n• **Hủy** — giữ nguyên các tool MCP\n\n_Dự phòng bằng chữ: trả lời `/approve`, `/always`, hoặc `/cancel`._"
     failed: '❌ Reload MCP thất bại: {error}'
-    header: 🔄 **Đã reload các MCP server**\n
+    header: "🔄 **Đã reload các MCP server**\n"
     none_connected: Không có MCP server nào đang kết nối.
     reconnected: '♻️ Đã kết nối lại: {names}'
     removed: '➖ Đã xóa: {names}'
-    tools_available: \n🔧 Có {tools} tool khả dụng từ {servers} server
+    tools_available: "\n🔧 Có {tools} tool khả dụng từ {servers} server"
   reload_skills:
     added_header: ➕ **Skill đã thêm:**
     failed: '❌ Reload skills thất bại: {error}'
-    header: 🔄 **Đã reload skills**\n
+    header: "🔄 **Đã reload skills**\n"
     item_no_desc: '    - {name}'
     item_with_desc: '    - {name}: {desc}'
     no_new: Không phát hiện skill mới nào.
     removed_header: ➖ **Skill đã xóa:**
-    total: \n📚 Có {count} skill khả dụng
+    total: "\n📚 Có {count} skill khả dụng"
   reset:
     header_default: ✨ Đã reset session! Bắt đầu mới.
     header_new: ✨ Đã bắt đầu session mới!
     header_titled: '✨ Đã bắt đầu session mới: {title}'
-    tip: '\n✦ Mẹo: {tip}'
-    title_empty_untitled: \n⚠️ Tiêu đề trống sau khi dọn dẹp — session bắt đầu không có tiêu đề.
-    title_error_untitled: \n⚠️ {error} — session bắt đầu không có tiêu đề.
-    title_rejected: '\n⚠️ Tiêu đề bị từ chối: {error}'
+    tip: "\n✦ Mẹo: {tip}"
+    title_empty_untitled: "\n⚠️ Tiêu đề trống sau khi dọn dẹp — session bắt đầu không có tiêu đề."
+    title_error_untitled: "\n⚠️ {error} — session bắt đầu không có tiêu đề."
+    title_rejected: "\n⚠️ Tiêu đề bị từ chối: {error}"
   restart:
     in_progress: ⏳ Gateway đang được khởi động lại...
     restarting: ♻ Đang khởi động lại gateway. Nếu bạn không nhận được thông báo trong vòng 60 giây, hãy khởi động lại từ console bằng `hermes gateway restart`.
@@ -2432,22 +2430,22 @@ gateway:
     blocked_not_owner: "⚠️ /resume bị chặn: '**{name}**' thuộc về người dùng hoặc chat khác. Bạn chỉ có thể resume session từ chat này."
     db_unavailable: Cơ sở dữ liệu session không khả dụng.
     list_failed: 'Không thể liệt kê session: {error}'
-    list_footer: '\nCách dùng: `/resume <session name>`'
-    list_footer_numbered: '\nCách dùng: `/resume <session name>` hoặc `/resume <number>` (vd: `/resume 1` cho session gần nhất)'
-    list_header: 📋 **Session có tên**\n
+    list_footer: "\nCách dùng: `/resume <session name>`"
+    list_footer_numbered: "\nCách dùng: `/resume <session name>` hoặc `/resume <number>` (vd: `/resume 1` cho session gần nhất)"
+    list_header: "📋 **Session có tên**\n"
     list_item: • **{title}**{preview_part}
     list_item_numbered: '{index}. **{title}**{preview_part}'
     list_preview_suffix: ' — _{preview}_'
     matrix_blocked_no_origin: '⚠️ Matrix /resume bị chặn: session có tên này không có room origin nào được ghi nhận, nên Hermes sẽ không resume nó trong room hiện tại theo mặc định. Dùng `/resume --cross-room {name}` nếu bạn chủ động muốn vượt ranh giới room.'
     matrix_blocked_other_room: '⚠️ Matrix /resume bị chặn: session đó thuộc về một Matrix room khác ({room}). Dùng `/resume --cross-room {name}` nếu bạn chủ động muốn resume nó tại đây.'
-    matrix_cross_room_success: '⚠️ Resume chéo room: đã resume **{title}** trong Matrix room **{room}**.\nCác tin nhắn sau này trong room này sẽ dùng transcript đó cho đến khi `/reset` hoặc một `/resume` khác.{msg_part}'
-    matrix_no_named_sessions: Không tìm thấy session có tên nào cho Matrix room này.\nDùng `/title My Session` để đặt tên cho session của room hiện tại, `/resume --all` để liệt kê mọi session Matrix, hoặc `/resume --cross-room <session name>` để chủ động vượt ranh giới room.
+    matrix_cross_room_success: "⚠️ Resume chéo room: đã resume **{title}** trong Matrix room **{room}**.\nCác tin nhắn sau này trong room này sẽ dùng transcript đó cho đến khi `/reset` hoặc một `/resume` khác.{msg_part}"
+    matrix_no_named_sessions: "Không tìm thấy session có tên nào cho Matrix room này.\nDùng `/title My Session` để đặt tên cho session của room hiện tại, `/resume --all` để liệt kê mọi session Matrix, hoặc `/resume --cross-room <session name>` để chủ động vượt ranh giới room."
     msg_count_one: ' ({count} tin nhắn)'
     msg_count_other: ' ({count} tin nhắn)'
-    no_named_sessions: Không tìm thấy session có tên nào.\nDùng `/title My Session` để đặt tên cho session hiện tại, sau đó `/resume My Session` để quay lại sau.
-    not_found: Không tìm thấy session nào khớp '**{name}**'.\nDùng `/resume` không kèm tham số để xem các session khả dụng.
-    out_of_range: Chỉ số resume {index} nằm ngoài phạm vi.\nDùng `/resume` không kèm tham số để xem các session khả dụng.
-    parse_error: '⚠️ Không thể phân tích tham số `/resume`: {error}.\nĐặt tiêu đề có dấu cách trong ngoặc kép, ví dụ: `/resume "Project A Plan"`.'
+    no_named_sessions: "Không tìm thấy session có tên nào.\nDùng `/title My Session` để đặt tên cho session hiện tại, sau đó `/resume My Session` để quay lại sau."
+    not_found: "Không tìm thấy session nào khớp '**{name}**'.\nDùng `/resume` không kèm tham số để xem các session khả dụng."
+    out_of_range: "Chỉ số resume {index} nằm ngoài phạm vi.\nDùng `/resume` không kèm tham số để xem các session khả dụng."
+    parse_error: "⚠️ Không thể phân tích tham số `/resume`: {error}.\nĐặt tiêu đề có dấu cách trong ngoặc kép, ví dụ: `/resume \"Project A Plan\"`."
     resumed_many: ↻ Đã resume session **{title}** ({count} tin nhắn). Cuộc trò chuyện đã được khôi phục.
     resumed_no_count: ↻ Đã resume session **{title}**. Cuộc trò chuyện đã được khôi phục.
     resumed_one: ↻ Đã resume session **{title}** ({count} tin nhắn). Cuộc trò chuyện đã được khôi phục.
@@ -2464,11 +2462,11 @@ gateway:
     failed_deletes: '⚠️ Không thể xóa (để nguyên tại chỗ): {files}'
     invalid_number: Số checkpoint không hợp lệ. Dùng 1-{max}.
     kept_oversize: '↷ Giữ nguyên (quá lớn so với checkpoint, không có bản sao đã lưu để hoàn tác): {files}'
-    kept_user_edits: '↷ Giữ nguyên phần bạn tự sửa tay: {files}\nDùng /rollback <N> --all để khôi phục cả những phần đó.'
+    kept_user_edits: "↷ Giữ nguyên phần bạn tự sửa tay: {files}\nDùng /rollback <N> --all để khôi phục cả những phần đó."
     none_found: Không tìm thấy checkpoint nào cho {cwd}
-    not_enabled: 'Checkpoints chưa được bật.\nBật trong config.yaml:\n```\ncheckpoints:\n  enabled: true\n```'
+    not_enabled: "Checkpoints chưa được bật.\nBật trong config.yaml:\n```\ncheckpoints:\n  enabled: true\n```"
     restore_failed: ❌ {error}
-    restored: '✅ Đã khôi phục về checkpoint {hash}: {reason}\nSnapshot trước khi rollback đã được lưu tự động.'
+    restored: "✅ Đã khôi phục về checkpoint {hash}: {reason}\nSnapshot trước khi rollback đã được lưu tự động."
   save:
     caption: 'Xuất session: {filename}'
     complete: Xuất hoàn tất.
@@ -2476,8 +2474,8 @@ gateway:
     no_adapter: Không tìm thấy platform adapter để gửi tài liệu.
     no_messages: Không tìm thấy tin nhắn đã lưu nào cho session này ({session_id}).
   session:
-    auto_reset_context_exhausted: \n\n🔄 Session tự reset — cuộc trò chuyện vượt quá kích thước context tối đa và không thể nén thêm. Tin nhắn tiếp theo của bạn sẽ bắt đầu một session mới.
-    auto_reset_notice: ◐ Đã reset session sau khi bị dừng. Lịch sử trò chuyện đã bị xóa.\nDùng /resume để xem và khôi phục session trước đó.\n
+    auto_reset_context_exhausted: "\n\n🔄 Session tự reset — cuộc trò chuyện vượt quá kích thước context tối đa và không thể nén thêm. Tin nhắn tiếp theo của bạn sẽ bắt đầu một session mới."
+    auto_reset_notice: "◐ Đã reset session sau khi bị dừng. Lịch sử trò chuyện đã bị xóa.\nDùng /resume để xem và khôi phục session trước đó.\n"
     info_acting_model: '◆ Model đang chạy (được tính phí cho lần chạy này): {provider}:{model}'
     info_context: '◆ Context: {tokens} token ({source})'
     info_endpoint: '◆ Endpoint: {url}'
@@ -2493,7 +2491,7 @@ gateway:
     err_missing_platform: Thiếu logical platform
     err_relay_unauthenticated: Relay không xác thực logical home target này
     save_failed: 'Lưu home channel thất bại: {error}'
-    success: '✅ Đã đặt home channel thành **{name}** (ID: {chat_id}).\nCron job và tin nhắn chéo platform sẽ được chuyển đến đây.'
+    success: "✅ Đã đặt home channel thành **{name}** (ID: {chat_id}).\nCron job và tin nhắn chéo platform sẽ được chuyển đến đây."
   shared:
     agent_running_retry_later: Agent đang chạy — chờ lượt hiện tại kết thúc rồi hãy /{command}.
     error_prefix: 'Lỗi: {error}'
@@ -2513,16 +2511,16 @@ gateway:
     notice_restart: ⚠️ Hermes đang khởi động lại — tác vụ hiện tại của bạn sẽ bị gián đoạn. Sau khi khởi động lại xong, gửi một tin nhắn bất kỳ và tôi sẽ cố tiếp tục từ chỗ bạn đang làm dở.
     notice_shutdown: ⚠️ Hermes đang tắt — tác vụ hiện tại của bạn sẽ bị gián đoạn. Khi nó hoạt động trở lại, gửi một tin nhắn bất kỳ và tôi sẽ cố tiếp tục từ chỗ chúng ta đang làm dở.
   skills:
-    diff_truncated: \n… (bị cắt bớt — diff đầy đủ trong ~/.hermes/pending/skills/{pending_id}.json)
-    disabled: 'Skill **{name}** đã được cài nhưng bị tắt.\nBật bằng: `hermes skills config`'
-    disabled_for_platform: 'Skill **{name}** bị tắt trên {platform}.\nBật bằng: `hermes skills config`'
+    diff_truncated: "\n… (bị cắt bớt — diff đầy đủ trong ~/.hermes/pending/skills/{pending_id}.json)"
+    disabled: "Skill **{name}** đã được cài nhưng bị tắt.\nBật bằng: `hermes skills config`"
+    disabled_for_platform: "Skill **{name}** bị tắt trên {platform}.\nBật bằng: `hermes skills config`"
     gate_off: Tính năng phê duyệt ghi của skill đang tắt (skills.write_approval). Bật bằng /skills approval on, sau đó xem xét các bản ghi đang chờ tại đây bằng /skills pending.
-    not_installed: 'Skill **{name}** khả dụng nhưng chưa được cài đặt.\nCài đặt bằng: `hermes skills install {install_name}`'
-    stacked_disabled: 'Skill **{names}** trong lệnh gọi stacked này đang bị tắt với {platform}.\nBật chúng bằng: `hermes skills config`'
+    not_installed: "Skill **{name}** khả dụng nhưng chưa được cài đặt.\nCài đặt bằng: `hermes skills install {install_name}`"
+    stacked_disabled: "Skill **{names}** trong lệnh gọi stacked này đang bị tắt với {platform}.\nBật chúng bằng: `hermes skills config`"
     stacked_load_failed: Không tải được các skill stacked cho /{command}.
     unknown_subcommand: 'Subcommand /skills không xác định trên nền tảng này. Dùng: pending, approve <id>, reject <id>, diff <id>, approval <on|off>. (Tìm kiếm/cài đặt chỉ làm được qua CLI.)'
   startup:
-    db_corrupt: ⚠️ Phát hiện cơ sở dữ liệu session bị hỏng. Tin nhắn có thể không được lưu. Các cách khôi phục:\n1. Chạy `hermes {profile_arg}doctor --fix`\n2. Dừng gateway, rồi khôi phục bằng:\n   hermes {profile_arg}sessions recover --source {db_path} --inspect-only\n   (nếu báo có thể khôi phục) hermes {profile_arg}sessions recover --source {db_path} --output recovered-state.db\n   — quá trình khôi phục sẽ chụp snapshot file bị hỏng trước; KHÔNG chạy `sqlite3 ... ".recover"` trực tiếp lên state.db đang chạy, một sqlite3 CLI dễ bị tổn thương có thể làm hỏng thêm\n3. Khôi phục từ bản sao lưu trong {backups_dir}/\nChạy `hermes {profile_arg}doctor` để xem chẩn đoán đã được làm sạch.
+    db_corrupt: "⚠️ Phát hiện cơ sở dữ liệu session bị hỏng. Tin nhắn có thể không được lưu. Các cách khôi phục:\n1. Chạy `hermes {profile_arg}doctor --fix`\n2. Dừng gateway, rồi khôi phục bằng:\n   hermes {profile_arg}sessions recover --source {db_path} --inspect-only\n   (nếu báo có thể khôi phục) hermes {profile_arg}sessions recover --source {db_path} --output recovered-state.db\n   — quá trình khôi phục sẽ chụp snapshot file bị hỏng trước; KHÔNG chạy `sqlite3 ... \".recover\"` trực tiếp lên state.db đang chạy, một sqlite3 CLI dễ bị tổn thương có thể làm hỏng thêm\n3. Khôi phục từ bản sao lưu trong {backups_dir}/\nChạy `hermes {profile_arg}doctor` để xem chẩn đoán đã được làm sạch."
     db_fts_corrupt: '⚠️ Cơ sở dữ liệu session báo lỗi hỏng chỉ giới hạn ở chỉ mục tìm kiếm (FTS5); các bảng tin nhắn không bị hư hại. Tin nhắn có thể không được lưu cho đến khi chỉ mục được sửa: chạy `hermes {profile_arg}doctor --fix`, rồi khởi động lại gateway. Không chạy công cụ khôi phục hay trả về bản sao lưu trừ khi `hermes {profile_arg}doctor` xác nhận có hư hại.'
     db_then_restart: '{action} Sau đó chạy `hermes {profile_arg}gateway restart`.'
     db_unavailable: '⚠️ Cơ sở dữ liệu session không khả dụng — tin nhắn có thể không được lưu và /resume sẽ trống. Nguyên nhân: {cause}. {action}'
@@ -2580,8 +2578,8 @@ gateway:
   suggestions:
     failed: 'Lệnh suggestions gặp lỗi: {error}'
   title:
-    current_no_title: '📌 Session: `{session_id}`\nChưa đặt tiêu đề. Cách dùng: `/title Tên Session Của Bạn`'
-    current_with_title: '📌 Session: `{session_id}`\nTiêu đề: **{title}**'
+    current_no_title: "📌 Session: `{session_id}`\nChưa đặt tiêu đề. Cách dùng: `/title Tên Session Của Bạn`"
+    current_with_title: "📌 Session: `{session_id}`\nTiêu đề: **{title}**"
     db_unavailable: Cơ sở dữ liệu session không khả dụng.
     empty_after_clean: ⚠️ Tiêu đề rỗng sau khi làm sạch. Vui lòng dùng các ký tự in được.
     not_found: Không tìm thấy session trong cơ sở dữ liệu.
@@ -2589,14 +2587,14 @@ gateway:
     warn_prefix: ⚠️ {error}
   topic:
     already_linked: Session đó đã được liên kết với một topic Telegram khác.
-    bound_status: 'Topic này được liên kết với:\nSession: {label}\nID: {session_id}\n\nDùng /new để thay topic này bằng một session mới.\nĐể làm việc song song, mở All Messages và gửi tin nhắn ở đó để tạo topic khác.'
+    bound_status: "Topic này được liên kết với:\nSession: {label}\nID: {session_id}\n\nDùng /new để thay topic này bằng một session mới.\nĐể làm việc song song, mở All Messages và gửi tin nhắn ở đó để tạo topic khác."
     default_title: Hermes Chat
     disable_failed: 'Không tắt được chế độ topic: {error}'
     enable_failed: 'Không bật được chế độ topic Telegram: {error}'
-    help: '/topic — bật chế độ DM đa session (một bot, nhiều chat song song)\n\nCách dùng:\n  /topic             Bật chế độ topic, hoặc hiện trạng thái nếu đã bật\n  /topic help        Hiện thông báo này\n  /topic off         Tắt chế độ topic và xóa các liên kết topic\n  /topic <id>        Trong một topic: khôi phục session cũ theo ID\n\nCách hoạt động:\n1. Chạy /topic một lần trong DM này — Hermes kiểm tra BotFather Threads\n   Settings đã được bật và chuyển sang chế độ đa session.\n2. Nhấn All Messages ở đầu bot và gửi bất kỳ tin nhắn nào.\n   Telegram tạo topic mới cho tin nhắn đó; mỗi topic là\n   một session Hermes độc lập (lịch sử mới, context mới).\n3. DM gốc trở thành sảnh hệ thống — gửi /topic, /status,\n   /help, /usage ở đó. Prompt thông thường gửi trong topic.\n4. /new trong một topic chỉ đặt lại session của topic đó.\n5. /topic <id> trong một topic khôi phục session cũ vào topic đó.'
-    mode_disabled: Chế độ topic đa session hiện đã TẮT với chat này.\n\nCác topic hiện có trong Telegram không bị xóa — chúng chỉ ngừng được coi là các session độc lập. DM gốc hoạt động lại như một chat Hermes bình thường. Chạy /topic để bật lại sau.
+    help: "/topic — bật chế độ DM đa session (một bot, nhiều chat song song)\n\nCách dùng:\n  /topic             Bật chế độ topic, hoặc hiện trạng thái nếu đã bật\n  /topic help        Hiện thông báo này\n  /topic off         Tắt chế độ topic và xóa các liên kết topic\n  /topic <id>        Trong một topic: khôi phục session cũ theo ID\n\nCách hoạt động:\n1. Chạy /topic một lần trong DM này — Hermes kiểm tra BotFather Threads\n   Settings đã được bật và chuyển sang chế độ đa session.\n2. Nhấn All Messages ở đầu bot và gửi bất kỳ tin nhắn nào.\n   Telegram tạo topic mới cho tin nhắn đó; mỗi topic là\n   một session Hermes độc lập (lịch sử mới, context mới).\n3. DM gốc trở thành sảnh hệ thống — gửi /topic, /status,\n   /help, /usage ở đó. Prompt thông thường gửi trong topic.\n4. /new trong một topic chỉ đặt lại session của topic đó.\n5. /topic <id> trong một topic khôi phục session cũ vào topic đó."
+    mode_disabled: "Chế độ topic đa session hiện đã TẮT với chat này.\n\nCác topic hiện có trong Telegram không bị xóa — chúng chỉ ngừng được coi là các session độc lập. DM gốc hoạt động lại như một chat Hermes bình thường. Chạy /topic để bật lại sau."
     mode_not_enabled: Chế độ topic đa session hiện chưa được bật cho chat này.
-    new_header: 'Đã bắt đầu một session Hermes mới trong topic này.\n\nMẹo: để làm việc song song, hãy mở All Messages và gửi tin nhắn ở đó để tạo topic riêng thay vì dùng /new tại đây. /new sẽ thay thế session đang gắn với topic hiện tại.'
+    new_header: "Đã bắt đầu một session Hermes mới trong topic này.\n\nMẹo: để làm việc song song, hãy mở All Messages và gửi tin nhắn ở đó để tạo topic riêng thay vì dùng /new tại đây. /new sẽ thay thế session đang gắn với topic hiện tại."
     no_chat_id: Không xác định được chat ID.
     no_session_db: Cơ sở dữ liệu session không khả dụng.
     no_unlinked: Không tìm thấy session Telegram cũ nào chưa được liên kết.
@@ -2611,18 +2609,18 @@ gateway:
     restore_step_1: 1. Tạo hoặc mở một topic. Để tạo topic mới, mở All Messages và gửi bất kỳ tin nhắn nào ở đó.
     restore_step_2: 2. Gửi /topic <session-id> trong topic đó.
     restored: 'Đã khôi phục session: {title}'
-    restored_last_message: \n\nTin nhắn Hermes cuối cùng:\n{text}
-    root_lobby: Chat chính này được dành cho các lệnh hệ thống.\n\nĐể bắt đầu một chat Hermes mới, hãy mở topic All Messages ở đầu giao diện bot này và gửi bất kỳ tin nhắn nào ở đó. Telegram sẽ tạo một topic mới cho tin nhắn đó; mỗi topic hoạt động như một session Hermes độc lập.
-    root_new: Để bắt đầu một chat Hermes song song mới, hãy mở topic All Messages ở đầu giao diện bot này và gửi bất kỳ tin nhắn nào ở đó. Telegram sẽ tạo một topic mới cho nó.\n\nMỗi topic là một session Hermes độc lập. Chỉ dùng /new trong một topic hiện có nếu bạn muốn thay thế session hiện tại của topic đó.
+    restored_last_message: "\n\nTin nhắn Hermes cuối cùng:\n{text}"
+    root_lobby: "Chat chính này được dành cho các lệnh hệ thống.\n\nĐể bắt đầu một chat Hermes mới, hãy mở topic All Messages ở đầu giao diện bot này và gửi bất kỳ tin nhắn nào ở đó. Telegram sẽ tạo một topic mới cho tin nhắn đó; mỗi topic hoạt động như một session Hermes độc lập."
+    root_new: "Để bắt đầu một chat Hermes song song mới, hãy mở topic All Messages ở đầu giao diện bot này và gửi bất kỳ tin nhắn nào ở đó. Telegram sẽ tạo một topic mới cho nó.\n\nMỗi topic là một session Hermes độc lập. Chỉ dùng /new trong một topic hiện có nếu bạn muốn thay thế session hiện tại của topic đó."
     session_not_found: 'Không tìm thấy session: {session_id}'
     setup_image_caption: BotFather → Bot Settings → Threads Settings
     status_enabled: Chế độ topic đa session của Telegram đã được bật.
     status_how_to: Để tạo một chat Hermes mới, hãy mở All Messages ở đầu giao diện bot này và gửi bất kỳ tin nhắn nào ở đó. Telegram sẽ tạo một topic mới cho nó.
     system_topic_intro: Topic hệ thống dành cho các lệnh và trạng thái Hermes.
     system_topic_name: Hệ thống
-    thread_ready: Chế độ topic đa session của Telegram đã được bật.\n\nTopic này sẽ được dùng như một session Hermes độc lập. Dùng /new để thay thế session hiện tại của topic này. Để làm việc song song, hãy mở All Messages và gửi tin nhắn ở đó để tạo topic khác.
-    topics_disabled: Topics Telegram chưa được bật cho bot này.\n\nCách bật:\n1. Mở @BotFather.\n2. Chọn bot của bạn.\n3. Mở Bot Settings → Threads Settings.\n4. Bật Threaded Mode và đảm bảo cho phép người dùng tạo thread mới.\n\nSau đó gửi lại /topic.
-    topics_user_disallowed: Topics Telegram đã được bật, nhưng người dùng không được phép tạo topic.\n\nMở @BotFather → chọn bot của bạn → Bot Settings → Threads Settings, rồi tắt 'Disallow users to create new threads'.\n\nSau đó gửi lại /topic.
+    thread_ready: "Chế độ topic đa session của Telegram đã được bật.\n\nTopic này sẽ được dùng như một session Hermes độc lập. Dùng /new để thay thế session hiện tại của topic này. Để làm việc song song, hãy mở All Messages và gửi tin nhắn ở đó để tạo topic khác."
+    topics_disabled: "Topics Telegram chưa được bật cho bot này.\n\nCách bật:\n1. Mở @BotFather.\n2. Chọn bot của bạn.\n3. Mở Bot Settings → Threads Settings.\n4. Bật Threaded Mode và đảm bảo cho phép người dùng tạo thread mới.\n\nSau đó gửi lại /topic."
+    topics_user_disallowed: "Topics Telegram đã được bật, nhưng người dùng không được phép tạo topic.\n\nMở @BotFather → chọn bot của bạn → Bot Settings → Threads Settings, rồi tắt 'Disallow users to create new threads'.\n\nSau đó gửi lại /topic."
     unauthorized: Bạn không có quyền dùng /topic trên bot này.
     untitled_session: Session chưa đặt tên
   topup:
@@ -2641,19 +2639,19 @@ gateway:
   undo:
     invalid_count: Số lượng không hợp lệ "{arg}" — dùng /undo hoặc /undo N.
     nothing: Không có gì để hoàn tác.
-    removed: '↩️ Đã hoàn tác {turns} turn ({count} tin nhắn).\nĐã sao lưu vào: "{preview}"\nSao chép/chỉnh sửa đoạn văn bản trên rồi gửi lại để prompt từ điểm này.'
+    removed: "↩️ Đã hoàn tác {turns} turn ({count} tin nhắn).\nĐã sao lưu vào: \"{preview}\"\nSao chép/chỉnh sửa đoạn văn bản trên rồi gửi lại để prompt từ điểm này."
   unknown_command: Lệnh không xác định `/{command}`. Gõ /commands để xem các lệnh khả dụng, hoặc gửi lại mà không có dấu gạch chéo ở đầu để gửi như tin nhắn thường.
   update:
     failed_notice: ❌ Cập nhật Hermes thất bại; phiên bản trước vẫn đang chạy. Chạy `hermes update` trên máy chủ để xem lỗi đầy đủ, hoặc thử lại /update sau.
     finished: ✅ Cập nhật Hermes hoàn tất.
     finished_success: ✅ Cập nhật Hermes hoàn tất thành công.
     hermes_cmd_not_found: ✗ Không tìm thấy lệnh `hermes`. Hermes đang chạy, nhưng lệnh cập nhật không tìm thấy file thực thi trên PATH hay qua Python interpreter hiện tại. Hãy thử chạy `hermes update` thủ công trong terminal.
-    last_lines: '{msg}\n\nCác dòng cuối:\n```\n{tail}\n```'
+    last_lines: "{msg}\n\nCác dòng cuối:\n```\n{tail}\n```"
     managed_action: cập nhật Hermes Agent
-    not_applicable: '✗ `hermes update` không áp dụng cho bản cài đặt này ({method}).\nCập nhật bằng: {command}'
+    not_applicable: "✗ `hermes update` không áp dụng cho bản cài đặt này ({method}).\nCập nhật bằng: {command}"
     not_git_repo: ✗ Không phải là git repository — không thể cập nhật.
     platform_not_messaging: ✗ /update chỉ khả dụng từ các nền tảng nhắn tin. Hãy chạy `hermes update` từ terminal.
-    prompt: ☤ **Cập nhật cần bạn nhập:**\n\n{prompt}{default_hint}\n\nTrả lời `{prefix}approve` (có) hoặc `{prefix}deny` (không), hoặc gõ trực tiếp câu trả lời của bạn.
+    prompt: "☤ **Cập nhật cần bạn nhập:**\n\n{prompt}{default_hint}\n\nTrả lời `{prefix}approve` (có) hoặc `{prefix}deny` (không), hoặc gõ trực tiếp câu trả lời của bạn."
     prompt_default: ' (mặc định: {default})'
     reply_failed: '✗ Không gửi được phản hồi tới tiến trình cập nhật: {error}'
     reply_sent: ✓ Đã gửi `{label}` tới tiến trình cập nhật.
@@ -2697,7 +2695,7 @@ gateway:
     mode_new: '⚙️ Tiến trình tool: **NEW** — chỉ hiện khi tool thay đổi (độ dài preview: `display.tool_preview_length`, mặc định 40).'
     mode_off: '⚙️ Tiến trình tool: **OFF** — không hiển thị hoạt động tool.'
     mode_verbose: '⚙️ Tiến trình tool: **VERBOSE** — hiện mọi lần gọi tool với đầy đủ đối số.'
-    not_enabled: 'Lệnh `/verbose` chưa được bật cho các nền tảng nhắn tin.\n\nBật trong `config.yaml`:\n```yaml\ndisplay:\n  tool_progress_command: true\n```'
+    not_enabled: "Lệnh `/verbose` chưa được bật cho các nền tảng nhắn tin.\n\nBật trong `config.yaml`:\n```yaml\ndisplay:\n  tool_progress_command: true\n```"
     save_failed: '_(không lưu được vào config: {error})_'
     saved_suffix: _(đã lưu cho **{platform}** — có hiệu lực từ tin nhắn tiếp theo)_
   voice:
@@ -2705,7 +2703,7 @@ gateway:
     channel_guild_only: Lệnh này chỉ hoạt động trong một Discord server.
     channel_join_failed: 'Không vào được kênh voice: {error}'
     channel_join_permissions: Không vào được kênh voice. Kiểm tra quyền của bot (Connect + Speak).
-    channel_joined: Đã vào kênh voice **{name}**.\nTôi sẽ nói các phản hồi của mình và lắng nghe bạn. Dùng /voice leave để ngắt kết nối.
+    channel_joined: "Đã vào kênh voice **{name}**.\nTôi sẽ nói các phản hồi của mình và lắng nghe bạn. Dùng /voice leave để ngắt kết nối."
     channel_left: Đã rời kênh voice.
     channel_not_in_voice: Bạn cần vào một kênh voice trước.
     channel_not_joined: Không ở trong kênh voice nào.
@@ -2713,9 +2711,9 @@ gateway:
     disabled_short: Đã tắt chế độ voice.
     disabled_text: Đã tắt chế độ voice. Chỉ trả lời bằng văn bản.
     enabled_short: Đã bật chế độ voice.
-    enabled_voice_only: Đã bật chế độ voice.\nTôi sẽ trả lời bằng giọng nói khi bạn gửi tin nhắn thoại.\nDùng /voice tts để nhận phản hồi giọng nói cho mọi tin nhắn.
-    help: '{toggle}\n\n**Cách /voice hoạt động**\n• `/voice on` — trả lời bằng giọng nói khi bạn gửi tin nhắn thoại\n• `/voice tts` — trả lời bằng giọng nói cho *mọi* tin nhắn\n• `/voice off` — quay lại chỉ trả lời bằng văn bản\n• `/voice status` — hiện chế độ hiện tại\n• `/voice` (không có đối số) — bật/tắt nhanh giữa on và off{channels}'
-    help_channels: \n\n**Kênh voice trực tiếp (Discord)**\n• Vào một kênh voice trước, rồi dùng `/voice channel` — tôi sẽ tham gia, lắng nghe và nói các phản hồi\n• `/voice leave` — ngắt kết nối khỏi kênh voice
+    enabled_voice_only: "Đã bật chế độ voice.\nTôi sẽ trả lời bằng giọng nói khi bạn gửi tin nhắn thoại.\nDùng /voice tts để nhận phản hồi giọng nói cho mọi tin nhắn."
+    help: "{toggle}\n\n**Cách /voice hoạt động**\n• `/voice on` — trả lời bằng giọng nói khi bạn gửi tin nhắn thoại\n• `/voice tts` — trả lời bằng giọng nói cho *mọi* tin nhắn\n• `/voice off` — quay lại chỉ trả lời bằng văn bản\n• `/voice status` — hiện chế độ hiện tại\n• `/voice` (không có đối số) — bật/tắt nhanh giữa on và off{channels}"
+    help_channels: "\n\n**Kênh voice trực tiếp (Discord)**\n• Vào một kênh voice trước, rồi dùng `/voice channel` — tôi sẽ tham gia, lắng nghe và nói các phản hồi\n• `/voice leave` — ngắt kết nối khỏi kênh voice"
     label_all: TTS (trả lời bằng giọng nói cho mọi tin nhắn)
     label_off: Tắt (chỉ văn bản)
     label_voice_only: Bật (trả lời bằng giọng nói cho tin nhắn thoại)
@@ -2726,14 +2724,14 @@ gateway:
     status_participants: 'Người tham gia: {count}'
     transcript_echo: '**[Voice]** <@{user}>: {text}'
     transcript_echo_short: 🎙️ "{text}"
-    tts_enabled: Đã bật TTS tự động.\nMọi phản hồi sẽ kèm một tin nhắn voice.
+    tts_enabled: "Đã bật TTS tự động.\nMọi phản hồi sẽ kèm một tin nhắn voice."
   whoami:
-    header: '**Bạn** — {platform} ({scope})\nUser ID: `{user_id}`\n'
+    header: "**Bạn** — {platform} ({scope})\nUser ID: `{user_id}`\n"
     scope_dm: DM
     scope_group: nhóm/kênh
-    tier_admin: 'Tier: **admin**\nSlash commands: dùng được tất cả'
-    tier_unrestricted: 'Tier: unrestricted (chưa cấu hình danh sách admin cho phạm vi này)\nSlash commands: dùng được tất cả'
-    tier_user: 'Tier: user\nSlash commands bạn có thể chạy: {commands}'
+    tier_admin: "Tier: **admin**\nSlash commands: dùng được tất cả"
+    tier_unrestricted: "Tier: unrestricted (chưa cấu hình danh sách admin cho phạm vi này)\nSlash commands: dùng được tất cả"
+    tier_user: "Tier: user\nSlash commands bạn có thể chạy: {commands}"
   yolo:
     disabled: ⚠️ Chế độ YOLO **TẮT** cho session này — các lệnh nguy hiểm sẽ cần phê duyệt.
     enabled: ⚡ Chế độ YOLO **BẬT** cho session này — mọi lệnh được tự động phê duyệt. Hãy dùng cẩn thận.
@@ -2742,7 +2740,7 @@ platform:
     provider_auth_failed: Xác thực provider thất bại
     provider_error_line: '⚠️ {label}: {error}'
     provider_rate_limited: Provider bị giới hạn tốc độ
-    transformed_notice: \n\n[Phản hồi đã được biến đổi sau khi streaming]\n
+    transformed_notice: "\n\n[Phản hồi đã được biến đổi sau khi streaming]\n"
   dingtalk:
     emotion:
       done: 🥳Xong
@@ -2887,8 +2885,8 @@ platform:
       more_available: Còn {count} lựa chọn nữa — gõ `/model <name>` trực tiếp
       provider_option: '{provider} ({count} model)'
       provider_placeholder: Chọn một provider...
-      select_model: 'Provider: **{provider}**\nChọn một model:{extra}'
-      select_provider: 'Model hiện tại: `{model}`\nProvider: {provider}\n\nChọn một provider:'
+      select_model: "Provider: **{provider}**\nChọn một model:{extra}"
+      select_provider: "Model hiện tại: `{model}`\nProvider: {provider}\n\nChọn một provider:"
       switch_anyway: Vẫn chuyển
       switch_error: 'Lỗi khi chuyển model: {error}'
       switched_title: ⚙ Đã chuyển model
@@ -2912,7 +2910,7 @@ platform:
       truncated_marker: '... [bị cắt bớt]'
       update_title: Cập nhật cần bạn nhập thông tin
     security:
-      unauthorized_slash_alert: '⚠️ Cố gắng dùng lệnh slash Discord trái phép\nUser: {user_name} ({user_id})\nKênh: {chan_id} (guild {guild_id})\nLệnh: {command_text}\nLý do: {reason}'
+      unauthorized_slash_alert: "⚠️ Cố gắng dùng lệnh slash Discord trái phép\nUser: {user_name} ({user_id})\nKênh: {chan_id} (guild {guild_id})\nLệnh: {command_text}\nLý do: {reason}"
     slash_confirm:
       already_resolved: Prompt này đã được xử lý rồi~
       always_approve: Luôn phê duyệt
@@ -2949,13 +2947,13 @@ platform:
       resolved_session: Đã phê duyệt cho session
     media:
       gif_downgraded: '[GIF đã chuyển thành file]'
-      gif_downgraded_caption: '[GIF đã chuyển thành file]\n{caption}'
+      gif_downgraded_caption: "[GIF đã chuyển thành file]\n{caption}"
     update_prompt:
       answer_no: ✗ Không
       answer_yes: ✓ Có
       answered_by: Đã trả lời bởi **{user}**
       answered_title: '{icon} Prompt cập nhật đã được trả lời: {answer}'
-      default_hint: '\n\nMặc định: `{default}`'
+      default_hint: "\n\nMặc định: `{default}`"
       title: ☤ Cập nhật cần bạn nhập thông tin
       word_no: Không
       word_yes: Có
@@ -2970,20 +2968,20 @@ platform:
       other_button: Khác / gõ câu trả lời
       question: ❓ {question}
     setup_files:
-      active: '✅ Gửi đính kèm gốc đang **hoạt động** cho `{who}`.\nToken: `{token_path}`\nGửi `/setup-files revoke` để tắt.'
+      active: "✅ Gửi đính kèm gốc đang **hoạt động** cho `{who}`.\nToken: `{token_path}`\nGửi `/setup-files revoke` để tắt."
       authorized: ✅ Đã cấp quyền! Gửi đính kèm gốc hiện đã hoạt động. Thử yêu cầu tôi gửi cho bạn một file PDF.
-      done_output: ✅ Xong.\n```\n{output}\n```
+      done_output: "✅ Xong.\n```\n{output}\n```"
       exchange_failed: ❌ Trao đổi token thất bại. Code có thể đã hết hạn hoặc URL bị lỗi. Gửi `/setup-files start` để nhận URL OAuth mới.
-      exchanged_not_loaded: ⚠️ Đã trao đổi token nhưng gateway không thể nạp thông tin xác thực mới vào bộ nhớ. Hãy khởi động lại gateway và token tại `{token_path}` sẽ được nhận.\nKết quả helper:\n```\n{output}\n```
+      exchanged_not_loaded: "⚠️ Đã trao đổi token nhưng gateway không thể nạp thông tin xác thực mới vào bộ nhớ. Hãy khởi động lại gateway và token tại `{token_path}` sẽ được nhận.\nKết quả helper:\n```\n{output}\n```"
       helper_error: '❌ Lỗi: {error}'
       no_client_credentials: ⚠️ Chưa lưu thông tin xác thực client nào cho profile này. Gửi `/setup-files` (không tham số) để xem hướng dẫn thiết lập.
       not_authorized_yet: 🔧 Đã lưu thông tin xác thực client nhưng bạn chưa cấp quyền. Gửi `/setup-files start` để bắt đầu.
-      not_configured: 🔧 Gửi đính kèm gốc **chưa được cấu hình**.\n**Bước 1 (một lần, trên host):** tạo OAuth client credentials tại https://console.cloud.google.com/apis/credentials → *Create credentials* → *OAuth client ID* → *Desktop app*. Tải file JSON về. Sau đó chạy trên host:\n```\npython -m plugins.platforms.google_chat.oauth --client-secret /path/to/client_secret.json\n```\n**Bước 2:** quay lại đây và gửi `/setup-files start`.
+      not_configured: "🔧 Gửi đính kèm gốc **chưa được cấu hình**.\n**Bước 1 (một lần, trên host):** tạo OAuth client credentials tại https://console.cloud.google.com/apis/credentials → *Create credentials* → *OAuth client ID* → *Desktop app*. Tải file JSON về. Sau đó chạy trên host:\n```\npython -m plugins.platforms.google_chat.oauth --client-secret /path/to/client_secret.json\n```\n**Bước 2:** quay lại đây và gửi `/setup-files start`."
       revoke_completed: Đã hoàn tất thu hồi (một số bước có thể đã bị bỏ qua).
       revoke_error: '❌ Lỗi khi thu hồi: {error}'
       revoked: Đã thu hồi.
       start_failed: ❌ Không thể tạo URL OAuth. Kiểm tra log của gateway và xác nhận client_secret.json còn hợp lệ.
-      start_instructions: '1. Mở URL này trong trình duyệt của bạn và cấp quyền:\n{auth_url}\n\n2. Sau khi bấm *Allow*, trình duyệt sẽ không tải được `http://localhost:1/?...&code=...`. Điều đó là bình thường.\n\n3. Sao chép toàn bộ URL lỗi từ thanh địa chỉ của trình duyệt và dán lại vào đây dạng: `/setup-files <PASTE_URL>` (hoặc chỉ giá trị `code=...`).\n\nMẹo: URL chứa quyền truy cập của bạn — hãy giữ kín nó.'
+      start_instructions: "1. Mở URL này trong trình duyệt của bạn và cấp quyền:\n{auth_url}\n\n2. Sau khi bấm *Allow*, trình duyệt sẽ không tải được `http://localhost:1/?...&code=...`. Điều đó là bình thường.\n\n3. Sao chép toàn bộ URL lỗi từ thanh địa chỉ của trình duyệt và dán lại vào đây dạng: `/setup-files <PASTE_URL>` (hoặc chỉ giá trị `code=...`).\n\nMẹo: URL chứa quyền truy cập của bạn — hãy giữ kín nó."
       who_shared: shared (cũ)
     typing:
       interrupted: (bị gián đoạn)
@@ -3052,7 +3050,7 @@ platform:
       video_failed: ⚠️ Không thể gửi video đính kèm.
     model_picker_expired: ⏳ Trình chọn model này đã hết hạn — vui lòng chạy /model lại.
     not_authorized: ⛔ Chưa được cấp quyền.
-    truncated_suffix: \n...(bị cắt bớt)
+    truncated_suffix: "\n...(bị cắt bớt)"
     unknown: không rõ
   signal:
     batch_pacing_notice: (Sắp có thêm ảnh — tạm dừng ~{wait} do giới hạn tốc độ của Signal, đợt {batch}/{total}.)
@@ -3094,16 +3092,16 @@ platform:
       choose_provider: Chọn một provider…
       fallback_model: ⚙ Cấu hình model — {provider}
       fallback_provider: ⚙ Cấu hình model — chọn một provider
-      model_header: '*⚙ Cấu hình model*\n\nProvider: *{provider}*\nChọn một model:{extra}'
-      more_available: \n*Còn {count} lựa chọn nữa — gõ `/model <name>` trực tiếp*
+      model_header: "*⚙ Cấu hình model*\n\nProvider: *{provider}*\nChọn một model:{extra}"
+      more_available: "\n*Còn {count} lựa chọn nữa — gõ `/model <name>` trực tiếp*"
       no_models_for_provider: Không có model nào khả dụng cho `{provider}`.
-      provider_header: '*⚙ Cấu hình model*\nModel hiện tại: `{model}`\nProvider: {provider}\n\nChọn một provider:{extra}'
+      provider_header: "*⚙ Cấu hình model*\nModel hiện tại: `{model}`\nProvider: {provider}\n\nChọn một provider:{extra}"
       switch_failed: '❌ Chuyển model thất bại: {error}'
       switch_failed_header: ⚙ Chuyển model thất bại
       switched_header: ⚙ Đã chuyển model
       switching: ⚙ Đang chuyển sang `{model}`…
     slash:
-      reply_truncated: '\n\n_[Câu trả lời bị cắt bớt: còn {count} phần nữa vượt giới hạn trả lời ephemeral của Slack.]_'
+      reply_truncated: "\n\n_[Câu trả lời bị cắt bớt: còn {count} phần nữa vượt giới hạn trả lời ephemeral của Slack.]_"
       running: Đang chạy `/{command}`…
     status:
       still_working: vẫn đang xử lý… ({elapsed})
